@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Manager_Hotel
 {
-    public partial class Form2 : Form
+    public partial class DatPhong : Form
     {
-        public Form2()
+        public DatPhong()
         {
             InitializeComponent();
         }

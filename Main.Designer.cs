@@ -1,7 +1,7 @@
 ﻿
 namespace Manager_Hotel
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Manager_Hotel
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.imageListIcon = new System.Windows.Forms.ImageList(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -93,9 +93,9 @@ namespace Manager_Hotel
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label2.ImageIndex = 7;
             this.label2.ImageList = this.imageListIcon;
-            this.label2.Location = new System.Drawing.Point(-6, 9);
+            this.label2.Location = new System.Drawing.Point(0, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 40);
+            this.label2.Size = new System.Drawing.Size(94, 40);
             this.label2.TabIndex = 3;
             this.label2.Tag = "";
             // 
@@ -458,7 +458,7 @@ namespace Manager_Hotel
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -476,7 +476,7 @@ namespace Manager_Hotel
             this.Controls.Add(this.panelSlider);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Quản Lý Khách Sạn";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Manager_Hotel
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         bool hiden = true;
         int pw;
-        public Form1()
+        public Main()
         {
             InitializeComponent();
             pw = panelSlider.Width;

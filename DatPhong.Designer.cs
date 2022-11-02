@@ -29,6 +29,8 @@ namespace Manager_Hotel
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DatPhong));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -85,6 +87,9 @@ namespace Manager_Hotel
             this.clTypeRom = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clDataCheckIn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clDateCheckOut = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageListIcon = new System.Windows.Forms.ImageList(this.components);
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -99,12 +104,12 @@ namespace Manager_Hotel
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel3.Controls.Add(this.label18);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1346, 44);
             this.panel3.TabIndex = 11;
-//            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel1
             // 
@@ -147,10 +152,13 @@ namespace Manager_Hotel
             // btnThoat
             // 
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.ImageIndex = 2;
+            this.btnThoat.ImageList = this.imageListIcon;
             this.btnThoat.Location = new System.Drawing.Point(52, 188);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(135, 35);
+            this.btnThoat.Size = new System.Drawing.Size(135, 38);
             this.btnThoat.TabIndex = 13;
             this.btnThoat.Text = "Đóng";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -158,10 +166,13 @@ namespace Manager_Hotel
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(52, 133);
+            this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHuy.ImageKey = "delete.png";
+            this.btnHuy.ImageList = this.imageListIcon;
+            this.btnHuy.Location = new System.Drawing.Point(52, 132);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(135, 35);
+            this.btnHuy.Size = new System.Drawing.Size(135, 41);
             this.btnHuy.TabIndex = 12;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -169,13 +180,17 @@ namespace Manager_Hotel
             // btnDatPhong
             // 
             this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatPhong.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDatPhong.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnDatPhong.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnDatPhong.ImageIndex = 1;
+            this.btnDatPhong.ImageList = this.imageListIcon;
             this.btnDatPhong.Location = new System.Drawing.Point(52, 78);
             this.btnDatPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatPhong.Name = "btnDatPhong";
-            this.btnDatPhong.Size = new System.Drawing.Size(135, 35);
+            this.btnDatPhong.Size = new System.Drawing.Size(135, 42);
             this.btnDatPhong.TabIndex = 11;
             this.btnDatPhong.Text = "Đặt phòng ";
+            this.btnDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDatPhong.UseVisualStyleBackColor = true;
             // 
             // groupBox3
@@ -285,7 +300,7 @@ namespace Manager_Hotel
             this.panel2.Controls.Add(this.groupBox4);
             this.panel2.Location = new System.Drawing.Point(7, 43);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(516, 578);
+            this.panel2.Size = new System.Drawing.Size(516, 586);
             this.panel2.TabIndex = 10;
             // 
             // groupBox1
@@ -560,7 +575,7 @@ namespace Manager_Hotel
             // 
             this.cbBoxLoaiKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxLoaiKhachHang.FormattingEnabled = true;
-            this.cbBoxLoaiKhachHang.Location = new System.Drawing.Point(13, 172);
+            this.cbBoxLoaiKhachHang.Location = new System.Drawing.Point(11, 172);
             this.cbBoxLoaiKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.cbBoxLoaiKhachHang.Name = "cbBoxLoaiKhachHang";
             this.cbBoxLoaiKhachHang.Size = new System.Drawing.Size(204, 28);
@@ -591,7 +606,7 @@ namespace Manager_Hotel
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDienThoai.Location = new System.Drawing.Point(13, 236);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(11, 236);
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(204, 26);
@@ -611,7 +626,7 @@ namespace Manager_Hotel
             // txtCMND
             // 
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(13, 110);
+            this.txtCMND.Location = new System.Drawing.Point(11, 110);
             this.txtCMND.Margin = new System.Windows.Forms.Padding(2);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(204, 26);
@@ -631,7 +646,7 @@ namespace Manager_Hotel
             // txtHoTen
             // 
             this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(13, 48);
+            this.txtHoTen.Location = new System.Drawing.Point(11, 48);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(204, 26);
@@ -664,6 +679,7 @@ namespace Manager_Hotel
             this.clTypeRom,
             this.clDataCheckIn,
             this.clDateCheckOut});
+            this.ltvOrderRom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltvOrderRom.GridLines = true;
             this.ltvOrderRom.HideSelection = false;
             this.ltvOrderRom.Location = new System.Drawing.Point(6, 19);
@@ -676,7 +692,7 @@ namespace Manager_Hotel
             // clIdPhong
             // 
             this.clIdPhong.Text = "Mã Phòng";
-            this.clIdPhong.Width = 64;
+            this.clIdPhong.Width = 70;
             // 
             // clName
             // 
@@ -703,6 +719,28 @@ namespace Manager_Hotel
             this.clDateCheckOut.Text = "Trả Phong";
             this.clDateCheckOut.Width = 70;
             // 
+            // imageListIcon
+            // 
+            this.imageListIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIcon.ImageStream")));
+            this.imageListIcon.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListIcon.Images.SetKeyName(0, "add.png");
+            this.imageListIcon.Images.SetKeyName(1, "checked.png");
+            this.imageListIcon.Images.SetKeyName(2, "close.png");
+            this.imageListIcon.Images.SetKeyName(3, "delete.png");
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.Window;
+            this.label18.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label18.ImageIndex = 0;
+            this.label18.ImageList = this.imageListIcon;
+            this.label18.Location = new System.Drawing.Point(20, 4);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(180, 36);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Đặt Phòng";
+            // 
             // DatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -715,7 +753,7 @@ namespace Manager_Hotel
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DatPhong";
             this.Text = "Đặt Phòng";
- //           this.Load += new System.EventHandler(this.DatPhong_Load);
+            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -792,5 +830,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.ColumnHeader clTypeRom;
         private System.Windows.Forms.ColumnHeader clDataCheckIn;
         private System.Windows.Forms.ColumnHeader clDateCheckOut;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ImageList imageListIcon;
     }
 }

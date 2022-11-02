@@ -16,5 +16,15 @@ namespace Manager_Hotel
         {
             InitializeComponent();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboxChuyenPhong_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

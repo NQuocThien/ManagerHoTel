@@ -89,6 +89,7 @@ namespace Manager_Hotel
             this.clDateCheckOut = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.imageListIcon = new System.Windows.Forms.ImageList(this.components);
             this.label18 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -662,6 +663,7 @@ namespace Manager_Hotel
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.ltvOrderRom);
             this.groupBox6.Location = new System.Drawing.Point(3, 8);
             this.groupBox6.Name = "groupBox6";
@@ -684,7 +686,7 @@ namespace Manager_Hotel
             this.ltvOrderRom.HideSelection = false;
             this.ltvOrderRom.Location = new System.Drawing.Point(6, 19);
             this.ltvOrderRom.Name = "ltvOrderRom";
-            this.ltvOrderRom.Size = new System.Drawing.Size(511, 538);
+            this.ltvOrderRom.Size = new System.Drawing.Size(511, 493);
             this.ltvOrderRom.TabIndex = 0;
             this.ltvOrderRom.UseCompatibleStateImageBehavior = false;
             this.ltvOrderRom.View = System.Windows.Forms.View.Details;
@@ -727,6 +729,7 @@ namespace Manager_Hotel
             this.imageListIcon.Images.SetKeyName(1, "checked.png");
             this.imageListIcon.Images.SetKeyName(2, "close.png");
             this.imageListIcon.Images.SetKeyName(3, "delete.png");
+            this.imageListIcon.Images.SetKeyName(4, "detail.png");
             // 
             // label18
             // 
@@ -740,6 +743,23 @@ namespace Manager_Hotel
             this.label18.Size = new System.Drawing.Size(180, 36);
             this.label18.TabIndex = 0;
             this.label18.Text = "Đặt Phòng";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.ImageIndex = 4;
+            this.button1.ImageList = this.imageListIcon;
+            this.button1.Location = new System.Drawing.Point(3, 517);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(517, 43);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Xem Chi Tiết";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DatPhong
             // 
@@ -832,5 +852,6 @@ namespace Manager_Hotel
         private System.Windows.Forms.ColumnHeader clDateCheckOut;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ImageList imageListIcon;
+        private System.Windows.Forms.Button button1;
     }
 }

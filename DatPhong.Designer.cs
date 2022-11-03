@@ -82,7 +82,7 @@ namespace Manager_Hotel
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnChiTietDatPhong = new System.Windows.Forms.Button();
             this.ltvOrderRom = new System.Windows.Forms.ListView();
             this.clIdPhong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -686,7 +686,7 @@ namespace Manager_Hotel
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button1);
+            this.groupBox6.Controls.Add(this.btnChiTietDatPhong);
             this.groupBox6.Controls.Add(this.ltvOrderRom);
             this.groupBox6.Location = new System.Drawing.Point(3, 8);
             this.groupBox6.Name = "groupBox6";
@@ -695,22 +695,22 @@ namespace Manager_Hotel
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Danh Sách Đặt Phòng Trong Ngày";
             // 
-            // button1
+            // btnChiTietDatPhong
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 4;
-            this.button1.ImageList = this.imageListIcon;
-            this.button1.Location = new System.Drawing.Point(3, 517);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(517, 43);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Xem Chi Tiết";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnChiTietDatPhong.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnChiTietDatPhong.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnChiTietDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChiTietDatPhong.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnChiTietDatPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChiTietDatPhong.ImageIndex = 4;
+            this.btnChiTietDatPhong.ImageList = this.imageListIcon;
+            this.btnChiTietDatPhong.Location = new System.Drawing.Point(3, 517);
+            this.btnChiTietDatPhong.Name = "btnChiTietDatPhong";
+            this.btnChiTietDatPhong.Size = new System.Drawing.Size(517, 43);
+            this.btnChiTietDatPhong.TabIndex = 1;
+            this.btnChiTietDatPhong.Text = "Xem Chi Tiết";
+            this.btnChiTietDatPhong.UseVisualStyleBackColor = false;
+            this.btnChiTietDatPhong.Click += new System.EventHandler(this.btnChiTietDatPhong_Click);
             // 
             // ltvOrderRom
             // 
@@ -852,6 +852,6 @@ namespace Manager_Hotel
         private System.Windows.Forms.ColumnHeader clDateCheckOut;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ImageList imageListIcon;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChiTietDatPhong;
     }
 }

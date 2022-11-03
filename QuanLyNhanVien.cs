@@ -82,5 +82,11 @@ namespace Manager_Hotel
             this.ltvDSNhanVien.Columns[5].Width = (int)n / 6;
 
         }
+
+        private void btnQuyen_Click(object sender, EventArgs e)
+        {
+            QuyenTruyCap quyen = new QuyenTruyCap();
+            quyen.ShowDialog();
+        }
     }
 }

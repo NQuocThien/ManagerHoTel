@@ -27,9 +27,10 @@ namespace Manager_Hotel
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnChiTietDatPhong_Click(object sender, EventArgs e)
         {
-
+            ChiTietDatPhong chitiet = new ChiTietDatPhong();
+            chitiet.ShowDialog();
         }
     }
 }

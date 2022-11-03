@@ -52,5 +52,49 @@ namespace Manager_Hotel
                 }
             }
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDatPhong_Click(object sender, EventArgs e)
+        {
+            DatPhong dp = new DatPhong();
+            dp.ShowDialog();
+        }
+
+        private void btnNhanPhong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSDDVTT_Click(object sender, EventArgs e)
+        {
+            SuDungDichVuVaThanToan dvtt = new SuDungDichVuVaThanToan();
+            dvtt.ShowDialog();
+        }
+
+        private void btnQuanLiPhong_Click(object sender, EventArgs e)
+        {
+            QuanLiPhong qlp = new QuanLiPhong();
+            qlp.ShowDialog();
+        }
+
+        private void btnQuanLiDatPhong_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnQuanLiNV_Click(object sender, EventArgs e)
+        {
+            QuanLyNhanVien qlnv = new QuanLyNhanVien();
+            qlnv.ShowDialog();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.ShowDialog();
+        }
     }
 }

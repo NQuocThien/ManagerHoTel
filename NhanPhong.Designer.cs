@@ -34,19 +34,17 @@ namespace Manager_Hotel
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ltvNhanPhong = new System.Windows.Forms.ListView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -69,11 +67,13 @@ namespace Manager_Hotel
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.imageList_icon = new System.Windows.Forms.ImageList(this.components);
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -120,19 +120,6 @@ namespace Manager_Hotel
             this.panel4.Size = new System.Drawing.Size(687, 581);
             this.panel4.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.ImageIndex = 2;
-            this.label1.ImageList = this.imageList_icon;
-            this.label1.Location = new System.Drawing.Point(19, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 47);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nhận Phòng";
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.groupBox5);
@@ -166,7 +153,7 @@ namespace Manager_Hotel
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.ltvNhanPhong);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
@@ -178,15 +165,15 @@ namespace Manager_Hotel
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhận phòng";
             // 
-            // listView1
+            // ltvNhanPhong
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 25);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(639, 495);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.ltvNhanPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ltvNhanPhong.HideSelection = false;
+            this.ltvNhanPhong.Location = new System.Drawing.Point(10, 25);
+            this.ltvNhanPhong.Name = "ltvNhanPhong";
+            this.ltvNhanPhong.Size = new System.Drawing.Size(639, 495);
+            this.ltvNhanPhong.TabIndex = 0;
+            this.ltvNhanPhong.UseCompatibleStateImageBehavior = false;
             // 
             // groupBox2
             // 
@@ -258,7 +245,7 @@ namespace Manager_Hotel
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(61, 88);
+            this.button1.Location = new System.Drawing.Point(61, 94);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(199, 26);
             this.button1.TabIndex = 1;
@@ -273,19 +260,6 @@ namespace Manager_Hotel
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(258, 26);
             this.textBox2.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 3;
-            this.button2.ImageList = this.imageList_icon;
-            this.button2.Location = new System.Drawing.Point(26, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(258, 38);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thêm Khách Hàng";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -474,7 +448,9 @@ namespace Manager_Hotel
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(370, 56);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(258, 22);
@@ -482,7 +458,9 @@ namespace Manager_Hotel
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker2.Location = new System.Drawing.Point(369, 110);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(258, 22);
@@ -496,44 +474,15 @@ namespace Manager_Hotel
             this.numericUpDown1.Size = new System.Drawing.Size(259, 22);
             this.numericUpDown1.TabIndex = 2;
             // 
-            // button3
+            // imageList_icon
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageIndex = 3;
-            this.button3.ImageList = this.imageList_icon;
-            this.button3.Location = new System.Drawing.Point(370, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(258, 38);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Nhận Phòng";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.ImageIndex = 1;
-            this.button4.ImageList = this.imageList_icon;
-            this.button4.Location = new System.Drawing.Point(370, 76);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(259, 38);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Đóng";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.ImageIndex = 1;
-            this.button5.ImageList = this.imageList_icon;
-            this.button5.Location = new System.Drawing.Point(27, 76);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(258, 38);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Hủy";
-            this.button5.UseVisualStyleBackColor = true;
+            this.imageList_icon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_icon.ImageStream")));
+            this.imageList_icon.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_icon.Images.SetKeyName(0, "close.png");
+            this.imageList_icon.Images.SetKeyName(1, "delete.png");
+            this.imageList_icon.Images.SetKeyName(2, "hotel.png");
+            this.imageList_icon.Images.SetKeyName(3, "plus.png");
+            this.imageList_icon.Images.SetKeyName(4, "detail.png");
             // 
             // button6
             // 
@@ -550,15 +499,70 @@ namespace Manager_Hotel
             this.button6.Text = "Xem Chi Tiết";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // imageList_icon
+            // button5
             // 
-            this.imageList_icon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_icon.ImageStream")));
-            this.imageList_icon.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_icon.Images.SetKeyName(0, "close.png");
-            this.imageList_icon.Images.SetKeyName(1, "delete.png");
-            this.imageList_icon.Images.SetKeyName(2, "hotel.png");
-            this.imageList_icon.Images.SetKeyName(3, "plus.png");
-            this.imageList_icon.Images.SetKeyName(4, "detail.png");
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.ImageIndex = 1;
+            this.button5.ImageList = this.imageList_icon;
+            this.button5.Location = new System.Drawing.Point(27, 76);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(258, 38);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Hủy";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.ImageIndex = 1;
+            this.button4.ImageList = this.imageList_icon;
+            this.button4.Location = new System.Drawing.Point(370, 76);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(259, 38);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Đóng";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.ImageIndex = 3;
+            this.button3.ImageList = this.imageList_icon;
+            this.button3.Location = new System.Drawing.Point(370, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(258, 38);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Nhận Phòng";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.ImageIndex = 3;
+            this.button2.ImageList = this.imageList_icon;
+            this.button2.Location = new System.Drawing.Point(26, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(258, 38);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Thêm Khách Hàng";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.ImageIndex = 2;
+            this.label1.ImageList = this.imageList_icon;
+            this.label1.Location = new System.Drawing.Point(19, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(219, 47);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nhận Phòng";
             // 
             // NhanPhong
             // 
@@ -569,6 +573,9 @@ namespace Manager_Hotel
             this.Controls.Add(this.panel1);
             this.Name = "NhanPhong";
             this.Text = "NhanPhong";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.NhanPhong_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -595,7 +602,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ltvNhanPhong;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button5;

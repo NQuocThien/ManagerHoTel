@@ -94,8 +94,7 @@ namespace Manager_Hotel
 
         private void Main_Load(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.ShowDialog();
+            
         }
     }
 }

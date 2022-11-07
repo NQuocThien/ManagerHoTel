@@ -33,6 +33,9 @@ namespace Manager_Hotel
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.imageListIcon = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.imageListIMG = new System.Windows.Forms.ImageList(this.components);
             this.btnSubAccount = new System.Windows.Forms.Button();
@@ -41,10 +44,12 @@ namespace Manager_Hotel
             this.btnSubAbout = new System.Windows.Forms.Button();
             this.panelSlider = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUser = new System.Windows.Forms.Button();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.btnHelp = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnSlider = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnQuanLiNV = new System.Windows.Forms.Button();
             this.btnQuanLiPhong = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
@@ -54,11 +59,6 @@ namespace Manager_Hotel
             this.btnQLDichVu = new System.Windows.Forms.Button();
             this.btnQLHoaDon = new System.Windows.Forms.Button();
             this.btnDatPhong = new System.Windows.Forms.Button();
-            this.btnUser = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
-            this.btnSlider = new System.Windows.Forms.Button();
             this.btnNhanPhong = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.panelSlider.SuspendLayout();
@@ -89,6 +89,36 @@ namespace Manager_Hotel
             this.groupBox1.Size = new System.Drawing.Size(1080, 52);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.ImageIndex = 6;
+            this.linkLabel2.ImageList = this.imageListIcon;
+            this.linkLabel2.Location = new System.Drawing.Point(983, 9);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(45, 40);
+            this.linkLabel2.TabIndex = 4;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.ImageIndex = 5;
+            this.linkLabel1.ImageList = this.imageListIcon;
+            this.linkLabel1.Location = new System.Drawing.Point(903, 9);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(45, 40);
+            this.linkLabel1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.ImageIndex = 7;
+            this.label2.ImageList = this.imageListIcon;
+            this.label2.Location = new System.Drawing.Point(0, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 40);
+            this.label2.TabIndex = 3;
+            this.label2.Tag = "";
             // 
             // label1
             // 
@@ -212,40 +242,82 @@ namespace Manager_Hotel
             this.panel1.Size = new System.Drawing.Size(61, 630);
             this.panel1.TabIndex = 6;
             // 
+            // btnUser
+            // 
+            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnUser.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnUser.ImageIndex = 1;
+            this.btnUser.ImageList = this.imageListIcon;
+            this.btnUser.Location = new System.Drawing.Point(0, 426);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(61, 51);
+            this.btnUser.TabIndex = 5;
+            this.btnUser.UseVisualStyleBackColor = false;
+            // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnLogOut.ImageIndex = 2;
+            this.btnLogOut.ImageList = this.imageListIcon;
+            this.btnLogOut.Location = new System.Drawing.Point(0, 477);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(61, 51);
+            this.btnLogOut.TabIndex = 4;
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnHelp.ImageIndex = 3;
+            this.btnHelp.ImageList = this.imageListIcon;
+            this.btnHelp.Location = new System.Drawing.Point(0, 528);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(61, 51);
+            this.btnHelp.TabIndex = 3;
+            this.btnHelp.UseVisualStyleBackColor = false;
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnAbout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnAbout.ImageIndex = 4;
+            this.btnAbout.ImageList = this.imageListIcon;
+            this.btnAbout.Location = new System.Drawing.Point(0, 579);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(61, 51);
+            this.btnAbout.TabIndex = 2;
+            this.btnAbout.UseVisualStyleBackColor = false;
+            // 
+            // btnSlider
+            // 
+            this.btnSlider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnSlider.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
+            this.btnSlider.ImageIndex = 0;
+            this.btnSlider.ImageList = this.imageListIcon;
+            this.btnSlider.Location = new System.Drawing.Point(0, 0);
+            this.btnSlider.Name = "btnSlider";
+            this.btnSlider.Size = new System.Drawing.Size(61, 51);
+            this.btnSlider.TabIndex = 0;
+            this.btnSlider.UseVisualStyleBackColor = false;
+            this.btnSlider.Click += new System.EventHandler(this.btnSlider_Click_1);
+            // 
             // timer1
             // 
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.ImageIndex = 6;
-            this.linkLabel2.ImageList = this.imageListIcon;
-            this.linkLabel2.Location = new System.Drawing.Point(983, 9);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(45, 40);
-            this.linkLabel2.TabIndex = 4;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ImageIndex = 5;
-            this.linkLabel1.ImageList = this.imageListIcon;
-            this.linkLabel1.Location = new System.Drawing.Point(903, 9);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(45, 40);
-            this.linkLabel1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.ImageIndex = 7;
-            this.label2.ImageList = this.imageListIcon;
-            this.label2.Location = new System.Drawing.Point(0, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 40);
-            this.label2.TabIndex = 3;
-            this.label2.Tag = "";
             // 
             // btnQuanLiNV
             // 
@@ -378,78 +450,6 @@ namespace Manager_Hotel
             this.btnDatPhong.UseVisualStyleBackColor = false;
             this.btnDatPhong.Click += new System.EventHandler(this.btnDatPhong_Click);
             // 
-            // btnUser
-            // 
-            this.btnUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnUser.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnUser.ImageIndex = 1;
-            this.btnUser.ImageList = this.imageListIcon;
-            this.btnUser.Location = new System.Drawing.Point(0, 426);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(61, 51);
-            this.btnUser.TabIndex = 5;
-            this.btnUser.UseVisualStyleBackColor = false;
-            // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnLogOut.ImageIndex = 2;
-            this.btnLogOut.ImageList = this.imageListIcon;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 477);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(61, 51);
-            this.btnLogOut.TabIndex = 4;
-            this.btnLogOut.UseVisualStyleBackColor = false;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnHelp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnHelp.ImageIndex = 3;
-            this.btnHelp.ImageList = this.imageListIcon;
-            this.btnHelp.Location = new System.Drawing.Point(0, 528);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(61, 51);
-            this.btnHelp.TabIndex = 3;
-            this.btnHelp.UseVisualStyleBackColor = false;
-            // 
-            // btnAbout
-            // 
-            this.btnAbout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnAbout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnAbout.ImageIndex = 4;
-            this.btnAbout.ImageList = this.imageListIcon;
-            this.btnAbout.Location = new System.Drawing.Point(0, 579);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(61, 51);
-            this.btnAbout.TabIndex = 2;
-            this.btnAbout.UseVisualStyleBackColor = false;
-            // 
-            // btnSlider
-            // 
-            this.btnSlider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnSlider.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSlider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(252)))));
-            this.btnSlider.ImageIndex = 0;
-            this.btnSlider.ImageList = this.imageListIcon;
-            this.btnSlider.Location = new System.Drawing.Point(0, 0);
-            this.btnSlider.Name = "btnSlider";
-            this.btnSlider.Size = new System.Drawing.Size(61, 51);
-            this.btnSlider.TabIndex = 0;
-            this.btnSlider.UseVisualStyleBackColor = false;
-            this.btnSlider.Click += new System.EventHandler(this.btnSlider_Click_1);
-            // 
             // btnNhanPhong
             // 
             this.btnNhanPhong.BackColor = System.Drawing.Color.SteelBlue;
@@ -485,6 +485,8 @@ namespace Manager_Hotel
             this.Controls.Add(this.btnNhanPhong);
             this.Name = "Main";
             this.Text = "Quản Lý Khách Sạn";
+            this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -21,5 +21,12 @@ namespace Manager_Hotel
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
+        }
     }
 }

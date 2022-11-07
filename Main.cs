@@ -66,7 +66,8 @@ namespace Manager_Hotel
 
         private void btnNhanPhong_Click(object sender, EventArgs e)
         {
-
+            NhanPhong np = new NhanPhong();
+            np.ShowDialog();
         }
 
         private void btnSDDVTT_Click(object sender, EventArgs e)

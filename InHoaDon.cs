@@ -26,5 +26,20 @@ namespace Manager_Hotel
         {
 
         }
+
+        private void lblNhanVienLap_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InHoaDon_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

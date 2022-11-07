@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Manager_Hotel
 {
-    public partial class InHoaDon : Form
+    public partial class NhanPhong : Form
     {
-        public InHoaDon()
+        public NhanPhong()
         {
             InitializeComponent();
         }
 
-        private void lblNhanVienLap_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

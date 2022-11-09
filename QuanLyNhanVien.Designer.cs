@@ -560,7 +560,7 @@ namespace Manager_Hotel
             this.ltvDSNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ltvDSNhanVien.HideSelection = false;
             this.ltvDSNhanVien.Location = new System.Drawing.Point(3, 18);
-            this.ltvDSNhanVien.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.ltvDSNhanVien.Margin = new System.Windows.Forms.Padding(10);
             this.ltvDSNhanVien.Name = "ltvDSNhanVien";
             this.ltvDSNhanVien.Size = new System.Drawing.Size(729, 446);
             this.ltvDSNhanVien.TabIndex = 0;

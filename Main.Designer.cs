@@ -434,6 +434,7 @@ namespace Manager_Hotel
             this.btnQLHoaDon.Text = "Quản Lí Hóa Đơn";
             this.btnQLHoaDon.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnQLHoaDon.UseVisualStyleBackColor = false;
+            this.btnQLHoaDon.Click += new System.EventHandler(this.btnQLHoaDon_Click);
             // 
             // btnDatPhong
             // 

@@ -96,5 +96,13 @@ namespace Manager_Hotel
         {
             
         }
+
+        private void btnQLHoaDon_Click(object sender, EventArgs e)
+        {
+            InHoaDon print = new InHoaDon();
+            print.ShowDialog();
+
+
+        }
     }
 }

@@ -31,10 +31,10 @@ namespace Manager_Hotel
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDangNhap = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -63,51 +63,52 @@ namespace Manager_Hotel
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnDangNhap
             // 
-            this.button1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(109, 269);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 38);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Đăng Nhập ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnDangNhap.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDangNhap.Location = new System.Drawing.Point(109, 269);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(199, 38);
+            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.Text = "Đăng Nhập ";
+            this.btnDangNhap.UseVisualStyleBackColor = true;
+            this.btnDangNhap.UseWaitCursor = true;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtPass);
+            this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnDangNhap);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(365, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(435, 450);
             this.panel2.TabIndex = 4;
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox2.Location = new System.Drawing.Point(64, 199);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 29);
-            this.textBox2.TabIndex = 5;
+            this.txtPass.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtPass.Location = new System.Drawing.Point(64, 199);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(289, 29);
+            this.txtPass.TabIndex = 5;
             // 
-            // textBox1
+            // txtUserName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox1.Location = new System.Drawing.Point(64, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 29);
-            this.textBox1.TabIndex = 5;
+            this.txtUserName.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtUserName.Location = new System.Drawing.Point(64, 121);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(289, 29);
+            this.txtUserName.TabIndex = 5;
             // 
             // label3
             // 
@@ -133,6 +134,7 @@ namespace Manager_Hotel
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Default;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Location = new System.Drawing.Point(109, 340);
@@ -141,6 +143,7 @@ namespace Manager_Hotel
             this.button2.TabIndex = 3;
             this.button2.Text = "Thoát ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -174,10 +177,10 @@ namespace Manager_Hotel
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;

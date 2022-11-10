@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassLoin\Connection.cs" />
+    <Compile Include="ClassLoin\Modify.cs" />
+    <Compile Include="ClassLoin\TaiKhoan.cs" />
+    <Compile Include="Database_KS.cs" />
     <Compile Include="InHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>

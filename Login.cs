@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Manager_Hotel.ClassLoin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,17 +18,40 @@ namespace Manager_Hotel
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        Modify modify = new Modify();
+        private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            string tenTK = txtUserName.Text;
+            string matKhau = txtPass.Text;
+            if(tenTK.Trim() == "")
+            {
+                MessageBox.Show("Nhập Tài Khoản", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else if (matKhau.Trim() == "")
+            {
+                MessageBox.Show("Nhập Mật Khẩu ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string squery = "select * from TaiKhoan where TenDangNhap= '" + tenTK + "' and MatKhau = '"+matKhau+"'";
+                if(modify.TaiKhoans(squery).Count > 0 )
+                {
+                    Main main = new Main();
+                    this.Hide();
+                    main.ShowDialog();
+
+                }
+                else
+                {
+                    MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
+            }
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
-            main.Show();
-            this.Hide();
+            Application.Exit();
         }
     }
 }

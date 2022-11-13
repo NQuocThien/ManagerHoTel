@@ -39,6 +39,8 @@ namespace Manager_Hotel
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblQuenMK = new System.Windows.Forms.LinkLabel();
+            this.lblDangKy = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,7 +70,7 @@ namespace Manager_Hotel
             this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnDangNhap.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnDangNhap.Location = new System.Drawing.Point(109, 269);
+            this.btnDangNhap.Location = new System.Drawing.Point(109, 252);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(199, 38);
             this.btnDangNhap.TabIndex = 3;
@@ -79,6 +81,8 @@ namespace Manager_Hotel
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblDangKy);
+            this.panel2.Controls.Add(this.lblQuenMK);
             this.panel2.Controls.Add(this.txtPass);
             this.panel2.Controls.Add(this.txtUserName);
             this.panel2.Controls.Add(this.label3);
@@ -98,6 +102,7 @@ namespace Manager_Hotel
             this.txtPass.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.txtPass.Location = new System.Drawing.Point(64, 199);
             this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(289, 29);
             this.txtPass.TabIndex = 5;
             // 
@@ -137,7 +142,7 @@ namespace Manager_Hotel
             this.button2.Cursor = System.Windows.Forms.Cursors.Default;
             this.button2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(109, 340);
+            this.button2.Location = new System.Drawing.Point(109, 319);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 38);
             this.button2.TabIndex = 3;
@@ -155,6 +160,30 @@ namespace Manager_Hotel
             this.label1.Size = new System.Drawing.Size(155, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "Đăng Nhập";
+            // 
+            // lblQuenMK
+            // 
+            this.lblQuenMK.AutoSize = true;
+            this.lblQuenMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuenMK.Location = new System.Drawing.Point(61, 389);
+            this.lblQuenMK.Name = "lblQuenMK";
+            this.lblQuenMK.Size = new System.Drawing.Size(120, 20);
+            this.lblQuenMK.TabIndex = 6;
+            this.lblQuenMK.TabStop = true;
+            this.lblQuenMK.Text = "Quên Mật Khẩu";
+            this.lblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMK_LinkClicked);
+            // 
+            // lblDangKy
+            // 
+            this.lblDangKy.AutoSize = true;
+            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangKy.Location = new System.Drawing.Point(284, 389);
+            this.lblDangKy.Name = "lblDangKy";
+            this.lblDangKy.Size = new System.Drawing.Size(69, 20);
+            this.lblDangKy.TabIndex = 6;
+            this.lblDangKy.TabStop = true;
+            this.lblDangKy.Text = "Đăng Ký";
+            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
             // 
             // Login
             // 
@@ -185,5 +214,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel lblDangKy;
+        private System.Windows.Forms.LinkLabel lblQuenMK;
     }
 }

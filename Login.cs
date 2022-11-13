@@ -37,21 +37,34 @@ namespace Manager_Hotel
                 if(modify.TaiKhoans(squery).Count > 0 )
                 {
                     Main main = new Main();
-                    this.Hide();
                     main.ShowDialog();
-
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Sai Tài Khoản Hoặc Mật Khẩu", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 }
             }
-
+            txtPass.Clear();
+            txtUserName.Clear();
+            txtUserName.Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblQuenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            QuenMatKhau mk = new QuenMatKhau();
+            mk.ShowDialog();
+        }
+
+        private void lblDangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DangKy dk = new DangKy();
+            dk.ShowDialog();
         }
     }
 }

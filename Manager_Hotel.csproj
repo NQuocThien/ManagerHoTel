@@ -49,6 +49,12 @@
     <Compile Include="ClassLoin\Connection.cs" />
     <Compile Include="ClassLoin\Modify.cs" />
     <Compile Include="ClassLoin\TaiKhoan.cs" />
+    <Compile Include="DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database_KS.cs" />
     <Compile Include="InHoaDon.cs">
       <SubType>Form</SubType>
@@ -100,6 +106,12 @@
     <Compile Include="QuanLyNhanVien.Designer.cs">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuenMatKhau.Designer.cs">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuyenTruyCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="ChiTietDatPhong.resx">
       <DependentUpon>ChiTietDatPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DatPhong.resx">
       <DependentUpon>DatPhong.cs</DependentUpon>
@@ -146,6 +161,9 @@
     <EmbeddedResource Include="QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuenMatKhau.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuyenTruyCap.resx">
       <DependentUpon>QuyenTruyCap.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +195,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Classic Hotel %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thiết kế chưa có tên.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forgot.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

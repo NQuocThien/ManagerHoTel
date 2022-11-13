@@ -180,6 +180,7 @@ namespace Manager_Hotel
             this.btnSubLogOut.Text = "Đăng Xuất";
             this.btnSubLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubLogOut.UseVisualStyleBackColor = false;
+            this.btnSubLogOut.Click += new System.EventHandler(this.btnSubLogOut_Click);
             // 
             // btnSubHelp
             // 

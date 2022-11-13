@@ -55,7 +55,10 @@ namespace Manager_Hotel
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Login lg = new Login();
+            lg.ShowDialog();
+            
         }
 
         private void btnDatPhong_Click(object sender, EventArgs e)
@@ -103,6 +106,11 @@ namespace Manager_Hotel
             print.ShowDialog();
 
 
+        }
+
+        private void btnSubLogOut_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

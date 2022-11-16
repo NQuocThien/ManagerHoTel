@@ -21,7 +21,7 @@ namespace Manager_Hotel
         }
 
         SqlCommand sqlCommand;
-        String query = "select * from NhanVien";
+        String querytableNv = "select * from NhanVien";
         ClassLoin.Modify modi = new ClassLoin.Modify();
 
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
@@ -31,7 +31,9 @@ namespace Manager_Hotel
             dateTimePickerNgayVaoLam.Text= dt.ToString("yyyy-MM-dd");
             modi.OpenConnection();
             dataGirdViewDSNhanVien.ReadOnly = true;
-            modi.loaddataTable(dataGirdViewDSNhanVien, query);
+            modi.loaddataTable(dataGirdViewDSNhanVien, querytableNv);
+            txtTenDangNhap.Enabled = false;
+            txtChucVu.Enabled = false;
 
         }
 
@@ -47,8 +49,7 @@ namespace Manager_Hotel
         {
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
-            txtTenDangNhap.ReadOnly = true;
-            txtChucVu.ReadOnly = true;
+            
             txtTenDangNhap.Text = dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString();
             txtChucVu.Text = dataGirdViewDSNhanVien.Rows[i].Cells[2].Value.ToString();
             txtHoTen.Text = dataGirdViewDSNhanVien.Rows[i].Cells[3].Value.ToString();
@@ -62,21 +63,13 @@ namespace Manager_Hotel
 
         private void btnCapNhatNhanVien_Click(object sender, EventArgs e)
         {
-            //modi.OpenConnection();
+          
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
-           /* using (SqlConnection sqlConnection = Connection.GetSqlConnection())
-            {
-                sqlConnection.Open();
-                sqlCommand = sqlConnection.CreateCommand();
-                sqlCommand.CommandText = "update NhanVien Set TenDangNhap='" + txtTenDangNhap.Text + "',ChucVu=N'"+ txtChucVu.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='"+ dateTimePickerNgayVaoLam.Text + "' where MaNV='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
-                sqlCommand.ExecuteNonQuery();
-                modi.loaddataNV(dataGirdViewDSNhanVien, query);
-                sqlConnection.Close();
-            }*/
+           
            String query1= "update NhanVien Set TenDangNhap='" + txtTenDangNhap.Text + "',ChucVu=N'" + txtChucVu.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='" + dateTimePickerNgayVaoLam.Text + "' where MaNV='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
-            modi.Command(query1);
-            modi.loaddataTable(dataGirdViewDSNhanVien, query);
+            
+            modi.conTable(querytableNv, query1, dataGirdViewDSNhanVien);
         }
 
         private void btnThemNhanVien_Click(object sender, EventArgs e)
@@ -84,25 +77,9 @@ namespace Manager_Hotel
             String manv = "3";//khóa chính không được trùng
             String tenDangNhap = "hoangthang";//tên đăng nhập để thêm
             String ChucVu = "chucvu";//Chức vụ nhân viên
-           /* using (SqlConnection sqlConnection = Connection.GetSqlConnection())
-            {
-                sqlConnection.Open();
-                sqlCommand = sqlConnection.CreateCommand();*/
-                String queryThemNV = "insert into NhanVien values ('" + manv + "','" + tenDangNhap + "','" + ChucVu + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
-                //modi.Command(queryThemNV);
-                //modi.loaddataTable(dataGirdViewDSNhanVien, query);
-            //sqlConnection.Close();
-            //}
+            String queryThemNV = "insert into NhanVien values ('" + manv + "','" + tenDangNhap + "','" + ChucVu + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
+            modi.conTable(querytableNv, queryThemNV, dataGirdViewDSNhanVien);
 
-            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
-            {
-                sqlConnection.Open();
-                sqlCommand = sqlConnection.CreateCommand();
-                sqlCommand.CommandText = queryThemNV;
-                sqlCommand.ExecuteNonQuery();
-                modi.loaddataTable(dataGirdViewDSNhanVien, query);
-                sqlConnection.Close();
-            }
         }
 
         private void btnDeleteNV_Click(object sender, EventArgs e)
@@ -110,19 +87,8 @@ namespace Manager_Hotel
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
             int maDelete= int .Parse(dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString());
-
             String queryDeleteNV = "delete from NhanVien where MaNV='" + maDelete + "'";
-            //modi.Command(queryDeleteNV);
-            //modi.loaddataTable(dataGirdViewDSNhanVien, query);
-            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
-            {
-                sqlConnection.Open();
-                sqlCommand = sqlConnection.CreateCommand();
-                sqlCommand.CommandText = queryDeleteNV;
-                sqlCommand.ExecuteNonQuery();
-                modi.loaddataTable(dataGirdViewDSNhanVien, query);
-                sqlConnection.Close();
-            }
+            modi.conTable(querytableNv, queryDeleteNV, dataGirdViewDSNhanVien);
         }
     }
 }

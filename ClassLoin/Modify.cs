@@ -58,8 +58,21 @@ namespace Manager_Hotel.ClassLoin
             //sqlCommand.ExecuteNonQuery(); // thực thi câu truy vấn
 
         }
+        //Dùng hiển thị trên data gird view : thêm , xóa ,sửa
+        public void conTable(String queryTable,String query, DataGridView Bang)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = sqlConnection.CreateCommand();
+                sqlCommand.CommandText = query;
+                sqlCommand.ExecuteNonQuery();
+                loaddataTable(Bang, queryTable);
+                sqlConnection.Close();
+            }
+        }
 
-        
+
         public void OpenConnection()
         {
             connection=Connection.GetSqlConnection();

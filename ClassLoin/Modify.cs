@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Data;
+
 namespace Manager_Hotel.ClassLoin
 {
     class Modify
@@ -12,6 +15,9 @@ namespace Manager_Hotel.ClassLoin
         {
         }
         SqlCommand sqlCommand;
+        SqlConnection connection;
+        SqlDataAdapter sqlDataAdapter=new SqlDataAdapter();
+        DataTable table = new DataTable();
         SqlDataReader dataReader; // doc dL trong ban
 
         public List<TaiKhoan> TaiKhoans(string query)
@@ -40,6 +46,24 @@ namespace Manager_Hotel.ClassLoin
                 sqlCommand.ExecuteNonQuery(); // thực thi câu truy vấn
                 sqlConnection.Close();
             }
+        }
+        public void loaddataTable(DataGridView BangNV,String query)
+        {
+            sqlCommand = connection.CreateCommand();//load dữ liệu lên ,tạo xử lý kết nối
+            sqlCommand.CommandText = query;//liên kết from nhân viên
+            sqlDataAdapter.SelectCommand = sqlCommand;
+            table.Clear();
+            sqlDataAdapter.Fill(table);
+            BangNV.DataSource = table;
+            //sqlCommand.ExecuteNonQuery(); // thực thi câu truy vấn
+
+        }
+
+        
+        public void OpenConnection()
+        {
+            connection=Connection.GetSqlConnection();
+            connection.Open();
         }
     }
     

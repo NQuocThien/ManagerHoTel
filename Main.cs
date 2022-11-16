@@ -92,6 +92,7 @@ namespace Manager_Hotel
         private void btnQuanLiNV_Click(object sender, EventArgs e)
         {
             QuanLyNhanVien qlnv = new QuanLyNhanVien();
+
             qlnv.ShowDialog();
         }
 

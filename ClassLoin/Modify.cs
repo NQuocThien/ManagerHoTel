@@ -37,6 +37,23 @@ namespace Manager_Hotel.ClassLoin
             }
             return taiKhoans;
         }
+        public string GetID(string squery)
+        {
+            string id = "";
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(squery, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    id = dataReader.GetString(0);
+                }
+                sqlConnection.Close();
+            }
+            return id;
+
+        }
         public void Command(string squery) // dùng để đăng ký tài khoản
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())

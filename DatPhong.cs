@@ -30,7 +30,7 @@ namespace Manager_Hotel
         private void btnChiTietDatPhong_Click(object sender, EventArgs e)
         {
             ChiTietDatPhong chitiet = new ChiTietDatPhong();
-            chitiet.ShowDialog();
+            //chitiet.ShowDialog();
         }
     }
 }

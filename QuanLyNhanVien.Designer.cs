@@ -32,8 +32,9 @@ namespace Manager_Hotel
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuanLyNhanVien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnDeleteNV = new System.Windows.Forms.Button();
             this.imageList_iCon = new System.Windows.Forms.ImageList(this.components);
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnQuyen = new System.Windows.Forms.Button();
             this.btnThemNhanVien = new System.Windows.Forms.Button();
@@ -63,8 +64,6 @@ namespace Manager_Hotel
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePickerNgayVaoLam = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -72,7 +71,8 @@ namespace Manager_Hotel
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGirdViewDSNhanVien = new System.Windows.Forms.DataGridView();
-            this.btnDeleteNV = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -107,6 +107,35 @@ namespace Manager_Hotel
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
+            // btnDeleteNV
+            // 
+            this.btnDeleteNV.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteNV.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteNV.ImageIndex = 2;
+            this.btnDeleteNV.ImageList = this.imageList_iCon;
+            this.btnDeleteNV.Location = new System.Drawing.Point(520, 140);
+            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDeleteNV.Name = "btnDeleteNV";
+            this.btnDeleteNV.Size = new System.Drawing.Size(342, 54);
+            this.btnDeleteNV.TabIndex = 5;
+            this.btnDeleteNV.Text = "Xóa Nhân Viên";
+            this.btnDeleteNV.UseVisualStyleBackColor = false;
+            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
+            // 
+            // imageList_iCon
+            // 
+            this.imageList_iCon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_iCon.ImageStream")));
+            this.imageList_iCon.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_iCon.Images.SetKeyName(0, "add.png");
+            this.imageList_iCon.Images.SetKeyName(1, "admini.png");
+            this.imageList_iCon.Images.SetKeyName(2, "close.png");
+            this.imageList_iCon.Images.SetKeyName(3, "reset-password.png");
+            this.imageList_iCon.Images.SetKeyName(4, "team-management.png");
+            this.imageList_iCon.Images.SetKeyName(5, "update.png");
+            // 
             // button7
             // 
             this.button7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -123,17 +152,6 @@ namespace Manager_Hotel
             this.button7.TabIndex = 4;
             this.button7.Text = "Đóng";
             this.button7.UseVisualStyleBackColor = false;
-            // 
-            // imageList_iCon
-            // 
-            this.imageList_iCon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_iCon.ImageStream")));
-            this.imageList_iCon.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_iCon.Images.SetKeyName(0, "add.png");
-            this.imageList_iCon.Images.SetKeyName(1, "admini.png");
-            this.imageList_iCon.Images.SetKeyName(2, "close.png");
-            this.imageList_iCon.Images.SetKeyName(3, "reset-password.png");
-            this.imageList_iCon.Images.SetKeyName(4, "team-management.png");
-            this.imageList_iCon.Images.SetKeyName(5, "update.png");
             // 
             // button6
             // 
@@ -311,7 +329,7 @@ namespace Manager_Hotel
             // 
             // dateNgaySinh
             // 
-            this.dateNgaySinh.CustomFormat = "yyyy-MM-dd";
+            this.dateNgaySinh.CustomFormat = "MM/dd/yyyy";
             this.dateNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgaySinh.Location = new System.Drawing.Point(32, 383);
@@ -441,12 +459,12 @@ namespace Manager_Hotel
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txtChucVu);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.dateTimePickerNgayVaoLam);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txtTenDangNhap);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(0, 246);
@@ -461,7 +479,7 @@ namespace Manager_Hotel
             // txtChucVu
             // 
             this.txtChucVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChucVu.Location = new System.Drawing.Point(46, 206);
+            this.txtChucVu.Location = new System.Drawing.Point(27, 206);
             this.txtChucVu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtChucVu.Name = "txtChucVu";
             this.txtChucVu.Size = new System.Drawing.Size(298, 35);
@@ -481,7 +499,7 @@ namespace Manager_Hotel
             // 
             // dateTimePickerNgayVaoLam
             // 
-            this.dateTimePickerNgayVaoLam.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerNgayVaoLam.CustomFormat = "MM/dd/yyyy";
             this.dateTimePickerNgayVaoLam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayVaoLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNgayVaoLam.Location = new System.Drawing.Point(45, 288);
@@ -498,30 +516,9 @@ namespace Manager_Hotel
             this.label5.Location = new System.Drawing.Point(22, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 29);
+            this.label5.Size = new System.Drawing.Size(109, 29);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Loại Nhân Viên";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(22, 62);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(183, 29);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tên Đăng Nhập";
-            // 
-            // txtTenDangNhap
-            // 
-            this.txtTenDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDangNhap.Location = new System.Drawing.Point(45, 103);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(298, 35);
-            this.txtTenDangNhap.TabIndex = 1;
+            this.label5.Text = "Mật khẩu";
             // 
             // groupBox2
             // 
@@ -608,23 +605,26 @@ namespace Manager_Hotel
             this.dataGirdViewDSNhanVien.TabIndex = 0;
             this.dataGirdViewDSNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGirdViewDSNhanVien_CellContentClick);
             // 
-            // btnDeleteNV
+            // textBox1
             // 
-            this.btnDeleteNV.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteNV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteNV.ImageIndex = 2;
-            this.btnDeleteNV.ImageList = this.imageList_iCon;
-            this.btnDeleteNV.Location = new System.Drawing.Point(520, 140);
-            this.btnDeleteNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDeleteNV.Name = "btnDeleteNV";
-            this.btnDeleteNV.Size = new System.Drawing.Size(342, 54);
-            this.btnDeleteNV.TabIndex = 5;
-            this.btnDeleteNV.Text = "Xóa Nhân Viên";
-            this.btnDeleteNV.UseVisualStyleBackColor = false;
-            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(27, 100);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(298, 35);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label4.Location = new System.Drawing.Point(17, 45);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(119, 29);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Tài khoản";
             // 
             // QuanLyNhanVien
             // 
@@ -637,7 +637,6 @@ namespace Manager_Hotel
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "QuanLyNhanVien";
             this.Text = "QuanLyNhanVien";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuanLyNhanVien_Load);
             this.groupBox1.ResumeLayout(false);
@@ -680,8 +679,6 @@ namespace Manager_Hotel
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
@@ -704,5 +701,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.DataGridView dataGirdViewDSNhanVien;
         private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.Button btnDeleteNV;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
     }
 }

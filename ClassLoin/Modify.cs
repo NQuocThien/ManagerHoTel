@@ -47,6 +47,17 @@ namespace Manager_Hotel.ClassLoin
                 sqlConnection.Close();
             }
         }
+        public DataTable GetDataTable(string squery)
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(squery, sqlConnection);
+                DataTable dt = new DataTable();
+                dt.Load(sqlCommand.ExecuteReader());
+                return dt;
+            }
+        }
         public void loaddataTable(DataGridView BangNV,String query)
         {
             sqlCommand = connection.CreateCommand();//load dữ liệu lên ,tạo xử lý kết nối

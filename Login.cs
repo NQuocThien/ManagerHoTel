@@ -36,9 +36,10 @@ namespace Manager_Hotel
                 string squery = "select * from TaiKhoan where TenDangNhap= '" + tenTK + "' and MatKhau = '"+matKhau+"'";
                 if(modify.TaiKhoans(squery).Count > 0 )
                 {
+                    this.Hide();
                     Main main = new Main();
                     main.ShowDialog();
-                    this.Close();
+                    
                 }
                 else
                 {
@@ -65,6 +66,11 @@ namespace Manager_Hotel
         {
             DangKy dk = new DangKy();
             dk.ShowDialog();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -487,7 +487,6 @@ namespace Manager_Hotel
             this.Controls.Add(this.btnNhanPhong);
             this.Name = "Main";
             this.Text = "Quản Lý Khách Sạn";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);

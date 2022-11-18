@@ -46,8 +46,11 @@ namespace Manager_Hotel
             this.dateNhan = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.dateTra = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.dateSinh = new System.Windows.Forms.DateTimePicker();
             this.cbBoxQuocTich = new System.Windows.Forms.ComboBox();
@@ -59,13 +62,10 @@ namespace Manager_Hotel
             this.txtSoDem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -230,6 +230,20 @@ namespace Manager_Hotel
             this.panel1.Size = new System.Drawing.Size(1346, 44);
             this.panel1.TabIndex = 26;
             // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.ImageIndex = 4;
+            this.label14.ImageList = this.imageList_Icon;
+            this.label14.Location = new System.Drawing.Point(21, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(250, 44);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Chi Tiết Đặt Phòng ";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // dateTra
             // 
             this.dateTra.CustomFormat = "dd/MM/yyyy";
@@ -270,6 +284,34 @@ namespace Manager_Hotel
             this.groupBox4.TabIndex = 24;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin khách hàng";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.ImageIndex = 1;
+            this.button3.ImageList = this.imageList_Icon;
+            this.button3.Location = new System.Drawing.Point(408, 369);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(232, 42);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Xóa khách hàng";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.ImageIndex = 3;
+            this.button2.ImageList = this.imageList_Icon;
+            this.button2.Location = new System.Drawing.Point(33, 369);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(250, 42);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Cập nhật khách hàng";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // txtDiaChi
             // 
@@ -395,6 +437,20 @@ namespace Manager_Hotel
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin nhận phòng";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.ImageIndex = 2;
+            this.button1.ImageList = this.imageList_Icon;
+            this.button1.Location = new System.Drawing.Point(47, 432);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(213, 40);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Lưu thay đổi";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -416,20 +472,6 @@ namespace Manager_Hotel
             this.label1.TabIndex = 1;
             this.label1.Text = "Ngày nhận:";
             // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label14.ImageIndex = 4;
-            this.label14.ImageList = this.imageList_Icon;
-            this.label14.Location = new System.Drawing.Point(21, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(250, 44);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Chi Tiết Đặt Phòng ";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -444,49 +486,6 @@ namespace Manager_Hotel
             this.button4.TabIndex = 25;
             this.button4.Text = "Đóng";
             this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageIndex = 1;
-            this.button3.ImageList = this.imageList_Icon;
-            this.button3.Location = new System.Drawing.Point(408, 369);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 42);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Xóa khách hàng";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 3;
-            this.button2.ImageList = this.imageList_Icon;
-            this.button2.Location = new System.Drawing.Point(33, 369);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 42);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Cập nhật khách hàng";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 2;
-            this.button1.ImageList = this.imageList_Icon;
-            this.button1.Location = new System.Drawing.Point(47, 432);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(213, 40);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Lưu thay đổi";
-            this.button1.UseVisualStyleBackColor = false;
-//            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ChiTietDatPhong
             // 

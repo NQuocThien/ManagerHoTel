@@ -23,8 +23,9 @@ namespace Manager_Hotel
 
         private void btnChiTietDatPhong_Click(object sender, EventArgs e)
         {
-            /*ChiTietDatPhong chitiet = new ChiTietDatPhong();*/
-            //chitiet.ShowDialog();
+            ChiTietDatPhong chitiet = new ChiTietDatPhong();
+            chitiet.ShowDialog();
+            this.Close();
         }
 
         private void btnDatPhong_Click(object sender, EventArgs e)
@@ -164,6 +165,43 @@ namespace Manager_Hotel
                 MessageBox.Show("Lỗi");
             }
         }
+        private void xoatrang()
+        {
+            txtHoTen.Clear();
+            txtCMND.Clear();
+            cbBoxLoaiKhachHang.SelectedIndex = -1;
+            txtSoDienThoai.Clear();
+            cbBoxGioiTinh.SelectedIndex = -1;
+            cbBoxQuocTich.SelectedIndex = -1;
+            txtDiaChi.Clear();
+            udSoDem.Value = 0;
+            cbLoaiPhong.Focus();
 
+        }
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            xoatrang();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Main m = new Main();
+            m.Show();
+        }
+
+        private void btnTimKiemKH_Click(object sender, EventArgs e)
+        {
+            string socm = txtTimKiemCMND_KH.Text;
+         
+            string squery_cmnd = "select * from KhachHang kh where kh.CMND = '" + socm + "'";
+            dataGridViewDSDatPhong.DataSource = modify.GetDataTable(squery_cmnd);
+
+        }
+
+        private void btnHuyTK_Click(object sender, EventArgs e)
+        {
+            Load_gvDSDatPhong();
+        }
     }
 }

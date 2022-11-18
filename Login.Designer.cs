@@ -33,14 +33,14 @@ namespace Manager_Hotel
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblDangKy = new System.Windows.Forms.LinkLabel();
+            this.lblQuenMK = new System.Windows.Forms.LinkLabel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblQuenMK = new System.Windows.Forms.LinkLabel();
-            this.lblDangKy = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,6 +95,31 @@ namespace Manager_Hotel
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(435, 450);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // lblDangKy
+            // 
+            this.lblDangKy.AutoSize = true;
+            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDangKy.Location = new System.Drawing.Point(284, 389);
+            this.lblDangKy.Name = "lblDangKy";
+            this.lblDangKy.Size = new System.Drawing.Size(69, 20);
+            this.lblDangKy.TabIndex = 6;
+            this.lblDangKy.TabStop = true;
+            this.lblDangKy.Text = "Đăng Ký";
+            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
+            // 
+            // lblQuenMK
+            // 
+            this.lblQuenMK.AutoSize = true;
+            this.lblQuenMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuenMK.Location = new System.Drawing.Point(61, 389);
+            this.lblQuenMK.Name = "lblQuenMK";
+            this.lblQuenMK.Size = new System.Drawing.Size(120, 20);
+            this.lblQuenMK.TabIndex = 6;
+            this.lblQuenMK.TabStop = true;
+            this.lblQuenMK.Text = "Quên Mật Khẩu";
+            this.lblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMK_LinkClicked);
             // 
             // txtPass
             // 
@@ -160,30 +185,6 @@ namespace Manager_Hotel
             this.label1.Size = new System.Drawing.Size(155, 37);
             this.label1.TabIndex = 4;
             this.label1.Text = "Đăng Nhập";
-            // 
-            // lblQuenMK
-            // 
-            this.lblQuenMK.AutoSize = true;
-            this.lblQuenMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuenMK.Location = new System.Drawing.Point(61, 389);
-            this.lblQuenMK.Name = "lblQuenMK";
-            this.lblQuenMK.Size = new System.Drawing.Size(120, 20);
-            this.lblQuenMK.TabIndex = 6;
-            this.lblQuenMK.TabStop = true;
-            this.lblQuenMK.Text = "Quên Mật Khẩu";
-            this.lblQuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblQuenMK_LinkClicked);
-            // 
-            // lblDangKy
-            // 
-            this.lblDangKy.AutoSize = true;
-            this.lblDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDangKy.Location = new System.Drawing.Point(284, 389);
-            this.lblDangKy.Name = "lblDangKy";
-            this.lblDangKy.Size = new System.Drawing.Size(69, 20);
-            this.lblDangKy.TabIndex = 6;
-            this.lblDangKy.TabStop = true;
-            this.lblDangKy.Text = "Đăng Ký";
-            this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
             // 
             // Login
             // 

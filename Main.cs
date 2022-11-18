@@ -55,16 +55,19 @@ namespace Manager_Hotel
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Login lg = new Login();
-            lg.ShowDialog();
             
+            Login lg = new Login();
+            lg.Show();
+            this.Close();
+
         }
 
         private void btnDatPhong_Click(object sender, EventArgs e)
         {
             DatPhong dp = new DatPhong();
             dp.ShowDialog();
+            this.Hide();
+
         }
 
         private void btnNhanPhong_Click(object sender, EventArgs e)

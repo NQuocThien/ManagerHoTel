@@ -56,25 +56,26 @@ namespace Manager_Hotel
         {
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
-            
-            //txtTenDangNhap.Text = dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString();
-            txtChucVu.Text = dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString();
-            txtHoTen.Text = dataGirdViewDSNhanVien.Rows[i].Cells[2].Value.ToString();
-            txtCMND.Text = dataGirdViewDSNhanVien.Rows[i].Cells[3].Value.ToString();
-            comboBoxGioiTinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[4].Value.ToString();
-            dateNgaySinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[5].Value.ToString();
-            txtSDT.Text = dataGirdViewDSNhanVien.Rows[i].Cells[6].Value.ToString();
-            txtDiaChi.Text = dataGirdViewDSNhanVien.Rows[i].Cells[7].Value.ToString();
-            dateTimePickerNgayVaoLam.Text= dataGirdViewDSNhanVien.Rows[i].Cells[8].Value.ToString();
+
+            txtTenTK.Text = dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString();
+            comboBoxChucVu.Text = dataGirdViewDSNhanVien.Rows[i].Cells[2].Value.ToString();
+            txtHoTen.Text = dataGirdViewDSNhanVien.Rows[i].Cells[3].Value.ToString();
+            txtCMND.Text = dataGirdViewDSNhanVien.Rows[i].Cells[4].Value.ToString();
+            comboBoxGioiTinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[5].Value.ToString();
+            dateNgaySinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[6].Value.ToString();
+            txtSDT.Text = dataGirdViewDSNhanVien.Rows[i].Cells[7].Value.ToString();
+            txtDiaChi.Text = dataGirdViewDSNhanVien.Rows[i].Cells[8].Value.ToString();
+            dateTimePickerNgayVaoLam.Text = dataGirdViewDSNhanVien.Rows[i].Cells[9].Value.ToString();
         }
 
         private void btnCapNhatNhanVien_Click(object sender, EventArgs e)
         {
-          
+
+
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
-           
-           String query1= "update NhanVien Set ChucVu=N'" + txtChucVu.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='" + dateTimePickerNgayVaoLam.Text + "' where MaNV='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
+
+            String query1 = "update NhanVien Set TenDangNhap='" + txtTenTK.Text + "',ChucVu=N'" + txtPass.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='" + dateTimePickerNgayVaoLam.Text + "' where MaNV='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
             modi.Command(query1);
             loadGirdView();
             //modi.conTable(querytableNv, query1, dataGirdViewDSNhanVien);
@@ -83,49 +84,63 @@ namespace Manager_Hotel
         String idNhanVien = "E";
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
-            
-            
+
             String queryThemNV;
+            try
+            {
+                string query_tk = "insert into TaiKhoan values ('" + txtTenTK.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "')";
+                modi.Command(query_tk);
+            }
+            catch (Exception ex)
+            {
+
+            }
             while (true)
             {
-                
-                try {
+
+                try
+                {
                     int ID = rd.Next(100, 1000);
-                    idNhanVien+=ID;
+                    idNhanVien += ID;
                     String ChucVu = comboBoxGioiTinh.Text;//Chức vụ nhân viên
-                    queryThemNV = "insert into NhanVien values ('" + idNhanVien + "','" + ChucVu + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
+                    queryThemNV = "insert into NhanVien values ('" + idNhanVien + "','" + txtTenTK.Text + "','" + ChucVu + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
                     modi.Command(queryThemNV);
                     break;
 
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     idNhanVien = "E";
                 }
 
             }
             loadGirdView();
-           //modi.conTable(querytableNv, queryThemNV, dataGirdViewDSNhanVien);
+            //modi.conTable(querytableNv, queryThemNV, dataGirdViewDSNhanVien);
 
 
         }
 
         private void btnDeleteNV_Click(object sender, EventArgs e)
         {
-            
-            
-            
+
+
+
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
-            String maDelete= dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString();
-            String queryDeleteNV = "delete from NhanVien where MaNV='" + maDelete + "'";
-            //String queryDeleteTk = "delete from TaiKhoan where TenDangNhap='" + maDelete + "'";
-            //String queryDeleteTKNV = "delete from NhanVien where MaNV='" + dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString() + "'";
-            //modi.Command(queryDeleteTk);
-            //modi.Command(queryDeleteTKNV);
-            //modi.conTable(querytableNv, queryDeleteNV, dataGirdViewDSNhanVien);
+            String maDelete = dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString();
+            String queryDeleteNV = "delete from NhanVien where TenDangNhap='" + maDelete + "'";
+            String queryDeleteTK = "delete from TaiKhoan where TenDangNhap='" + maDelete + "'";
+            modi.Command(queryDeleteTK);
             modi.Command(queryDeleteNV);
             loadGirdView();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            String querySearch = "select * From NhanVien Where MaNV like '%" + txtSearch.Text + "%'or HoTen like '%" + txtSearch.Text + "%'or CMNDNhanVien like '%" + txtSearch.Text + "%'or SDT like '%" + txtSearch.Text + "%' ";
+            
+            dataGirdViewDSNhanVien.DataSource = modi.GetDataTable(querySearch);
         }
     }
 }

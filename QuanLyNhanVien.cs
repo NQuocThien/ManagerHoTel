@@ -183,5 +183,9 @@ namespace Manager_Hotel
             }
         }
 
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

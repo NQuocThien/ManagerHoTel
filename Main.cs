@@ -116,5 +116,12 @@ namespace Manager_Hotel
         {
             
         }
+
+        private void btnQLDichVu_Click(object sender, EventArgs e)
+        {
+            QuanLiDichVu s = new QuanLiDichVu();
+            s.ShowDialog();
+
+        }
     }
 }

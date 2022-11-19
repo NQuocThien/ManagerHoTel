@@ -8,7 +8,7 @@ namespace Manager_Hotel.ClassLoin
 {
     class Connection
     {
-        private static string stringConnection = "Data Source=QUOCTHIEN;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True";
+        private static string stringConnection = "Data Source=TRUONGTHINH;Initial Catalog=QUANLYKHACHSAN;Integrated Security=True";
 
         public static SqlConnection GetSqlConnection()
         {

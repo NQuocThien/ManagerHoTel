@@ -21,7 +21,7 @@ namespace Manager_Hotel
         }
 
         //SqlCommand sqlCommand;
-        String querytableNv = "select * from NhanVien";
+        String querytableNv = "select * from TaiKhoan tk,NhanVien nv where tk.TenDangNhap=nv.TenDangNhap";
         ClassLoin.Modify modi = new ClassLoin.Modify();
 
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
@@ -30,7 +30,24 @@ namespace Manager_Hotel
             //txtTenDangNhap.Enabled = false;
             //txtChucVu.Enabled = false;
             modi.OpenConnection();
+            //andl();
+            txtTenTK.Enabled = false;
 
+
+
+
+
+        }
+
+        public void andl()
+        {
+            dataGirdViewDSNhanVien.Columns[0].Visible = false;
+            dataGirdViewDSNhanVien.Columns[1].Visible = false;
+            dataGirdViewDSNhanVien.Columns[2].Visible = false;
+            dataGirdViewDSNhanVien.Columns[3].Visible = false;
+            dataGirdViewDSNhanVien.Columns[8].Visible = false;
+            dataGirdViewDSNhanVien.Columns[9].Visible = false;
+            dataGirdViewDSNhanVien.Columns[12].Visible = false;
         }
         public void loadGirdView()
         {
@@ -57,77 +74,28 @@ namespace Manager_Hotel
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
 
-            txtTenTK.Text = dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString();
-            comboBoxChucVu.Text = dataGirdViewDSNhanVien.Rows[i].Cells[2].Value.ToString();
-            txtHoTen.Text = dataGirdViewDSNhanVien.Rows[i].Cells[3].Value.ToString();
-            txtCMND.Text = dataGirdViewDSNhanVien.Rows[i].Cells[4].Value.ToString();
-            comboBoxGioiTinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[5].Value.ToString();
-            dateNgaySinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[6].Value.ToString();
-            txtSDT.Text = dataGirdViewDSNhanVien.Rows[i].Cells[7].Value.ToString();
-            txtDiaChi.Text = dataGirdViewDSNhanVien.Rows[i].Cells[8].Value.ToString();
-            dateTimePickerNgayVaoLam.Text = dataGirdViewDSNhanVien.Rows[i].Cells[9].Value.ToString();
+            txtTenTK.Text = dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString();
+            txtPass.Text = dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString();
+            txtEmail.Text= dataGirdViewDSNhanVien.Rows[i].Cells[2].Value.ToString();
+            //3,4
+            comboBoxChucVu.Text = dataGirdViewDSNhanVien.Rows[i].Cells[5].Value.ToString();
+            txtHoTen.Text = dataGirdViewDSNhanVien.Rows[i].Cells[6].Value.ToString();
+            txtCMND.Text = dataGirdViewDSNhanVien.Rows[i].Cells[7].Value.ToString();
+            comboBoxGioiTinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[8].Value.ToString();
+            dateNgaySinh.Text = dataGirdViewDSNhanVien.Rows[i].Cells[9].Value.ToString();
+            txtSDT.Text = dataGirdViewDSNhanVien.Rows[i].Cells[10].Value.ToString();
+            txtDiaChi.Text = dataGirdViewDSNhanVien.Rows[i].Cells[11].Value.ToString();
+            dateTimePickerNgayVaoLam.Text = dataGirdViewDSNhanVien.Rows[i].Cells[12].Value.ToString();
         }
 
-        private void btnCapNhatNhanVien_Click(object sender, EventArgs e)
-        {
-
-
-            int i;
-            i = dataGirdViewDSNhanVien.CurrentRow.Index;
-
-            String query1 = "update NhanVien Set TenDangNhap='" + txtTenTK.Text + "',ChucVu=N'" + txtPass.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='" + dateTimePickerNgayVaoLam.Text + "' where MaNV='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
-            modi.Command(query1);
-            loadGirdView();
-            //modi.conTable(querytableNv, query1, dataGirdViewDSNhanVien);
-        }
         Random rd = new Random();
         String idNhanVien = "E";
-        private void btnThemNhanVien_Click(object sender, EventArgs e)
-        {
-
-            String queryThemNV;
-            try
-            {
-                string query_tk = "insert into TaiKhoan values ('" + txtTenTK.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "')";
-                modi.Command(query_tk);
-            }
-            catch (Exception ex)
-            {
-
-            }
-            while (true)
-            {
-
-                try
-                {
-                    int ID = rd.Next(100, 1000);
-                    idNhanVien += ID;
-                    String ChucVu = comboBoxGioiTinh.Text;//Chức vụ nhân viên
-                    queryThemNV = "insert into NhanVien values ('" + idNhanVien + "','" + txtTenTK.Text + "','" + ChucVu + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
-                    modi.Command(queryThemNV);
-                    break;
-
-                }
-                catch (Exception ex)
-                {
-                    idNhanVien = "E";
-                }
-
-            }
-            loadGirdView();
-            //modi.conTable(querytableNv, queryThemNV, dataGirdViewDSNhanVien);
-
-
-        }
 
         private void btnDeleteNV_Click(object sender, EventArgs e)
         {
-
-
-
             int i;
             i = dataGirdViewDSNhanVien.CurrentRow.Index;
-            String maDelete = dataGirdViewDSNhanVien.Rows[i].Cells[1].Value.ToString();
+            String maDelete = dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString();
             String queryDeleteNV = "delete from NhanVien where TenDangNhap='" + maDelete + "'";
             String queryDeleteTK = "delete from TaiKhoan where TenDangNhap='" + maDelete + "'";
             modi.Command(queryDeleteTK);
@@ -142,5 +110,78 @@ namespace Manager_Hotel
             
             dataGirdViewDSNhanVien.DataSource = modi.GetDataTable(querySearch);
         }
+
+        private void btnbtnThucHien_Click(object sender, EventArgs e)
+        {
+            if (radioBtcapnhatNV.Checked == true)
+            {
+                int i;
+                i = dataGirdViewDSNhanVien.CurrentRow.Index;
+
+                String query1 = "update NhanVien Set ChucVu=N'" + comboBoxChucVu.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='" + dateTimePickerNgayVaoLam.Text + "' where TenDangNhap='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
+                String query2 = "update TaiKhoan set MatKhau='" + txtPass.Text + "',Email='" + txtEmail.Text + "'where TenDangNhap='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
+                modi.Command(query2);
+                modi.Command(query1);
+                loadGirdView();
+            }
+            else if(radioBtAddNV.Checked == true)
+            {
+                
+                String queryThemNV;
+                try
+                {
+                    string query_tk = "insert into TaiKhoan values ('" + txtTenTK.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "')";
+                    modi.Command(query_tk);
+                }
+                catch (Exception ex)
+                {
+
+                }
+                while (true)
+                {
+
+                    try
+                    {
+                        int ID = rd.Next(100, 1000);
+                        idNhanVien += ID;
+                        queryThemNV = "insert into NhanVien values ('" + idNhanVien + "','" + txtTenTK.Text + "','" + comboBoxGioiTinh.Text + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
+                        modi.Command(queryThemNV);
+                        break;
+
+                    }
+                    catch (Exception ex)
+                    {
+                        idNhanVien = "E";
+                    }
+
+                }
+                loadGirdView();
+            }
+        }
+
+        private void radioBtcapnhatNV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioBtcapnhatNV.Checked == true)
+            {
+                txtTenTK.Enabled = false;
+            }
+        }
+
+        private void radioBtAddNV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioBtAddNV.Checked == true)
+            {
+                txtTenTK.Clear();
+                txtPass.Clear();
+                txtEmail.Clear();
+                txtHoTen.Clear();
+                txtCMND.Clear();
+                txtSDT.Clear();
+                txtDiaChi.Clear();
+
+                txtTenTK.Enabled = true;
+            }
+        }
+
     }
 }

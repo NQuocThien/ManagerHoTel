@@ -30,7 +30,7 @@ namespace Manager_Hotel
             //txtTenDangNhap.Enabled = false;
             //txtChucVu.Enabled = false;
             modi.OpenConnection();
-            //andl();
+            andl();
             txtTenTK.Enabled = false;
 
 
@@ -98,8 +98,8 @@ namespace Manager_Hotel
             String maDelete = dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString();
             String queryDeleteNV = "delete from NhanVien where TenDangNhap='" + maDelete + "'";
             String queryDeleteTK = "delete from TaiKhoan where TenDangNhap='" + maDelete + "'";
-            modi.Command(queryDeleteTK);
             modi.Command(queryDeleteNV);
+            modi.Command(queryDeleteTK);
             loadGirdView();
         }
 

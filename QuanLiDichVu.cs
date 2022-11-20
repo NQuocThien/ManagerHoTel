@@ -24,6 +24,12 @@ namespace Manager_Hotel
             dataGridViewDV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDV.DataSource = modify.GetDataTable(querytableDV);
 
+            int n = dataGridViewDV.Width / 4;
+            dataGridViewDV.Columns[0].Width = n;
+            dataGridViewDV.Columns[1].Width = n;
+            dataGridViewDV.Columns[2].Width = n;
+            dataGridViewDV.Columns[3].Width = n;
+
         }
         private void btnCapNhatDichVu_Click(object sender, EventArgs e)
         {
@@ -85,6 +91,7 @@ namespace Manager_Hotel
         private void dataGridViewDV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int i;
+
             i = dataGridViewDV.CurrentRow.Index;
 
             txtMaDV.Text = dataGridViewDV.Rows[i].Cells[0].Value.ToString();

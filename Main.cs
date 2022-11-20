@@ -14,14 +14,18 @@ namespace Manager_Hotel
     {
         bool hiden = true;
         int pw;
-        public Main()
+        private string tenDangNhap = "";
+        public Main(string tenDangNhap)
         {
             InitializeComponent();
             pw = panelSlider.Width;
             panelSlider.Width = 0;
+            this.tenDangNhap = tenDangNhap;
         }
 
-       
+        public Main()
+        {
+        }
 
         private void btnSlider_Click_1(object sender, EventArgs e)
         {
@@ -95,7 +99,6 @@ namespace Manager_Hotel
         private void btnQuanLiNV_Click(object sender, EventArgs e)
         {
             QuanLyNhanVien qlnv = new QuanLyNhanVien();
-
             qlnv.ShowDialog();
         }
 
@@ -122,6 +125,12 @@ namespace Manager_Hotel
             QuanLiDichVu s = new QuanLiDichVu();
             s.ShowDialog();
 
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            ThongTinTaiKhoan tk = new ThongTinTaiKhoan(tenDangNhap);
+            tk.ShowDialog();
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Manager_Hotel
                 if(modify.TaiKhoans(squery).Count > 0 )
                 {
                     this.Hide();
-                    Main main = new Main();
+                    Main main = new Main(txtUserName.Text);
                     main.ShowDialog();
                     
                 }

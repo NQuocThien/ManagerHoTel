@@ -35,10 +35,10 @@ namespace Manager_Hotel
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.radioBtAddNV = new System.Windows.Forms.RadioButton();
             this.radioBtcapnhatNV = new System.Windows.Forms.RadioButton();
-            this.btnDeleteNV = new System.Windows.Forms.Button();
-            this.imageList_iCon = new System.Windows.Forms.ImageList(this.components);
-            this.btnDong = new System.Windows.Forms.Button();
             this.btnThucHien = new System.Windows.Forms.Button();
+            this.imageList_iCon = new System.Windows.Forms.ImageList(this.components);
+            this.btnDeleteNV = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -113,9 +113,9 @@ namespace Manager_Hotel
             this.groupBox6.Controls.Add(this.radioBtcapnhatNV);
             this.groupBox6.Controls.Add(this.btnThucHien);
             this.groupBox6.Location = new System.Drawing.Point(34, 24);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(506, 99);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
@@ -125,7 +125,7 @@ namespace Manager_Hotel
             // 
             this.radioBtAddNV.AutoSize = true;
             this.radioBtAddNV.Location = new System.Drawing.Point(363, 22);
-            this.radioBtAddNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioBtAddNV.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtAddNV.Name = "radioBtAddNV";
             this.radioBtAddNV.Size = new System.Drawing.Size(139, 24);
             this.radioBtAddNV.TabIndex = 1;
@@ -138,7 +138,7 @@ namespace Manager_Hotel
             // 
             this.radioBtcapnhatNV.AutoSize = true;
             this.radioBtcapnhatNV.Location = new System.Drawing.Point(26, 22);
-            this.radioBtcapnhatNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioBtcapnhatNV.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtcapnhatNV.Name = "radioBtcapnhatNV";
             this.radioBtcapnhatNV.Size = new System.Drawing.Size(164, 24);
             this.radioBtcapnhatNV.TabIndex = 0;
@@ -146,51 +146,6 @@ namespace Manager_Hotel
             this.radioBtcapnhatNV.Text = "Cập nhật nhân viên";
             this.radioBtcapnhatNV.UseVisualStyleBackColor = true;
             this.radioBtcapnhatNV.CheckedChanged += new System.EventHandler(this.radioBtcapnhatNV_CheckedChanged);
-            // 
-            // btnDeleteNV
-            // 
-            this.btnDeleteNV.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteNV.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteNV.ImageIndex = 2;
-            this.btnDeleteNV.ImageList = this.imageList_iCon;
-            this.btnDeleteNV.Location = new System.Drawing.Point(337, 140);
-            this.btnDeleteNV.Name = "btnDeleteNV";
-            this.btnDeleteNV.Size = new System.Drawing.Size(228, 35);
-            this.btnDeleteNV.TabIndex = 5;
-            this.btnDeleteNV.Text = "Xóa Nhân Viên";
-            this.btnDeleteNV.UseVisualStyleBackColor = false;
-            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
-            // 
-            // imageList_iCon
-            // 
-            this.imageList_iCon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_iCon.ImageStream")));
-            this.imageList_iCon.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_iCon.Images.SetKeyName(0, "add.png");
-            this.imageList_iCon.Images.SetKeyName(1, "admini.png");
-            this.imageList_iCon.Images.SetKeyName(2, "close.png");
-            this.imageList_iCon.Images.SetKeyName(3, "reset-password.png");
-            this.imageList_iCon.Images.SetKeyName(4, "team-management.png");
-            this.imageList_iCon.Images.SetKeyName(5, "update.png");
-            // 
-            // btnDong
-            // 
-            this.btnDong.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.ImageIndex = 2;
-            this.btnDong.ImageList = this.imageList_iCon;
-            this.btnDong.Location = new System.Drawing.Point(12, 141);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(228, 35);
-            this.btnDong.TabIndex = 4;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = false;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // btnThucHien
             // 
@@ -210,11 +165,58 @@ namespace Manager_Hotel
             this.btnThucHien.UseVisualStyleBackColor = false;
             this.btnThucHien.Click += new System.EventHandler(this.btnbtnThucHien_Click);
             // 
+            // imageList_iCon
+            // 
+            this.imageList_iCon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_iCon.ImageStream")));
+            this.imageList_iCon.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_iCon.Images.SetKeyName(0, "add.png");
+            this.imageList_iCon.Images.SetKeyName(1, "admini.png");
+            this.imageList_iCon.Images.SetKeyName(2, "close.png");
+            this.imageList_iCon.Images.SetKeyName(3, "reset-password.png");
+            this.imageList_iCon.Images.SetKeyName(4, "team-management.png");
+            this.imageList_iCon.Images.SetKeyName(5, "update.png");
+            // 
+            // btnDeleteNV
+            // 
+            this.btnDeleteNV.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnDeleteNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteNV.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnDeleteNV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteNV.ImageIndex = 2;
+            this.btnDeleteNV.ImageList = this.imageList_iCon;
+            this.btnDeleteNV.Location = new System.Drawing.Point(337, 140);
+            this.btnDeleteNV.Name = "btnDeleteNV";
+            this.btnDeleteNV.Size = new System.Drawing.Size(228, 35);
+            this.btnDeleteNV.TabIndex = 5;
+            this.btnDeleteNV.Text = "Xóa Nhân Viên";
+            this.btnDeleteNV.UseVisualStyleBackColor = false;
+            this.btnDeleteNV.Click += new System.EventHandler(this.btnDeleteNV_Click);
+            // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDong.ImageIndex = 2;
+            this.btnDong.ImageList = this.imageList_iCon;
+            this.btnDong.Location = new System.Drawing.Point(12, 141);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(228, 35);
+            this.btnDong.TabIndex = 4;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1346, 41);
@@ -223,7 +225,7 @@ namespace Manager_Hotel
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.ImageIndex = 4;
             this.label2.ImageList = this.imageList_iCon;
@@ -474,7 +476,7 @@ namespace Manager_Hotel
             "Quản lý",
             "Nhân viên"});
             this.comboBoxChucVu.Location = new System.Drawing.Point(12, 210);
-            this.comboBoxChucVu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxChucVu.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxChucVu.Name = "comboBoxChucVu";
             this.comboBoxChucVu.Size = new System.Drawing.Size(199, 24);
             this.comboBoxChucVu.TabIndex = 15;
@@ -619,7 +621,7 @@ namespace Manager_Hotel
             this.dataGirdViewDSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGirdViewDSNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGirdViewDSNhanVien.Location = new System.Drawing.Point(3, 18);
-            this.dataGirdViewDSNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGirdViewDSNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.dataGirdViewDSNhanVien.Name = "dataGirdViewDSNhanVien";
             this.dataGirdViewDSNhanVien.RowHeadersWidth = 62;
             this.dataGirdViewDSNhanVien.RowTemplate.Height = 28;

@@ -23,9 +23,11 @@ namespace Manager_Hotel
 
         private void btnChiTietDatPhong_Click(object sender, EventArgs e)
         {
-            ChiTietDatPhong chitiet = new ChiTietDatPhong();
+            DataGridViewRow row = dataGridViewDSDatPhong.SelectedRows[0];
+            string maPhieuDP = row.Cells[0].Value.ToString();
+            ChiTietDatPhong chitiet = new ChiTietDatPhong(maPhieuDP);
             chitiet.ShowDialog();
-            this.Close();
+            Load_gvDSDatPhong();
         }
 
         private void btnDatPhong_Click(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace Manager_Hotel
 
             string HoTen = txtHoTen.Text;
             string CMND = txtCMND.Text;
-            string LoaiKH = cbLoaiPhong.Text;
+            string LoaiKH = cbBoxLoaiKhachHang.Text;
             string sdt = txtSoDienThoai.Text;
             string NgaySinh = dateSinh.Value.ToString("yyyy-MM-dd");
             string DiaChi = txtDiaChi.Text;
@@ -115,7 +117,7 @@ namespace Manager_Hotel
 
             }
 
-            while (true) // insert table phieu dat phong
+            while (true) 
             {
                 try
                 {
@@ -202,6 +204,22 @@ namespace Manager_Hotel
         private void btnHuyTK_Click(object sender, EventArgs e)
         {
             Load_gvDSDatPhong();
+        }
+
+        private void dataGridViewDSDatPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridViewDSDatPhong.SelectedRows[0];
+            string maPhieuDP = row.Cells[0].Value.ToString();
+            string squery_infor = "select lp.Maloai, lp.TenLoai, lp.SoNguoi, lp.DonGia from PhieuDatPhong pdp, Phong p, LoaiPhong lp where pdp.MaPhong = p.MaPhong and p.MaLoai = lp.Maloai and pdp.MaPhieuDP ='" + maPhieuDP + "'";
+            DataTable data = modify.GetDataTable(squery_infor);
+            DataTableReader tableReader = data.CreateDataReader();
+            while (tableReader.Read())
+            {
+                txtMaLoaiPhong.Text = tableReader.GetString(0);
+                txtTenLoaiPhong.Text = tableReader.GetString(1);
+                txtSoLuongNguoiToiDa.Text = tableReader.GetInt32(2) + "";
+                txtGia.Text = tableReader.GetInt32(3) + "";
+            }
         }
     }
 }

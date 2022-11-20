@@ -60,6 +60,7 @@ namespace Manager_Hotel
             this.label1 = new System.Windows.Forms.Label();
             this.dateNhan = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnHuyTK = new System.Windows.Forms.Button();
             this.btnTimKiemKH = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTimKiemCMND_KH = new System.Windows.Forms.TextBox();
@@ -84,7 +85,6 @@ namespace Manager_Hotel
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridViewDSDatPhong = new System.Windows.Forms.DataGridView();
             this.btnChiTietDatPhong = new System.Windows.Forms.Button();
-            this.btnHuyTK = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -250,6 +250,7 @@ namespace Manager_Hotel
             // 
             // txtGia
             // 
+            this.txtGia.Enabled = false;
             this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGia.Location = new System.Drawing.Point(14, 253);
             this.txtGia.Margin = new System.Windows.Forms.Padding(2);
@@ -270,6 +271,7 @@ namespace Manager_Hotel
             // 
             // txtSoLuongNguoiToiDa
             // 
+            this.txtSoLuongNguoiToiDa.Enabled = false;
             this.txtSoLuongNguoiToiDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuongNguoiToiDa.Location = new System.Drawing.Point(14, 183);
             this.txtSoLuongNguoiToiDa.Margin = new System.Windows.Forms.Padding(2);
@@ -301,6 +303,7 @@ namespace Manager_Hotel
             // 
             // txtTenLoaiPhong
             // 
+            this.txtTenLoaiPhong.Enabled = false;
             this.txtTenLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenLoaiPhong.Location = new System.Drawing.Point(14, 113);
             this.txtTenLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
@@ -310,6 +313,7 @@ namespace Manager_Hotel
             // 
             // txtMaLoaiPhong
             // 
+            this.txtMaLoaiPhong.Enabled = false;
             this.txtMaLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaLoaiPhong.Location = new System.Drawing.Point(14, 43);
             this.txtMaLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
@@ -446,6 +450,18 @@ namespace Manager_Hotel
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm khách hàng";
+            // 
+            // btnHuyTK
+            // 
+            this.btnHuyTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuyTK.Location = new System.Drawing.Point(377, 69);
+            this.btnHuyTK.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHuyTK.Name = "btnHuyTK";
+            this.btnHuyTK.Size = new System.Drawing.Size(97, 26);
+            this.btnHuyTK.TabIndex = 10;
+            this.btnHuyTK.Text = "Hủy";
+            this.btnHuyTK.UseVisualStyleBackColor = true;
+            this.btnHuyTK.Click += new System.EventHandler(this.btnHuyTK_Click);
             // 
             // btnTimKiemKH
             // 
@@ -721,6 +737,7 @@ namespace Manager_Hotel
             this.dataGridViewDSDatPhong.ReadOnly = true;
             this.dataGridViewDSDatPhong.Size = new System.Drawing.Size(517, 501);
             this.dataGridViewDSDatPhong.TabIndex = 3;
+            this.dataGridViewDSDatPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDSDatPhong_CellClick);
             // 
             // btnChiTietDatPhong
             // 
@@ -738,18 +755,6 @@ namespace Manager_Hotel
             this.btnChiTietDatPhong.Text = "Xem Chi Tiết";
             this.btnChiTietDatPhong.UseVisualStyleBackColor = false;
             this.btnChiTietDatPhong.Click += new System.EventHandler(this.btnChiTietDatPhong_Click);
-            // 
-            // btnHuyTK
-            // 
-            this.btnHuyTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuyTK.Location = new System.Drawing.Point(377, 69);
-            this.btnHuyTK.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHuyTK.Name = "btnHuyTK";
-            this.btnHuyTK.Size = new System.Drawing.Size(97, 26);
-            this.btnHuyTK.TabIndex = 10;
-            this.btnHuyTK.Text = "Hủy";
-            this.btnHuyTK.UseVisualStyleBackColor = true;
-            this.btnHuyTK.Click += new System.EventHandler(this.btnHuyTK_Click);
             // 
             // DatPhong
             // 

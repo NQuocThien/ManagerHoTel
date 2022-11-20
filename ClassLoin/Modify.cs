@@ -54,7 +54,7 @@ namespace Manager_Hotel.ClassLoin
             return id;
 
         }
-        public void Command(string squery) // dùng để đăng ký tài khoản
+        public void Command(string squery) // thêm xóa sửa
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
@@ -64,7 +64,7 @@ namespace Manager_Hotel.ClassLoin
                 sqlConnection.Close();
             }
         }
-        public DataTable GetDataTable(string squery)
+        public DataTable GetDataTable(string squery) // 
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
@@ -99,8 +99,6 @@ namespace Manager_Hotel.ClassLoin
                 sqlConnection.Close();
             }
         }
-
-
         public void OpenConnection()
         {
             connection=Connection.GetSqlConnection();

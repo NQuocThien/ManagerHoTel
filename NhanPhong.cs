@@ -46,5 +46,10 @@ namespace Manager_Hotel
             ltvNhanPhong.Columns.Add("Ngày Trả");
             ltvNhanPhong.Columns[5].Width = w;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

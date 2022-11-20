@@ -285,7 +285,7 @@ namespace Manager_Hotel
             this.btnThongKe.ImageList = this.imageListIMG;
             this.btnThongKe.Location = new System.Drawing.Point(627, 93);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(339, 167);
+            this.btnThongKe.Size = new System.Drawing.Size(339, 177);
             this.btnThongKe.TabIndex = 10;
             this.btnThongKe.Text = "Thống Kê Doanh Thu";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.BottomLeft;

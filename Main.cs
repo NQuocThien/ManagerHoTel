@@ -15,17 +15,15 @@ namespace Manager_Hotel
         bool hiden = true;
         int pw;
         private string tenDangNhap = "";
-        public Main(string tenDangNhap)
+        public Main()
         {
             InitializeComponent();
             pw = panelSlider.Width;
             panelSlider.Width = 0;
-            this.tenDangNhap = tenDangNhap;
+            this.tenDangNhap = Login.tenTK;
         }
 
-        public Main()
-        {
-        }
+       
 
         private void btnSlider_Click_1(object sender, EventArgs e)
         {

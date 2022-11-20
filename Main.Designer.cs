@@ -48,7 +48,6 @@ namespace Manager_Hotel
             this.btnQuanLiNV = new System.Windows.Forms.Button();
             this.btnQuanLiPhong = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
-            this.btnQuanLiDatPhong = new System.Windows.Forms.Button();
             this.btnQuyDinh = new System.Windows.Forms.Button();
             this.btnSDDVTT = new System.Windows.Forms.Button();
             this.btnQLDichVu = new System.Windows.Forms.Button();
@@ -254,9 +253,9 @@ namespace Manager_Hotel
             this.btnQuanLiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiNV.ImageIndex = 9;
             this.btnQuanLiNV.ImageList = this.imageListIMG;
-            this.btnQuanLiNV.Location = new System.Drawing.Point(802, 266);
+            this.btnQuanLiNV.Location = new System.Drawing.Point(802, 276);
             this.btnQuanLiNV.Name = "btnQuanLiNV";
-            this.btnQuanLiNV.Size = new System.Drawing.Size(164, 184);
+            this.btnQuanLiNV.Size = new System.Drawing.Size(164, 329);
             this.btnQuanLiNV.TabIndex = 8;
             this.btnQuanLiNV.Text = "Quản Lí Nhân Viên";
             this.btnQuanLiNV.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -269,9 +268,9 @@ namespace Manager_Hotel
             this.btnQuanLiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuanLiPhong.ImageIndex = 7;
             this.btnQuanLiPhong.ImageList = this.imageListIMG;
-            this.btnQuanLiPhong.Location = new System.Drawing.Point(627, 266);
+            this.btnQuanLiPhong.Location = new System.Drawing.Point(627, 276);
             this.btnQuanLiPhong.Name = "btnQuanLiPhong";
-            this.btnQuanLiPhong.Size = new System.Drawing.Size(169, 184);
+            this.btnQuanLiPhong.Size = new System.Drawing.Size(169, 329);
             this.btnQuanLiPhong.TabIndex = 9;
             this.btnQuanLiPhong.Text = "Quản Lí Phòng";
             this.btnQuanLiPhong.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -291,21 +290,6 @@ namespace Manager_Hotel
             this.btnThongKe.Text = "Thống Kê Doanh Thu";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnThongKe.UseVisualStyleBackColor = false;
-            // 
-            // btnQuanLiDatPhong
-            // 
-            this.btnQuanLiDatPhong.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnQuanLiDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLiDatPhong.ImageIndex = 6;
-            this.btnQuanLiDatPhong.ImageList = this.imageListIMG;
-            this.btnQuanLiDatPhong.Location = new System.Drawing.Point(627, 456);
-            this.btnQuanLiDatPhong.Name = "btnQuanLiDatPhong";
-            this.btnQuanLiDatPhong.Size = new System.Drawing.Size(339, 149);
-            this.btnQuanLiDatPhong.TabIndex = 11;
-            this.btnQuanLiDatPhong.Text = "Quản Lí Đặt Phòng ";
-            this.btnQuanLiDatPhong.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnQuanLiDatPhong.UseVisualStyleBackColor = false;
-            this.btnQuanLiDatPhong.Click += new System.EventHandler(this.btnQuanLiDatPhong_Click);
             // 
             // btnQuyDinh
             // 
@@ -478,7 +462,6 @@ namespace Manager_Hotel
             this.Controls.Add(this.btnQuanLiNV);
             this.Controls.Add(this.btnQuanLiPhong);
             this.Controls.Add(this.btnThongKe);
-            this.Controls.Add(this.btnQuanLiDatPhong);
             this.Controls.Add(this.btnQuyDinh);
             this.Controls.Add(this.btnSDDVTT);
             this.Controls.Add(this.btnQLDichVu);
@@ -511,7 +494,6 @@ namespace Manager_Hotel
         private System.Windows.Forms.ImageList imageListIMG;
         private System.Windows.Forms.Button btnQuanLiPhong;
         private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnQuanLiDatPhong;
         private System.Windows.Forms.Button btnQuyDinh;
         private System.Windows.Forms.Button btnSDDVTT;
         private System.Windows.Forms.Button btnQLDichVu;

@@ -19,9 +19,10 @@ namespace Manager_Hotel
             InitializeComponent();
         }
         Modify modify = new Modify();
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        public static string tenTK = ""
+;        private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string tenTK = txtUserName.Text;
+            tenTK = txtUserName.Text;
             string matKhau = txtPass.Text;
             if(tenTK.Trim() == "")
             {
@@ -37,7 +38,7 @@ namespace Manager_Hotel
                 if(modify.TaiKhoans(squery).Count > 0 )
                 {
                     this.Hide();
-                    Main main = new Main(txtUserName.Text);
+                    Main main = new Main();
                     main.ShowDialog();
                     
                 }

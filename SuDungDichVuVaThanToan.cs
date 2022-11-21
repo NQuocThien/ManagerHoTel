@@ -1,12 +1,17 @@
-﻿using System;
+﻿using Manager_Hotel.ClassLoin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace Manager_Hotel
 {
@@ -16,27 +21,30 @@ namespace Manager_Hotel
         {
             InitializeComponent();
         }
+        String queryDV = "select *from DichVu";
+        String queryDV1 = "select LoaiDichVu From DichVu";
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        ClassLoin.Modify modify = new ClassLoin.Modify();
         private void SuDungDichVuVaThanToan_Load(object sender, EventArgs e)
         {
             Load_LvHD();
             Load_lvServiece();
             Load_lvPhuThu();
+            loaddatagirdview();
+            loadComboBox();
+        }
+        public void loaddatagirdview()
+        {
+            dataGridViewDV.DataSource = modify.GetDataTable(queryDV);
+        }
+        public void loadComboBox()
+        {
+                comboBoxLoaiDV.DisplayMember = "LoaiDichVu";
+                comboBoxLoaiDV.ValueMember = "MaDV";
+                comboBoxLoaiDV.DataSource = modify.GetDataTable(queryDV); 
+            
+               
         }
 
         private void Load_LvHD()
@@ -107,6 +115,33 @@ namespace Manager_Hotel
 
             LtvPhuThu.Columns.Add("Mô Tả");
             LtvPhuThu.Columns[3].Width = (int) n *4;
+        }
+
+        private void DatagirdviewDV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void comboBoxLoaiDV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            String queryLoaiDV = "select TenDV from DichVu where LoaiDichVu like '%" + comboBoxLoaiDV.Text + "%'";
+            //MessageBox.Show(comboBoxDV.SelectedText, "Thong bao");
+            comboBoxDV.DisplayMember = "TenDV";
+            comboBoxDV.ValueMember = "MaDV";
+            comboBoxDV.DataSource = modify.GetDataTable(queryLoaiDV);
+            
+           /* txtGia.DataBindings.Clear();
+            txtGia.DataBindings.Add("DichVu", comboBoxDV.DataSource, "DonGia");*/
+            
+
+
+
+         }
+
+        private void comboBoxDV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

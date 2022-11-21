@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using ComboBox = System.Windows.Forms.ComboBox;
+using System.Data.Entity.Infrastructure;
 
 namespace Manager_Hotel.ClassLoin
 {
@@ -54,6 +57,23 @@ namespace Manager_Hotel.ClassLoin
             return id;
 
         }
+        public int GetInt32(string squery)
+        {
+            int id=0 ;
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(squery, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    id = dataReader.GetInt32(0);
+                }
+                sqlConnection.Close();
+            }
+            return id;
+
+        }
         public void Command(string squery) // thêm xóa sửa
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
@@ -86,18 +106,18 @@ namespace Manager_Hotel.ClassLoin
             //sqlCommand.ExecuteNonQuery(); // thực thi câu truy vấn
 
         }
-        //Dùng hiển thị trên data gird view : thêm , xóa ,sửa
-        public void conTable(String queryTable,String query, DataGridView Bang)
+        //Dùng hiển thị trên comboBox từ sql
+        public DataTable loadcomboBox(String query)
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {
-                sqlConnection.Open();
-                sqlCommand = sqlConnection.CreateCommand();
-                sqlCommand.CommandText = query;
-                sqlCommand.ExecuteNonQuery();
-                loaddataTable(Bang, queryTable);
-                sqlConnection.Close();
+                SqlDataAdapter da = new SqlDataAdapter(query, sqlConnection);//SQL là câu truy vấn bảng trong cơ sở dữ liệu, cn là connection đến cơ sở dữ liệu
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
             }
+
+
         }
         public void OpenConnection()
         {

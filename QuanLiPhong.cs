@@ -42,7 +42,12 @@ namespace Manager_Hotel
 
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
-
+            // lấy mã loại
+            string maLoai = modify.GetID("Select MaLoai From LoaiPhong Where TenLoai = '" + cbLoaiPhong.Text + "'");
+            // nhập bảng Phòng
+            string squery = "Insert Into Phong Values('" + txtMaPhong.Text + "' , N'" + cbTrangThai.Text + "' , '" + maLoai + "')";
+            modify.Command(squery);
+            Load_gvPhong();
         }
 
         private void dataGridViewPhong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -55,6 +60,60 @@ namespace Manager_Hotel
             cbLoaiPhong.Text = dataGridViewPhong.Rows[i].Cells[2].Value.ToString();
             udSLNguoi.Value = Convert.ToInt32(dataGridViewPhong.Rows[i].Cells[3].Value);
             txtDonGia.Text = dataGridViewPhong.Rows[i].Cells[4].Value.ToString();
+        }
+
+        private void btnCapNhatPhong_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                 // lấy mã loại            
+                string maLoai = modify.GetID("Select MaLoai From LoaiPhong Where TenLoai = '" + cbLoaiPhong.Text + "'");
+                // cập nhật thông tin phòng
+                string squery = "Update Phong Set TrangThai = N'" + cbTrangThai.Text + "' , MaLoai = '" + maLoai + "' where MaPhong = '"+txtMaPhong.Text+"' ";
+                modify.Command(squery);
+                Load_gvPhong();
+            }
+            catch
+            {                
+                if (MessageBox.Show("Thông tin không hợp lệ", "Lỗi ", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.OK )
+                {
+                    this.Close();
+                    
+                }
+
+            }
+          
+
+        }
+
+        private void btnXoaPhong_Click(object sender, EventArgs e)
+        {
+            // 
+            string maPhong = "";
+            if(dataGridViewPhong.SelectedRows.Count >0)
+            {
+                DataGridViewRow row = dataGridViewPhong.SelectedRows[0];
+                maPhong = row.Cells[0].Value.ToString();
+                string squery = "DELETE FROM Phong WHERE MaPhong = '" + maPhong + "' ";
+                modify.Command(squery);
+                Load_gvPhong();
+            }
+        }
+
+        private void btnDongDSPhong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnTimKiemPhong_Click(object sender, EventArgs e)
+        {
+            
+          /*  try
+            {*/
+                String querySearch = "select p.MaPhong, p.TrangThai, lp.TenLoai, lp.SoNguoi, lp.DonGia from Phong p, LoaiPhong lp where p.MaLoai = lp.MaLoai and ( p.MaPhong like '%" + txtSearch.Text + "%' or lp.TenLoai like '"+txtSearch.Text+"' )";
+                dataGridViewPhong.DataSource = modify.GetDataTable(querySearch);
+         /*   }
+            catch { }*/
         }
     }
 }

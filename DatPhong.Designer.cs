@@ -46,9 +46,7 @@ namespace Manager_Hotel
             this.label17 = new System.Windows.Forms.Label();
             this.txtSoLuongNguoiToiDa = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.txtTenLoaiPhong = new System.Windows.Forms.TextBox();
-            this.txtMaLoaiPhong = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.udSoDem = new System.Windows.Forms.NumericUpDown();
@@ -85,6 +83,8 @@ namespace Manager_Hotel
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataGridViewDSDatPhong = new System.Windows.Forms.DataGridView();
             this.btnChiTietDatPhong = new System.Windows.Forms.Button();
+            this.txtMaLoaiPhong = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -290,17 +290,6 @@ namespace Manager_Hotel
             this.label14.TabIndex = 23;
             this.label14.Text = "Tên loại phòng:";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(14, 21);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(112, 20);
-            this.label15.TabIndex = 21;
-            this.label15.Text = "Mã loại phòng:";
-            // 
             // txtTenLoaiPhong
             // 
             this.txtTenLoaiPhong.Enabled = false;
@@ -310,16 +299,6 @@ namespace Manager_Hotel
             this.txtTenLoaiPhong.Name = "txtTenLoaiPhong";
             this.txtTenLoaiPhong.Size = new System.Drawing.Size(220, 26);
             this.txtTenLoaiPhong.TabIndex = 22;
-            // 
-            // txtMaLoaiPhong
-            // 
-            this.txtMaLoaiPhong.Enabled = false;
-            this.txtMaLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaLoaiPhong.Location = new System.Drawing.Point(14, 43);
-            this.txtMaLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaLoaiPhong.Name = "txtMaLoaiPhong";
-            this.txtMaLoaiPhong.Size = new System.Drawing.Size(220, 26);
-            this.txtMaLoaiPhong.TabIndex = 20;
             // 
             // panel2
             // 
@@ -761,6 +740,27 @@ namespace Manager_Hotel
             this.btnChiTietDatPhong.UseVisualStyleBackColor = false;
             this.btnChiTietDatPhong.Click += new System.EventHandler(this.btnChiTietDatPhong_Click);
             // 
+            // txtMaLoaiPhong
+            // 
+            this.txtMaLoaiPhong.Enabled = false;
+            this.txtMaLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaLoaiPhong.Location = new System.Drawing.Point(14, 43);
+            this.txtMaLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaLoaiPhong.Name = "txtMaLoaiPhong";
+            this.txtMaLoaiPhong.Size = new System.Drawing.Size(220, 26);
+            this.txtMaLoaiPhong.TabIndex = 20;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(14, 21);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(112, 20);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Mã loại phòng:";
+            // 
             // DatPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -811,9 +811,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtSoLuongNguoiToiDa;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtTenLoaiPhong;
-        private System.Windows.Forms.TextBox txtMaLoaiPhong;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
@@ -852,5 +850,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.NumericUpDown udSoDem;
         private System.Windows.Forms.DataGridView dataGridViewDSDatPhong;
         private System.Windows.Forms.Button btnHuyTK;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtMaLoaiPhong;
     }
 }

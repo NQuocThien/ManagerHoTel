@@ -24,8 +24,8 @@ namespace Manager_Hotel
         private void btnChiTietDatPhong_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = dataGridViewDSDatPhong.SelectedRows[0];
-            string maPhieuDP = row.Cells[0].Value.ToString();
-            ChiTietDatPhong chitiet = new ChiTietDatPhong(maPhieuDP);
+            string maChiTietDP = row.Cells[0].Value.ToString();
+            ChiTietDatPhong chitiet = new ChiTietDatPhong(maChiTietDP);
             chitiet.ShowDialog();
             Load_gvDSDatPhong();
         }
@@ -69,8 +69,6 @@ namespace Manager_Hotel
                 }
                 catch (Exception ex)
                 {
-
-
                     if (MessageBox.Show(" Loi KH Thử lại " + ex, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
                     {
                         this.Close();
@@ -85,7 +83,7 @@ namespace Manager_Hotel
                 {
                     int id = rd.Next(100, 1000);
                     id_ctdp += +id;
-                    string squeryChiTietDatPhong = "insert into ChiTietDatPhong values('" + id_ctdp + "', '" + NgayNhan + "', '" + NgayTra + "', '" + SoDem + "', '" + id_kh + "' )";
+                    string squeryChiTietDatPhong = "insert into ChiTietDatPhong values('" + id_ctdp + "', '" + NgayNhan + "', '" + NgayTra + "', '" + SoDem + "', '" + id_kh + "', '"+LoaiPhong+"' )";
                     modify.Command(squeryChiTietDatPhong);
                     break;
                 }
@@ -97,43 +95,6 @@ namespace Manager_Hotel
                         this.Close();
                     }
                     id_ctdp = "A";
-                }
-            }
-
-
-
-            try // lấy mã phòng
-            {
-                string squery_maPhong = "Select MaPhong from Phong where TrangThai=N'Trống' and Maloai='" + maLoai + "'";
-                id_Phong = modify.GetID(squery_maPhong);
-                MessageBox.Show("  mã phòng: " + id_Phong);
-            }
-            catch (Exception ex)
-            {
-                if (MessageBox.Show(" Loi Lấy Mã Phòng Thử lại " + ex, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
-                {
-                    this.Close();
-                }
-
-            }
-
-            while (true) 
-            {
-                try
-                {
-                    int id = rd.Next(100, 1000);
-                    id_pdp += +id;
-                    string squery = "insert into PhieuDatPhong values('" + id_pdp + "', '" + id_ctdp + "', '" + id_Phong + "')";
-                    modify.Command(squery);
-                    break;
-                }
-                catch (Exception ex)
-                {
-                    if (MessageBox.Show(" Loi PhieuDatPhong Thử lại " + ex, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
-                    {
-                        this.Close();
-                    }
-                    id_pdp = "N";
                 }
             }
             Load_gvDSDatPhong();
@@ -148,7 +109,7 @@ namespace Manager_Hotel
         {
             dataGridViewDSDatPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDSDatPhong.ReadOnly = true;
-            string squery = "select pdp.MaPhieuDP, kh.HoTen, kh.CMND, lp.TenLoai, ctdp.NgayNhan, ctdp.NgayTra from KhachHang kh,  ChiTietDatPhong ctdp, PhieuDatPhong pdp, Phong p, LoaiPhong lp where kh.MaKH =ctdp.MaKH and pdp.MaPhong = p.MaPhong and p.MaLoai = lp.Maloai and ctdp.MaChiTietDatPhong = pdp.MaChiTietDP ";
+            string squery = "Select ct.MaChiTietDatPhong, kh.HoTen, kh.CMND, ct.TenLoai,ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct, KhachHang kh where ct.MaKH = kh.Makh ";
             DataTable dt = modify.GetDataTable(squery);
             dataGridViewDSDatPhong.DataSource = dt;
         }
@@ -209,8 +170,9 @@ namespace Manager_Hotel
         private void dataGridViewDSDatPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row = dataGridViewDSDatPhong.SelectedRows[0];
-            string maPhieuDP = row.Cells[0].Value.ToString();
-            string squery_infor = "select lp.Maloai, lp.TenLoai, lp.SoNguoi, lp.DonGia from PhieuDatPhong pdp, Phong p, LoaiPhong lp where pdp.MaPhong = p.MaPhong and p.MaLoai = lp.Maloai and pdp.MaPhieuDP ='" + maPhieuDP + "'";
+            string maChiTietDP = row.Cells[0].Value.ToString();
+            string squery_infor = "Select lp.Maloai, lp.TenLoai, lp.SoNguoi, lp.DonGia From ChiTietDatPhong ct , KhachHang kh, LoaiPhong lp Where ct.MaKH = kh.MaKH and ct.TenLoai = lp.TenLoai and ct.MaChiTietDatPhong = '"+maChiTietDP+"'";
+
             DataTable data = modify.GetDataTable(squery_infor);
             DataTableReader tableReader = data.CreateDataReader();
             while (tableReader.Read())

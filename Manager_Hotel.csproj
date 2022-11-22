@@ -127,6 +127,12 @@
     <Compile Include="QuenMatKhau.Designer.cs">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuyDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuyDinh.Designer.cs">
+      <DependentUpon>QuyDinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuyenTruyCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuenMatKhau.resx">
       <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuyDinh.resx">
+      <DependentUpon>QuyDinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuyenTruyCap.resx">
       <DependentUpon>QuyenTruyCap.cs</DependentUpon>

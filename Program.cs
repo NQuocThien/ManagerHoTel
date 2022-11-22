@@ -16,7 +16,7 @@ namespace Manager_Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SuDungDichVuVaThanToan());
+            Application.Run(new QuyDinh());
         }
     }
 }

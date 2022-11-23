@@ -46,7 +46,7 @@ namespace Manager_Hotel
 
             try
             {
-                queryThemDV = "insert into DichVu values('" + txtMaDV.Text + "',+ '" + txtTenDV.Text + "', '" + txtLoaiDV.Text + "', '" + txtDonGia.Text + "' )";
+                queryThemDV = "insert into DichVu values('" + txtMaDV.Text + "',+ N'" + txtLoaiDV.Text + "', N'" + txtTenDV.Text + "', '" + txtDonGia.Text + "' )";
                 modify.Command(queryThemDV);
 
             }

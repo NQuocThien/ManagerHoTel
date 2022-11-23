@@ -130,5 +130,11 @@ namespace Manager_Hotel
             ThongTinTaiKhoan tk = new ThongTinTaiKhoan(tenDangNhap);
             tk.ShowDialog();
         }
+
+        private void btnQuyDinh_Click(object sender, EventArgs e)
+        {
+            QuyDinh qd = new QuyDinh();
+            qd.ShowDialog();
+        }
     }
 }

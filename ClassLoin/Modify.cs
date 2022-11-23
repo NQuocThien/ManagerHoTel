@@ -107,7 +107,7 @@ namespace Manager_Hotel.ClassLoin
 
         }
         //Dùng hiển thị trên comboBox từ sql
-        public DataTable loadcomboBox(String query)
+        public DataTable loadtextBox(String query)
         {
             using (SqlConnection sqlConnection = Connection.GetSqlConnection())
             {

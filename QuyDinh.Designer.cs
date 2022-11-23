@@ -42,19 +42,21 @@
             // lblQuyDinh
             // 
             this.lblQuyDinh.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuyDinh.Location = new System.Drawing.Point(18, 88);
+            this.lblQuyDinh.Location = new System.Drawing.Point(20, 110);
+            this.lblQuyDinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblQuyDinh.Multiline = true;
             this.lblQuyDinh.Name = "lblQuyDinh";
             this.lblQuyDinh.ReadOnly = true;
-            this.lblQuyDinh.Size = new System.Drawing.Size(1049, 733);
+            this.lblQuyDinh.Size = new System.Drawing.Size(1180, 915);
             this.lblQuyDinh.TabIndex = 2;
             // 
             // btnDong
             // 
             this.btnDong.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.Location = new System.Drawing.Point(9, 3);
+            this.btnDong.Location = new System.Drawing.Point(10, 4);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(1058, 44);
+            this.btnDong.Size = new System.Drawing.Size(1190, 55);
             this.btnDong.TabIndex = 2;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
@@ -64,18 +66,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(9, 12);
+            this.panel1.Location = new System.Drawing.Point(10, 15);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1058, 70);
+            this.panel1.Size = new System.Drawing.Size(1190, 88);
             this.panel1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 33);
+            this.label1.Size = new System.Drawing.Size(178, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUY ĐỊNH";
             // 
@@ -83,9 +86,10 @@
             // 
             this.panel3.Controls.Add(this.btnDong);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 737);
+            this.panel3.Location = new System.Drawing.Point(0, 921);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1079, 53);
+            this.panel3.Size = new System.Drawing.Size(1214, 66);
             this.panel3.TabIndex = 6;
             // 
             // panel2
@@ -94,19 +98,22 @@
             this.panel2.Controls.Add(this.lblQuyDinh);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1079, 737);
+            this.panel2.Size = new System.Drawing.Size(1214, 921);
             this.panel2.TabIndex = 7;
             // 
             // QuyDinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 844);
+            this.ClientSize = new System.Drawing.Size(1214, 1050);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "QuyDinh";
             this.Text = "QuyDinh";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.QuyDinh_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

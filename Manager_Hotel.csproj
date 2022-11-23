@@ -62,6 +62,7 @@
       <DependentUpon>ChiTietDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassLoin\Connection.cs" />
+    <Compile Include="ClassLoin\DichVu.cs" />
     <Compile Include="ClassLoin\Modify.cs" />
     <Compile Include="ClassLoin\TaiKhoan.cs" />
     <Compile Include="DangKy.cs">

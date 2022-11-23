@@ -42,11 +42,18 @@ namespace Manager_Hotel
 
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
-            // lấy mã loại
-            string maLoai = modify.GetID("Select MaLoai From LoaiPhong Where TenLoai = '" + cbLoaiPhong.Text + "'");
-            // nhập bảng Phòng
-            string squery = "Insert Into Phong Values('" + txtMaPhong.Text + "' , N'" + cbTrangThai.Text + "' , '" + maLoai + "')";
-            modify.Command(squery);
+
+            try
+            {// lấy mã loại
+
+                string maLoai = modify.GetID("Select MaLoai From LoaiPhong Where TenLoai = '" + cbLoaiPhong.Text + "'");
+                // nhập bảng Phòng
+                string squery = "Insert Into Phong Values('" + txtMaPhong.Text + "' , N'" + cbTrangThai.Text + "' , '" + maLoai + "')";
+                modify.Command(squery);
+            }catch
+            {
+                MessageBox.Show("Thông tin phòng không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             Load_gvPhong();
         }
 

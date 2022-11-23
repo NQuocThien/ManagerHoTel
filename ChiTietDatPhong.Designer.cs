@@ -50,6 +50,7 @@ namespace Manager_Hotel
             this.dateTra = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnXoaKH = new System.Windows.Forms.Button();
+            this.btnDong = new System.Windows.Forms.Button();
             this.btnCapNhatKH = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.dateSinh = new System.Windows.Forms.DateTimePicker();
@@ -65,7 +66,6 @@ namespace Manager_Hotel
             this.btnLuu = new System.Windows.Forms.Button();
             this.txtMaDP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDong = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -139,6 +139,7 @@ namespace Manager_Hotel
             // 
             // cbBoxGioiTinh
             // 
+            this.cbBoxGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxGioiTinh.FormattingEnabled = true;
             this.cbBoxGioiTinh.Items.AddRange(new object[] {
@@ -183,6 +184,7 @@ namespace Manager_Hotel
             // 
             // cbBoxLoaiPhong
             // 
+            this.cbBoxLoaiPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxLoaiPhong.FormattingEnabled = true;
             this.cbBoxLoaiPhong.Items.AddRange(new object[] {
@@ -310,6 +312,22 @@ namespace Manager_Hotel
             this.btnXoaKH.UseVisualStyleBackColor = false;
             this.btnXoaKH.Click += new System.EventHandler(this.btnXoaKH_Click);
             // 
+            // btnDong
+            // 
+            this.btnDong.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDong.ImageIndex = 0;
+            this.btnDong.ImageList = this.imageList_Icon;
+            this.btnDong.Location = new System.Drawing.Point(210, 425);
+            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDong.Name = "btnDong";
+            this.btnDong.Size = new System.Drawing.Size(252, 49);
+            this.btnDong.TabIndex = 25;
+            this.btnDong.Text = "Đóng";
+            this.btnDong.UseVisualStyleBackColor = false;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
+            // 
             // btnCapNhatKH
             // 
             this.btnCapNhatKH.BackColor = System.Drawing.SystemColors.AppWorkspace;
@@ -348,6 +366,7 @@ namespace Manager_Hotel
             // 
             // cbBoxQuocTich
             // 
+            this.cbBoxQuocTich.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxQuocTich.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxQuocTich.FormattingEnabled = true;
             this.cbBoxQuocTich.Items.AddRange(new object[] {
@@ -366,6 +385,7 @@ namespace Manager_Hotel
             // 
             // cbBoxLoaiKhachHang
             // 
+            this.cbBoxLoaiKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBoxLoaiKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxLoaiKhachHang.FormattingEnabled = true;
             this.cbBoxLoaiKhachHang.Items.AddRange(new object[] {
@@ -496,22 +516,6 @@ namespace Manager_Hotel
             this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ngày nhận:";
-            // 
-            // btnDong
-            // 
-            this.btnDong.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btnDong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDong.ImageIndex = 0;
-            this.btnDong.ImageList = this.imageList_Icon;
-            this.btnDong.Location = new System.Drawing.Point(210, 425);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(252, 49);
-            this.btnDong.TabIndex = 25;
-            this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = false;
-            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // ChiTietDatPhong
             // 

@@ -40,6 +40,24 @@ namespace Manager_Hotel.ClassLoin
             }
             return taiKhoans;
         }
+        public List<DichVu> DichVus(string query)
+        {
+            List<DichVu> DichVus = new List<DichVu>();
+
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                sqlConnection.Open();
+                sqlCommand = new SqlCommand(query, sqlConnection);
+                dataReader = sqlCommand.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    DichVus.Add(new DichVu(dataReader.GetString(0), dataReader.GetString(1), dataReader.GetString(3), dataReader.GetString(4), dataReader.GetString(5), dataReader.GetInt32(6), dataReader.GetInt32(7), dataReader.GetInt32(8)));
+                }
+                sqlConnection.Close();
+            }
+            return DichVus;
+        }
+
         public string GetID(string squery)
         {
             string id = "";

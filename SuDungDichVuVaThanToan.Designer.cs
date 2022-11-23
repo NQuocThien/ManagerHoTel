@@ -38,17 +38,17 @@ namespace Manager_Hotel
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewAddDV = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewHD = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -68,10 +68,10 @@ namespace Manager_Hotel
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddDV)).BeginInit();
             this.panel6.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
             this.panel5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -148,7 +148,7 @@ namespace Manager_Hotel
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.dataGridView2);
+            this.groupBox6.Controls.Add(this.dataGridViewAddDV);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -159,16 +159,17 @@ namespace Manager_Hotel
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hóa Đơn Dịch Vụ";
             // 
-            // dataGridView2
+            // dataGridViewAddDV
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 24);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.Size = new System.Drawing.Size(1003, 483);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridViewAddDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAddDV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewAddDV.Location = new System.Drawing.Point(4, 24);
+            this.dataGridViewAddDV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewAddDV.Name = "dataGridViewAddDV";
+            this.dataGridViewAddDV.RowHeadersWidth = 62;
+            this.dataGridViewAddDV.Size = new System.Drawing.Size(1003, 483);
+            this.dataGridViewAddDV.TabIndex = 0;
+            this.dataGridViewAddDV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddDV_CellContentClick);
             // 
             // panel6
             // 
@@ -182,7 +183,7 @@ namespace Manager_Hotel
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Controls.Add(this.dataGridViewHD);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -193,16 +194,16 @@ namespace Manager_Hotel
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Hóa Đơn Thành Tiền";
             // 
-            // dataGridView1
+            // dataGridViewHD
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 24);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1003, 353);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewHD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewHD.Location = new System.Drawing.Point(4, 24);
+            this.dataGridViewHD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridViewHD.Name = "dataGridViewHD";
+            this.dataGridViewHD.RowHeadersWidth = 62;
+            this.dataGridViewHD.Size = new System.Drawing.Size(1003, 353);
+            this.dataGridViewHD.TabIndex = 0;
             // 
             // panel5
             // 
@@ -221,7 +222,7 @@ namespace Manager_Hotel
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txtTongTien);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,6 +257,7 @@ namespace Manager_Hotel
             this.button4.TabIndex = 1;
             this.button4.Text = "Đóng";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -282,14 +284,15 @@ namespace Manager_Hotel
             this.label17.TabIndex = 0;
             this.label17.Text = "Giảm Giá:";
             // 
-            // textBox4
+            // txtTongTien
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(24, 105);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(266, 35);
-            this.textBox4.TabIndex = 2;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.Location = new System.Drawing.Point(24, 105);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(266, 35);
+            this.txtTongTien.TabIndex = 2;
+            this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
             // 
             // label16
             // 
@@ -459,7 +462,6 @@ namespace Manager_Hotel
             this.dataGridViewDV.Size = new System.Drawing.Size(638, 655);
             this.dataGridViewDV.TabIndex = 11;
             this.dataGridViewDV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatagirdviewDV_CellClick);
-            this.dataGridViewDV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDV_CellContentClick);
             // 
             // SuDungDichVuVaThanToan
             // 
@@ -478,10 +480,10 @@ namespace Manager_Hotel
             this.panel4.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAddDV)).EndInit();
             this.panel6.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).EndInit();
             this.panel5.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -506,7 +508,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label15;
@@ -526,7 +528,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox comboBoxDV;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewAddDV;
+        private System.Windows.Forms.DataGridView dataGridViewHD;
     }
 }

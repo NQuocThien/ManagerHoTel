@@ -106,7 +106,7 @@ namespace Manager_Hotel
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1346, 44);
+            this.panel3.Size = new System.Drawing.Size(1346, 43);
             this.panel3.TabIndex = 11;
             // 
             // label18

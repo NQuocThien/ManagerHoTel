@@ -19,7 +19,7 @@ namespace Manager_Hotel
         {
             InitializeComponent();
             pw = panelSlider.Width;
-            panelSlider.Width = 0;
+            //panelSlider.Width = 0;
             this.tenDangNhap = Login.tenTK;
         }
 

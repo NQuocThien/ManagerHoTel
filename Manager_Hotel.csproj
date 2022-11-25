@@ -72,7 +72,6 @@
     <Compile Include="DangKy.Designer.cs">
       <DependentUpon>DangKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database_KS.cs" />
     <Compile Include="InHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +96,7 @@
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModiFy.cs" />
     <Compile Include="NhanPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AGU.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

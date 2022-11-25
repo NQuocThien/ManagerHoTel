@@ -97,14 +97,14 @@ namespace Manager_Hotel
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Menu;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.ImageIndex = 1;
             this.label1.ImageList = this.imageList_iCon;
-            this.label1.Location = new System.Drawing.Point(3, 6);
+            this.label1.Location = new System.Drawing.Point(5, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(499, 39);
+            this.label1.Size = new System.Drawing.Size(398, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sử Dụng Dịch Vụ Thanh Toán";
             // 
@@ -197,7 +197,7 @@ namespace Manager_Hotel
             this.dataGridViewAddDV.RowHeadersWidth = 62;
             this.dataGridViewAddDV.Size = new System.Drawing.Size(640, 337);
             this.dataGridViewAddDV.TabIndex = 0;
-            this.dataGridViewAddDV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddDV_CellContentClick);
+//            this.dataGridViewAddDV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddDV_CellContentClick);
             // 
             // panel6
             // 
@@ -288,6 +288,7 @@ namespace Manager_Hotel
             this.btnThanhToan.TabIndex = 1;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // label17
             // 
@@ -307,7 +308,7 @@ namespace Manager_Hotel
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(214, 29);
             this.txtTongTien.TabIndex = 2;
-            this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
+//            this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
             // 
             // label16
             // 

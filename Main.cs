@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Manager_Hotel.ClassLoin;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Manager_Hotel
         bool hiden = true;
         int pw;
         private string tenDangNhap = "";
+        Modify modify = new Modify();
         public Main()
         {
             InitializeComponent();
@@ -80,7 +82,9 @@ namespace Manager_Hotel
 
         private void btnSDDVTT_Click(object sender, EventArgs e)
         {
-            SuDungDichVuVaThanToan dvtt = new SuDungDichVuVaThanToan();
+            string squery = "Select HoTen from NhanVien where TenDangNhap = '" + tenDangNhap + "'";
+            string HoTen = modify.GetID(squery);
+            SuDungDichVuVaThanToan dvtt = new SuDungDichVuVaThanToan(HoTen);
             dvtt.ShowDialog();
         }
 
@@ -107,8 +111,8 @@ namespace Manager_Hotel
 
         private void btnQLHoaDon_Click(object sender, EventArgs e)
         {
-            InHoaDon print = new InHoaDon();
-            print.ShowDialog();
+            //InHoaDon print = new InHoaDon();
+            //print.ShowDialog();
 
 
         }

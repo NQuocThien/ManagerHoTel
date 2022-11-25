@@ -18,14 +18,14 @@ namespace Manager_Hotel
 {
     public partial class SuDungDichVuVaThanToan : Form
     {
-        public SuDungDichVuVaThanToan()
-        {
-            InitializeComponent();
-        }
 
         string queryDV1 = "select DISTINCT LoaiDichVu from DichVu";
-
-
+        string HoTenNhanVien = "";
+        public SuDungDichVuVaThanToan(string HoTen)
+        {
+            InitializeComponent();
+            this.HoTenNhanVien = HoTen;
+        }
         ClassLoin.Modify modify = new ClassLoin.Modify();
         private void SuDungDichVuVaThanToan_Load(object sender, EventArgs e)
         {
@@ -64,9 +64,9 @@ namespace Manager_Hotel
      
         private void Load_gvHoaDonPhong(string maKH)
         {
-            int n = dataGridViewAddDV.Width / 6;
-            dataGridViewAddDV.ReadOnly = true;
-            dataGridViewAddDV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            int n = dataGridViewHD.Width / 6;
+            dataGridViewHD.ReadOnly = true;
+            dataGridViewHD.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             string squery_test = "Select ct.MaKH from ChiTietDatPhong ct where ct.MaChiTietDatPhong in (Select MaChiTietDP from HoaDonPhong ) and ct.MaKH = '"+maKH+"'";
             string maKH_test = modify.GetID(squery_test);
@@ -153,16 +153,11 @@ namespace Manager_Hotel
 
         private void Load_gvThemDichVu(string maKH)
         {
-            string maHDDichVu = "HD";
-            int n = dataGridViewHD.Width / 10;
-
-            dataGridViewHD.ReadOnly = true;
-            dataGridViewHD.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-    
+            int n = dataGridViewAddDV.Width / 10;
+            dataGridViewAddDV.ReadOnly = true;
+            dataGridViewAddDV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewAddDV.DataSource = modify.GetDataTable("Select hv.MaHDDV, dv.TenDV, dv.DonGia, hv.SoLuong, hv.ThanhTien From DichVu dv, HoaDonDV hv , HoaDon hd where dv.MaDV = hv.MaDV and hd.MaHD = hv.MaHD and hd.MaKH = '" + maKH + "'");
-
             dataGridViewAddDV.Columns[0].Visible = false;
-
             dataGridViewAddDV.Columns[1].HeaderText = "Tên Dịch Vụ";
             dataGridViewAddDV.Columns[1].Width = n * 5;
             dataGridViewAddDV.Columns[2].HeaderText = "Đơn Giá";
@@ -274,17 +269,7 @@ namespace Manager_Hotel
         {
             this.Close();
         }
-
-        private void dataGridViewAddDV_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txtTongTien_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
+      
         private void btnXoaDV_Click(object sender, EventArgs e)
         {
             string maHDDV = "";
@@ -325,8 +310,6 @@ namespace Manager_Hotel
             txtTongTien.Text = tongtien + "";
         }
 
-  
-
         private void udGiamGia_ValueChanged(object sender, EventArgs e)
         {
             int tongtien = int.Parse(txtTongTien.Text);
@@ -337,6 +320,14 @@ namespace Manager_Hotel
             modify.Command("Update HoaDon set TongTien = '" + tongtien + "' where MaKH = '"+maKH+"' ");
             txtTongTien.Text = tongtien + "";
 
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            string maKH = dataGridViewPhong.SelectedRows[0].Cells[0].Value.ToString();
+            string maHD = modify.GetID("Select MaHD from HoaDon Where MaKH = '" + maKH + "'");
+            InHoaDon hd = new InHoaDon(maKH, HoTenNhanVien, int.Parse(txtTongTien.Text), maHD, (int) udGiamGia.Value);
+            hd.ShowDialog();
         }
     }
 }

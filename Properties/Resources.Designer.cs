@@ -63,6 +63,16 @@ namespace Manager_Hotel.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AGU {
+            get {
+                object obj = ResourceManager.GetObject("AGU", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Classic_Hotel {
             get {
                 object obj = ResourceManager.GetObject("Classic Hotel", resourceCulture);

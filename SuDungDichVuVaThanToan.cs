@@ -44,6 +44,15 @@ namespace Manager_Hotel
             dataGridViewPhong.DataSource = modify.GetDataTable(squery_loadPhong);
             dataGridViewPhong.ReadOnly = true;
             dataGridViewPhong.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewPhong.Columns[0].HeaderText = "Mã KH";
+            dataGridViewPhong.Columns[1].HeaderText = "Phòng";
+            dataGridViewPhong.Columns[2].HeaderText = "Họ Tên";
+            dataGridViewPhong.Columns[3].HeaderText = "CMND";
+            dataGridViewPhong.Columns[4].HeaderText = "Loại Phòng";
+            dataGridViewPhong.Columns[5].HeaderText = "Ngày Nhận";
+            dataGridViewPhong.Columns[6].HeaderText = "Ngày Trả";
+
+
         }
         public void loadComboBox()
         {
@@ -51,19 +60,8 @@ namespace Manager_Hotel
                 comboBoxLoaiDV.ValueMember = "MaDV";
                 comboBoxLoaiDV.DataSource = modify.GetDataTable(queryDV1);
         }
-
-       
-        private void DatagirdviewDV_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //load
-            int i = dataGridViewPhong.CurrentRow.Index;
-            KiemTraTaoMoiHD(dataGridViewPhong.Rows[i].Cells[0].Value.ToString()); // 
-
-            Load_gvThemDichVu(dataGridViewPhong.Rows[i].Cells[0].Value.ToString()); //
-            Load_gvHoaDonPhong(dataGridViewPhong.Rows[i].Cells[0].Value.ToString()); // 
-            btnThemDV.Enabled = true;
-        }
-
+              
+     
         private void Load_gvHoaDonPhong(string maKH)
         {
             int n = dataGridViewAddDV.Width / 6;
@@ -160,19 +158,19 @@ namespace Manager_Hotel
 
             dataGridViewHD.ReadOnly = true;
             dataGridViewHD.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-     
-            
+    
+            dataGridViewAddDV.DataSource = modify.GetDataTable("Select hv.MaHDDV, dv.TenDV, dv.DonGia, hv.SoLuong, hv.ThanhTien From DichVu dv, HoaDonDV hv , HoaDon hd where dv.MaDV = hv.MaDV and hd.MaHD = hv.MaHD and hd.MaKH = '" + maKH + "'");
 
-            dataGridViewAddDV.DataSource = modify.GetDataTable("Select dv.TenDV, dv.DonGia, hv.SoLuong, hv.ThanhTien From DichVu dv, HoaDonDV hv , HoaDon hd where dv.MaDV = hv.MaDV and hd.MaHD = hv.MaHD and hd.MaKH = '" + maKH + "'");
+            dataGridViewAddDV.Columns[0].Visible = false;
 
-            dataGridViewAddDV.Columns[0].HeaderText = "Tên Dịch Vụ";
-            dataGridViewAddDV.Columns[0].Width = n * 5;
-            dataGridViewAddDV.Columns[1].HeaderText = "Đơn Giá";
-            dataGridViewAddDV.Columns[1].Width = n * 2;
-            dataGridViewAddDV.Columns[2].HeaderText = "Số Lượng";
-            dataGridViewAddDV.Columns[2].Width = n * 1;
-            dataGridViewAddDV.Columns[3].HeaderText = "Thành Tiền";
-            dataGridViewAddDV.Columns[3].Width = n * 2;
+            dataGridViewAddDV.Columns[1].HeaderText = "Tên Dịch Vụ";
+            dataGridViewAddDV.Columns[1].Width = n * 5;
+            dataGridViewAddDV.Columns[2].HeaderText = "Đơn Giá";
+            dataGridViewAddDV.Columns[2].Width = n * 2;
+            dataGridViewAddDV.Columns[3].HeaderText = "Số Lượng";
+            dataGridViewAddDV.Columns[3].Width = n * 1;
+            dataGridViewAddDV.Columns[4].HeaderText = "Thành Tiền";
+            dataGridViewAddDV.Columns[4].Width = n * 2;
         }
 
         private void KiemTraTaoMoiHD (string maKH)
@@ -285,6 +283,60 @@ namespace Manager_Hotel
         private void txtTongTien_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnXoaDV_Click(object sender, EventArgs e)
+        {
+            string maHDDV = "";
+            string maKH = dataGridViewPhong.CurrentRow.Cells[0].Value.ToString();
+            if (dataGridViewAddDV.Rows.Count > 1)
+            {
+                DataGridViewRow row = dataGridViewAddDV.SelectedRows[0];
+                maHDDV = row.Cells[0].Value.ToString();
+                string squery_del = "Delete HoaDonDV Where MaHDDV = '" + maHDDV + "'";
+                modify.Command(squery_del);
+            }
+            CapNhatTien(maKH);
+            Load_gvThemDichVu(maKH);
+        }
+
+        private void DatagirdviewPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string maKH = dataGridViewPhong.SelectedRows[0].Cells[0].Value.ToString();
+            string squery = "Select TongTien from HoaDon where MaKH= '" + maKH + "'";
+            int tongtien = 0;
+            DataTableReader reader = modify.GetDataTable(squery).CreateDataReader();
+            while(reader.Read())
+            {
+                tongtien += reader.GetInt32(0); 
+            }
+
+            int i = dataGridViewPhong.CurrentRow.Index;
+            KiemTraTaoMoiHD(maKH); // 
+            Load_gvThemDichVu(maKH); //
+            Load_gvHoaDonPhong(maKH); // 
+            btnThemDV.Enabled = true;
+            comboBoxDV.Enabled = true;
+            comboBoxLoaiDV.Enabled = true;
+            udSoLuong.Enabled = true;
+            udGiamGia.Enabled = true;
+            btnXoaDV.Enabled = true;
+            btnThanhToan.Enabled = true;
+            txtTongTien.Text = tongtien + "";
+        }
+
+  
+
+        private void udGiamGia_ValueChanged(object sender, EventArgs e)
+        {
+            int tongtien = int.Parse(txtTongTien.Text);
+            tongtien -= (int) udGiamGia.Value;
+            tongtien = tongtien < 0 ? 0 : tongtien;
+            string maKH = dataGridViewPhong.CurrentRow.Cells[0].Value.ToString();
+            // 
+            modify.Command("Update HoaDon set TongTien = '" + tongtien + "' where MaKH = '"+maKH+"' ");
+            txtTongTien.Text = tongtien + "";
+
         }
     }
 }

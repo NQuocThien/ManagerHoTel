@@ -22,14 +22,15 @@ namespace Manager_Hotel
         {
             InitializeComponent();
         }
-        String queryDV = "select *from DichVu";
-        String queryDV1 = "select DISTINCT LoaiDichVu from DichVu";
+
+        string queryDV1 = "select DISTINCT LoaiDichVu from DichVu";
 
 
         ClassLoin.Modify modify = new ClassLoin.Modify();
         private void SuDungDichVuVaThanToan_Load(object sender, EventArgs e)
         {
-
+            txtTongTien.Enabled = false;
+            btnThemDV.Enabled = false;
             loaddatagirdview();
             loadComboBox();
         }
@@ -58,10 +59,9 @@ namespace Manager_Hotel
             int i = dataGridViewPhong.CurrentRow.Index;
             KiemTraTaoMoiHD(dataGridViewPhong.Rows[i].Cells[0].Value.ToString()); // 
 
-
             Load_gvThemDichVu(dataGridViewPhong.Rows[i].Cells[0].Value.ToString()); //
             Load_gvHoaDonPhong(dataGridViewPhong.Rows[i].Cells[0].Value.ToString()); // 
-
+            btnThemDV.Enabled = true;
         }
 
         private void Load_gvHoaDonPhong(string maKH)
@@ -110,6 +110,7 @@ namespace Manager_Hotel
                         maHDPhong = "HP";
                     }
                 }
+                
 
             }
 
@@ -132,6 +133,7 @@ namespace Manager_Hotel
 
             dataGridViewHD.Columns[5].HeaderText = "Tổng Tiền";
             dataGridViewHD.Columns[5].Width = n;
+            CapNhatTien(maKH);
         }
 
         private void comboBoxLoaiDV_SelectedIndexChanged(object sender, EventArgs e)
@@ -245,27 +247,29 @@ namespace Manager_Hotel
                 }
             }
             // cập nhật lại tổng tiền 
+            CapNhatTien(maKH);
+            Load_gvThemDichVu(maKH);
+            Load_gvHoaDonPhong(maKH);
+            }
+
+        private void CapNhatTien(string maKH)
+        {
             int tienPhong = 0;
             int tienDV = 0;
-            DataTableReader reader1 = modify.GetDataTable("Select hdp.ThanhTien  from HoaDonPhong hdp, HoaDon hd  where  hd.MaHD = hdp.MaHD and hd.MaKH ='"+maKH+"'").CreateDataReader();
-            while( reader1.Read())
+            DataTableReader reader1 = modify.GetDataTable("Select hdp.ThanhTien  from HoaDonPhong hdp, HoaDon hd  where  hd.MaHD = hdp.MaHD and hd.MaKH ='" + maKH + "'").CreateDataReader();
+            while (reader1.Read())
             {
                 tienPhong = reader1.GetInt32(0);
             }
-            DataTableReader reader2 = modify.GetDataTable("Select dhdv.ThanhTien from HoaDonDV dhdv , HoaDon hd  where  hd.MaHD = dhdv.MaHD and hd.MaKH ='"+maKH+"'").CreateDataReader();
+            DataTableReader reader2 = modify.GetDataTable("Select dhdv.ThanhTien from HoaDonDV dhdv , HoaDon hd  where  hd.MaHD = dhdv.MaHD and hd.MaKH ='" + maKH + "'").CreateDataReader();
             while (reader2.Read())
             {
                 tienDV += reader2.GetInt32(0);
             }
             int tong = tienPhong + tienDV;
-            string squery_update = "Update HoaDon set TongTien = '" + tong +"' where MaKH ='"+maKH+"'"; ;
-           
+            string squery_update = "Update HoaDon set TongTien = '" + tong + "' where MaKH ='" + maKH + "'"; ;
+
             modify.Command(squery_update);
-
-            Load_gvThemDichVu(maKH);
-            Load_gvHoaDonPhong(maKH);
-
-
         }
 
         private void button4_Click(object sender, EventArgs e)

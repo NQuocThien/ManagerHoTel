@@ -51,6 +51,7 @@ namespace Manager_Hotel
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.udSoLuong = new System.Windows.Forms.NumericUpDown();
             this.label15 = new System.Windows.Forms.Label();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@ namespace Manager_Hotel
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPhong = new System.Windows.Forms.DataGridView();
-            this.udSoLuong = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -75,14 +75,15 @@ namespace Manager_Hotel
             this.panel5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udSoLuong)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -92,14 +93,14 @@ namespace Manager_Hotel
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Font = new System.Drawing.Font("MV Boli", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Menu;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.ImageIndex = 1;
             this.label1.ImageList = this.imageList_iCon;
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(406, 39);
+            this.label1.Size = new System.Drawing.Size(499, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sử Dụng Dịch Vụ Thanh Toán";
             // 
@@ -114,6 +115,7 @@ namespace Manager_Hotel
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightGray;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel3);
@@ -128,9 +130,9 @@ namespace Manager_Hotel
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(669, 0);
+            this.panel4.Location = new System.Drawing.Point(697, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(674, 581);
+            this.panel4.Size = new System.Drawing.Size(646, 581);
             this.panel4.TabIndex = 0;
             // 
             // panel8
@@ -139,7 +141,7 @@ namespace Manager_Hotel
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 248);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(674, 333);
+            this.panel8.Size = new System.Drawing.Size(646, 333);
             this.panel8.TabIndex = 0;
             // 
             // groupBox6
@@ -148,19 +150,20 @@ namespace Manager_Hotel
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(674, 333);
+            this.groupBox6.Size = new System.Drawing.Size(646, 333);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hóa Đơn Dịch Vụ";
             // 
             // dataGridViewAddDV
             // 
+            this.dataGridViewAddDV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewAddDV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAddDV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewAddDV.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewAddDV.Name = "dataGridViewAddDV";
             this.dataGridViewAddDV.RowHeadersWidth = 62;
-            this.dataGridViewAddDV.Size = new System.Drawing.Size(668, 314);
+            this.dataGridViewAddDV.Size = new System.Drawing.Size(640, 314);
             this.dataGridViewAddDV.TabIndex = 0;
             this.dataGridViewAddDV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddDV_CellContentClick);
             // 
@@ -170,7 +173,7 @@ namespace Manager_Hotel
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(674, 248);
+            this.panel6.Size = new System.Drawing.Size(646, 248);
             this.panel6.TabIndex = 0;
             // 
             // groupBox4
@@ -179,33 +182,36 @@ namespace Manager_Hotel
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(674, 248);
+            this.groupBox4.Size = new System.Drawing.Size(646, 248);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Hóa Đơn Thành Tiền";
             // 
             // dataGridViewHD
             // 
+            this.dataGridViewHD.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHD.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewHD.Location = new System.Drawing.Point(3, 16);
             this.dataGridViewHD.Name = "dataGridViewHD";
             this.dataGridViewHD.RowHeadersWidth = 62;
-            this.dataGridViewHD.Size = new System.Drawing.Size(668, 229);
+            this.dataGridViewHD.Size = new System.Drawing.Size(640, 229);
             this.dataGridViewHD.TabIndex = 0;
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.OldLace;
             this.panel5.Controls.Add(this.groupBox3);
             this.panel5.Controls.Add(this.groupBox2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(434, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(235, 581);
+            this.panel5.Size = new System.Drawing.Size(263, 581);
             this.panel5.TabIndex = 0;
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.LightGray;
             this.groupBox3.Controls.Add(this.textBox5);
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.button3);
@@ -216,7 +222,7 @@ namespace Manager_Hotel
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(0, 291);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(235, 287);
+            this.groupBox3.Size = new System.Drawing.Size(263, 287);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức Năng";
@@ -235,9 +241,9 @@ namespace Manager_Hotel
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.ImageIndex = 0;
             this.button4.ImageList = this.imageList_iCon;
-            this.button4.Location = new System.Drawing.Point(20, 243);
+            this.button4.Location = new System.Drawing.Point(20, 238);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 33);
+            this.button4.Size = new System.Drawing.Size(174, 38);
             this.button4.TabIndex = 1;
             this.button4.Text = "Đóng";
             this.button4.UseVisualStyleBackColor = true;
@@ -249,9 +255,9 @@ namespace Manager_Hotel
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.ImageIndex = 2;
             this.button3.ImageList = this.imageList_iCon;
-            this.button3.Location = new System.Drawing.Point(20, 189);
+            this.button3.Location = new System.Drawing.Point(20, 182);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 35);
+            this.button3.Size = new System.Drawing.Size(174, 40);
             this.button3.TabIndex = 1;
             this.button3.Text = "Thanh Toán";
             this.button3.UseVisualStyleBackColor = true;
@@ -287,6 +293,7 @@ namespace Manager_Hotel
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
             this.groupBox2.Controls.Add(this.udSoLuong);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.txtGia);
@@ -300,16 +307,24 @@ namespace Manager_Hotel
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(235, 291);
+            this.groupBox2.Size = new System.Drawing.Size(263, 291);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Dịch Vụ";
+            // 
+            // udSoLuong
+            // 
+            this.udSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.udSoLuong.Location = new System.Drawing.Point(21, 212);
+            this.udSoLuong.Name = "udSoLuong";
+            this.udSoLuong.Size = new System.Drawing.Size(209, 26);
+            this.udSoLuong.TabIndex = 4;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 188);
+            this.label15.Location = new System.Drawing.Point(21, 188);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(82, 20);
             this.label15.TabIndex = 0;
@@ -318,16 +333,16 @@ namespace Manager_Hotel
             // txtGia
             // 
             this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.Location = new System.Drawing.Point(16, 158);
+            this.txtGia.Location = new System.Drawing.Point(21, 158);
             this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(182, 26);
+            this.txtGia.Size = new System.Drawing.Size(213, 26);
             this.txtGia.TabIndex = 2;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(16, 134);
+            this.label14.Location = new System.Drawing.Point(21, 134);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 20);
             this.label14.TabIndex = 0;
@@ -338,9 +353,9 @@ namespace Manager_Hotel
             this.comboBoxDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxDV.FormattingEnabled = true;
-            this.comboBoxDV.Location = new System.Drawing.Point(16, 102);
+            this.comboBoxDV.Location = new System.Drawing.Point(21, 102);
             this.comboBoxDV.Name = "comboBoxDV";
-            this.comboBoxDV.Size = new System.Drawing.Size(182, 28);
+            this.comboBoxDV.Size = new System.Drawing.Size(213, 28);
             this.comboBoxDV.TabIndex = 3;
             this.comboBoxDV.SelectedIndexChanged += new System.EventHandler(this.comboBoxDV_SelectedIndexChanged);
             // 
@@ -349,9 +364,9 @@ namespace Manager_Hotel
             this.comboBoxLoaiDV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLoaiDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLoaiDV.FormattingEnabled = true;
-            this.comboBoxLoaiDV.Location = new System.Drawing.Point(16, 46);
+            this.comboBoxLoaiDV.Location = new System.Drawing.Point(21, 46);
             this.comboBoxLoaiDV.Name = "comboBoxLoaiDV";
-            this.comboBoxLoaiDV.Size = new System.Drawing.Size(182, 28);
+            this.comboBoxLoaiDV.Size = new System.Drawing.Size(213, 28);
             this.comboBoxLoaiDV.TabIndex = 3;
             this.comboBoxLoaiDV.SelectedIndexChanged += new System.EventHandler(this.comboBoxLoaiDV_SelectedIndexChanged);
             // 
@@ -359,7 +374,7 @@ namespace Manager_Hotel
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 78);
+            this.label13.Location = new System.Drawing.Point(21, 78);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(69, 20);
             this.label13.TabIndex = 0;
@@ -371,7 +386,7 @@ namespace Manager_Hotel
             this.btnThemDV.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemDV.ImageIndex = 3;
             this.btnThemDV.ImageList = this.imageList_iCon;
-            this.btnThemDV.Location = new System.Drawing.Point(16, 244);
+            this.btnThemDV.Location = new System.Drawing.Point(40, 244);
             this.btnThemDV.Name = "btnThemDV";
             this.btnThemDV.Size = new System.Drawing.Size(182, 33);
             this.btnThemDV.TabIndex = 1;
@@ -383,7 +398,7 @@ namespace Manager_Hotel
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(16, 22);
+            this.label12.Location = new System.Drawing.Point(21, 18);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(103, 20);
             this.label12.TabIndex = 0;
@@ -400,6 +415,7 @@ namespace Manager_Hotel
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
             this.groupBox1.Controls.Add(this.dataGridViewPhong);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -412,6 +428,7 @@ namespace Manager_Hotel
             // 
             // dataGridViewPhong
             // 
+            this.dataGridViewPhong.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPhong.Location = new System.Drawing.Point(6, 31);
             this.dataGridViewPhong.Name = "dataGridViewPhong";
@@ -419,14 +436,6 @@ namespace Manager_Hotel
             this.dataGridViewPhong.Size = new System.Drawing.Size(425, 426);
             this.dataGridViewPhong.TabIndex = 11;
             this.dataGridViewPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatagirdviewDV_CellClick);
-            // 
-            // udSoLuong
-            // 
-            this.udSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.udSoLuong.Location = new System.Drawing.Point(20, 212);
-            this.udSoLuong.Name = "udSoLuong";
-            this.udSoLuong.Size = new System.Drawing.Size(178, 26);
-            this.udSoLuong.TabIndex = 4;
             // 
             // SuDungDichVuVaThanToan
             // 
@@ -453,10 +462,10 @@ namespace Manager_Hotel
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udSoLuong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udSoLuong)).EndInit();
             this.ResumeLayout(false);
 
         }

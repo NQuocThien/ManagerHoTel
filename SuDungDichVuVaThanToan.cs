@@ -187,9 +187,8 @@ namespace Manager_Hotel
                     {
                         Random rd = new Random();
                         maHD += rd.Next(100, 1000); // tọa mã hóa đơn
-                        string squery_insert = "insert into HoaDon values('" + maHD + "', '0', '" + maKH + "')";
+                        string squery_insert = "insert into HoaDon values('" + maHD + "', '0', '" + maKH + "', TrangThaiTT = N'Chưa Thanh Toán')";
                         modify.Command(squery_insert);
-
                         break;
                     }
                     catch
@@ -212,7 +211,7 @@ namespace Manager_Hotel
             string maHD = modify.GetID("Select MaHD from HoaDon where MaKH = '"+maKH+"'");
             string maDV = "";
             int dongia = 0;
-            MessageBox.Show("Test :" +comboBoxDV.Text +", "+comboBoxLoaiDV.Text);
+           
 
             DataTableReader reader = modify.GetDataTable("Select MaDV ,DonGia from DichVu where TenDV =N'" + comboBoxDV.Text + "' and LoaiDichVu =N'" + comboBoxLoaiDV.Text + "'").CreateDataReader();
             while(reader.Read())
@@ -326,8 +325,21 @@ namespace Manager_Hotel
         {
             string maKH = dataGridViewPhong.SelectedRows[0].Cells[0].Value.ToString();
             string maHD = modify.GetID("Select MaHD from HoaDon Where MaKH = '" + maKH + "'");
+            string kt_thongtin_thanhtoan = modify.GetID("Select TrangThaiTT from HoaDon Where MaKH = '" + maKH + "'");
+            if (kt_thongtin_thanhtoan == "Đã Thanh Toán")
+            {
+                MessageBox.Show("Hóa Đơn Này Đã Được Thanh Toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+           
             InHoaDon hd = new InHoaDon(maKH, HoTenNhanVien, int.Parse(txtTongTien.Text), maHD, (int) udGiamGia.Value);
             hd.ShowDialog();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

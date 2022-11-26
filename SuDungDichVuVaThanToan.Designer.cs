@@ -46,6 +46,7 @@ namespace Manager_Hotel
             this.dataGridViewHD = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.udGiamGia = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
@@ -64,7 +65,6 @@ namespace Manager_Hotel
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridViewPhong = new System.Windows.Forms.DataGridView();
-            this.udGiamGia = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -77,12 +77,12 @@ namespace Manager_Hotel
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHD)).BeginInit();
             this.panel5.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udGiamGia)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.udSoLuong)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udGiamGia)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -197,7 +197,6 @@ namespace Manager_Hotel
             this.dataGridViewAddDV.RowHeadersWidth = 62;
             this.dataGridViewAddDV.Size = new System.Drawing.Size(640, 337);
             this.dataGridViewAddDV.TabIndex = 0;
-//            this.dataGridViewAddDV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAddDV_CellContentClick);
             // 
             // panel6
             // 
@@ -259,6 +258,26 @@ namespace Manager_Hotel
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức Năng";
             // 
+            // udGiamGia
+            // 
+            this.udGiamGia.Enabled = false;
+            this.udGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.udGiamGia.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.udGiamGia.Location = new System.Drawing.Point(21, 143);
+            this.udGiamGia.Maximum = new decimal(new int[] {
+            2000000,
+            0,
+            0,
+            0});
+            this.udGiamGia.Name = "udGiamGia";
+            this.udGiamGia.Size = new System.Drawing.Size(214, 29);
+            this.udGiamGia.TabIndex = 3;
+            this.udGiamGia.ValueChanged += new System.EventHandler(this.udGiamGia_ValueChanged);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Wheat;
@@ -308,7 +327,6 @@ namespace Manager_Hotel
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(214, 29);
             this.txtTongTien.TabIndex = 2;
-//            this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
             // 
             // label16
             // 
@@ -340,6 +358,7 @@ namespace Manager_Hotel
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sách Dịch Vụ";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // udSoLuong
             // 
@@ -473,26 +492,6 @@ namespace Manager_Hotel
             this.dataGridViewPhong.TabIndex = 11;
             this.dataGridViewPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatagirdviewPhong_CellClick);
             // 
-            // udGiamGia
-            // 
-            this.udGiamGia.Enabled = false;
-            this.udGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.udGiamGia.Increment = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-            this.udGiamGia.Location = new System.Drawing.Point(21, 143);
-            this.udGiamGia.Maximum = new decimal(new int[] {
-            2000000,
-            0,
-            0,
-            0});
-            this.udGiamGia.Name = "udGiamGia";
-            this.udGiamGia.Size = new System.Drawing.Size(214, 29);
-            this.udGiamGia.TabIndex = 3;
-            this.udGiamGia.ValueChanged += new System.EventHandler(this.udGiamGia_ValueChanged);
-            // 
             // SuDungDichVuVaThanToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,13 +517,13 @@ namespace Manager_Hotel
             this.panel5.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.udGiamGia)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.udSoLuong)).EndInit();
             this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.udGiamGia)).EndInit();
             this.ResumeLayout(false);
 
         }

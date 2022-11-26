@@ -126,7 +126,8 @@ namespace Manager_Hotel
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            modify.Command("Update HoaDon set TrangThaiTT = N'Đã Thang Toán' where MaKH = '" + maKH + "'");
+            MessageBox.Show(maKH);
+            modify.Command("Update HoaDon set TrangThaiTT = N'Đã Thanh Toán' , NgayThanhToan = '"+DateTime.Now.ToString("yyyy-MM-dd")+ "', NguoiThanhToan = N'"+HoTenNV+"'   where MaKH = '" + maKH + "'");
             MessageBox.Show("Đã Thanh Toán Xong"); /// thay thế code in hoa đơn
         }
     }

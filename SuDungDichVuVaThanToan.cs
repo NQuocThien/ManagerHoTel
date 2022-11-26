@@ -332,7 +332,6 @@ namespace Manager_Hotel
                 return;
             }
 
-           
             InHoaDon hd = new InHoaDon(maKH, HoTenNhanVien, int.Parse(txtTongTien.Text), maHD, (int) udGiamGia.Value);
             hd.ShowDialog();
         }

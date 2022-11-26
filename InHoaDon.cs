@@ -123,5 +123,11 @@ namespace Manager_Hotel
         {
             this.Close();
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            modify.Command("Update HoaDon set TrangThaiTT = N'Đã Thang Toán' where MaKH = '" + maKH + "'");
+            MessageBox.Show("Đã Thanh Toán Xong"); /// thay thế code in hoa đơn
+        }
     }
 }

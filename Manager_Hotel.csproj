@@ -96,7 +96,6 @@
     <Compile Include="DatPhong.Designer.cs">
       <DependentUpon>DatPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModiFy.cs" />
     <Compile Include="NhanPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +151,12 @@
     </Compile>
     <Compile Include="SuDungDichVuVaThanToan.Designer.cs">
       <DependentUpon>SuDungDichVuVaThanToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongKe.Designer.cs">
+      <DependentUpon>ThongKe.cs</DependentUpon>
     </Compile>
     <Compile Include="ThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -213,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SuDungDichVuVaThanToan.resx">
       <DependentUpon>SuDungDichVuVaThanToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongKe.resx">
+      <DependentUpon>ThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongTinTaiKhoan.resx">
       <DependentUpon>ThongTinTaiKhoan.cs</DependentUpon>

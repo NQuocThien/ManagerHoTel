@@ -363,6 +363,7 @@ namespace Manager_Hotel
             this.btnThongKe.Text = "Thống Kê Doanh Thu";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // btnQuyDinh
             // 

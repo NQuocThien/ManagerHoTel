@@ -140,5 +140,11 @@ namespace Manager_Hotel
             QuyDinh qd = new QuyDinh();
             qd.ShowDialog();
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            ThongKe tk = new ThongKe();
+            tk.ShowDialog();
+        }
     }
 }

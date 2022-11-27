@@ -126,9 +126,9 @@ namespace Manager_Hotel
         Bitmap bmp;
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(maKH);
+            //MessageBox.Show(maKH);
             modify.Command("Update HoaDon set TrangThaiTT = N'Đã Thanh Toán' , NgayThanhToan = '"+DateTime.Now.ToString("yyyy-MM-dd")+ "', NguoiThanhToan = N'"+HoTenNV+"'   where MaKH = '" + maKH + "'");
-            MessageBox.Show("Đã Thanh Toán Xong"); /// thay thế code in hoa đơn
+            //MessageBox.Show("Đã Thanh Toán Xong"); /// thay thế code in hoa đơn
             Graphics g = this.CreateGraphics();
             bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
             this.DrawToBitmap(bmp, new Rectangle(0, 0, this.Size.Width, this.Size.Height));

@@ -157,7 +157,7 @@ namespace Manager_Hotel
         {
             string socm = txtTimKiemCMND_KH.Text;
          
-            string squery_cmnd = "select * from KhachHang kh where kh.CMND = '" + socm + "'";
+            string squery_cmnd = "select * from KhachHang kh where kh.CMND like '%" + socm + "%'";
             dataGridViewDSDatPhong.DataSource = modify.GetDataTable(squery_cmnd);
 
         }

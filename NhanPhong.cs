@@ -162,7 +162,7 @@ namespace Manager_Hotel
             {
                 string squery = "Select ct.MaChiTietDatPhong, kh.HoTen, kh.CMND, ct.TenLoai, ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct , KhachHang kh where ct.MaKH  =kh.MaKH and ct.MaChiTietDatPhong not in (Select pdp.MaChiTietDP from PhieuDatPhong pdp ) and (kh.HoTen like '%"+txtSearch.Text+"%' or kh.CMND like '%"+txtSearch.Text+"%')";
                 gvDatPhong.DataSource = modify.GetDataTable(squery);
-            }else
+            }else if(rdDanhSachNP.Checked==true)
             {
                 string squery_Nhan = "Select p.MaPhong, kh.HoTen, kh.CMND, ct.TenLoai, ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct , KhachHang kh, PhieuDatPhong pdp, Phong p  where ct.MaKH  =kh.MaKH and p.MaPhong = pdp.MaPhong and ct.MaChiTietDatPhong = pdp.MaChiTietDP  and ct.MaChiTietDatPhong  in (Select pdp.MaChiTietDP from PhieuDatPhong pdp ) and (kh.HoTen like '%" + txtSearch.Text + "%' or kh.CMND like '%" + txtSearch.Text + "%')";
                 gvNhanPhong.DataSource = modify.GetDataTable(squery_Nhan);

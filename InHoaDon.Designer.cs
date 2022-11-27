@@ -578,7 +578,7 @@
             this.dataGridViewAddDV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridViewAddDV.Name = "dataGridViewAddDV";
             this.dataGridViewAddDV.RowHeadersWidth = 62;
-            this.dataGridViewAddDV.Size = new System.Drawing.Size(1116, 269);
+            this.dataGridViewAddDV.Size = new System.Drawing.Size(1164, 269);
             this.dataGridViewAddDV.TabIndex = 96;
             // 
             // label31

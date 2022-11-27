@@ -129,6 +129,8 @@ namespace Manager_Hotel
             MessageBox.Show(maKH);
             modify.Command("Update HoaDon set TrangThaiTT = N'Đã Thanh Toán' , NgayThanhToan = '"+DateTime.Now.ToString("yyyy-MM-dd")+ "', NguoiThanhToan = N'"+HoTenNV+"'   where MaKH = '" + maKH + "'");
             MessageBox.Show("Đã Thanh Toán Xong"); /// thay thế code in hoa đơn
+            PrintDialog print = new PrintDialog();
+            print.ShowDialog();
         }
     }
 }

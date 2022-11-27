@@ -329,7 +329,7 @@ namespace Manager_Hotel
             if (kt_thongtin_thanhtoan == "Đã Thanh Toán")
             {
                 MessageBox.Show("Hóa Đơn Này Đã Được Thanh Toán", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                
             }
 
             InHoaDon hd = new InHoaDon(maKH, HoTenNhanVien, int.Parse(txtTongTien.Text), maHD, (int) udGiamGia.Value);

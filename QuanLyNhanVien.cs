@@ -20,7 +20,6 @@ namespace Manager_Hotel
             InitializeComponent();
         }
 
-        //SqlCommand sqlCommand;
         String querytableNv = "select tk.TenDangNhap, nv.HoTen, nv.ChucVu, nv.CMNDNhanVien, nv.SDT, nv.DiaChi  from TaiKhoan tk,NhanVien nv where tk.TenDangNhap=nv.TenDangNhap";
         ClassLoin.Modify modi = new ClassLoin.Modify();
 
@@ -29,7 +28,6 @@ namespace Manager_Hotel
             loadGirdView();
             txtTenTK.Enabled = false;
         }
-
         public void loadGirdView()
         {
             DateTime dt = DateTime.Now;
@@ -59,9 +57,6 @@ namespace Manager_Hotel
 
             dataGirdViewDSNhanVien.Columns[5].HeaderText = "Địa Chỉ ";
             dataGirdViewDSNhanVien.Columns[5].Width = n;
-
-
-
         }
 
         private void dataGirdViewDSNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -92,7 +87,6 @@ namespace Manager_Hotel
             }
             catch { }
         }
-
         Random rd = new Random();
         String idNhanVien = "E";
 
@@ -131,7 +125,6 @@ namespace Manager_Hotel
             }
             else if(radioBtAddNV.Checked == true)
             {
-                
                 String queryThemNV;
                 try
                 {
@@ -144,7 +137,6 @@ namespace Manager_Hotel
                 }
                 while (true)
                 {
-
                     try
                     {
                         int ID = rd.Next(100, 1000);
@@ -157,7 +149,6 @@ namespace Manager_Hotel
                     {
                         idNhanVien = "E";
                     }
-
                 }
                 loadGirdView();
             }
@@ -186,7 +177,6 @@ namespace Manager_Hotel
                 txtTenTK.Enabled = true;
             }
         }
-
         private void btnDong_Click(object sender, EventArgs e)
         {
             this.Close();

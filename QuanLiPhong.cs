@@ -61,12 +61,17 @@ namespace Manager_Hotel
         {
             int i;
 
-            i = dataGridViewPhong.CurrentRow.Index;
-            txtMaPhong.Text = dataGridViewPhong.Rows[i].Cells[0].Value.ToString();
-            cbTrangThai.Text = dataGridViewPhong.Rows[i].Cells[1].Value.ToString();
-            cbLoaiPhong.Text = dataGridViewPhong.Rows[i].Cells[2].Value.ToString();
-            udSLNguoi.Value = Convert.ToInt32(dataGridViewPhong.Rows[i].Cells[3].Value);
-            txtDonGia.Text = dataGridViewPhong.Rows[i].Cells[4].Value.ToString();
+            try
+            {
+                i = dataGridViewPhong.CurrentRow.Index;
+                txtMaPhong.Text = dataGridViewPhong.Rows[i].Cells[0].Value.ToString();
+                cbTrangThai.Text = dataGridViewPhong.Rows[i].Cells[1].Value.ToString();
+                cbLoaiPhong.Text = dataGridViewPhong.Rows[i].Cells[2].Value.ToString();
+                udSLNguoi.Value = Convert.ToInt32(dataGridViewPhong.Rows[i].Cells[3].Value);
+                txtDonGia.Text = dataGridViewPhong.Rows[i].Cells[4].Value.ToString();
+            }
+            catch { }
+           
         }
 
         private void btnCapNhatPhong_Click(object sender, EventArgs e)

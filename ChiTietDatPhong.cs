@@ -82,7 +82,7 @@ namespace Manager_Hotel
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            modify.Command("UPDATE ChiTietDatPhong Set NgayNhan ='" + dateNhan.Value.ToString("yyyy-MM-dd") + "' , NgayTra='" + dateTra.Value.ToString("yyyy-MM-dd") + "' , SoDem = '" + udSoDem.Value + "' Where MaChiTietDatPhong = '" + maChiTietDP + "'");
+            modify.Command("UPDATE ChiTietDatPhong Set NgayNhan ='" + dateNhan.Value.ToString("yyyy-MM-dd") + "' , NgayTra='" + dateTra.Value.ToString("yyyy-MM-dd") + "' , SoDem = '" + udSoDem.Value + "' , TenLoai ='"+cbBoxLoaiPhong.Text+"' Where MaChiTietDatPhong = '" + maChiTietDP + "'");
             MessageBox.Show("Đã Lưu Lại Thông Tin Đặt Phòng: ", "Lưu Lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -109,6 +109,11 @@ namespace Manager_Hotel
             string squery_delKH = " Delete From Khachhang  Where MaKH = '" + maKH + "' ";
             modify.Command(squery_delKH);
             MessageBox.Show("Đã xóa khách hàng: " + txtHoTen.Text, "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

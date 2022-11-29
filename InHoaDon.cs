@@ -52,7 +52,7 @@ namespace Manager_Hotel
             string squery1 = "Select hdp.ThanhTien from HoaDon hd, HoaDonPhong hdp where hd.MaHD = hdp.MaHD and hd.MaKH ='" + maKH + "'";
             DataTableReader reader1 = modify.GetDataTable(squery1).CreateDataReader();
             int TienPhong = 0;
-            while(reader.Read())
+            while(reader1.Read())
             {
                 TienPhong = reader1.GetInt32(0);
             }
@@ -140,5 +140,7 @@ namespace Manager_Hotel
         {
             e.Graphics.DrawImage(bmp, 0, 10);
         }
+
+       
     }
 }

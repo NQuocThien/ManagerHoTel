@@ -96,8 +96,6 @@ namespace Manager_Hotel
                             tienPhong = reader.GetInt32(1);
                         }
                         int tongtien = soDem * tienPhong;
-                        MessageBox.Show("Teest: " +maChiTietDP +" , "+maHD +" " +tienPhong + ",  "+soDem);
-
                         string squery_insert = "Insert into HoaDonPhong values('" + maHDPhong + "', '" + maChiTietDP + "', '" + tongtien + "', '"+maHD+"')";
                         modify.Command(squery_insert);
                         break;
@@ -187,8 +185,9 @@ namespace Manager_Hotel
                     {
                         Random rd = new Random();
                         maHD += rd.Next(100, 1000); // tọa mã hóa đơn
-                        string squery_insert = "insert into HoaDon values('" + maHD + "', '0', '" + maKH + "', TrangThaiTT = N'Chưa Thanh Toán')";
+                        string squery_insert = "insert into HoaDon values('" + maHD + "', '0', '" + maKH + "', N'Chưa Thanh Toán', '', '')";
                         modify.Command(squery_insert);
+
                         break;
                     }
                     catch
@@ -196,14 +195,10 @@ namespace Manager_Hotel
                         maHD = "B";
                         MessageBox.Show(" lỗi Chưa có hóa đơn");
                     }
-
-                    
                 }
-                
             }
-
-          
         }
+
         private void btnThemDV_Click(object sender, EventArgs e)
         {
             string maHDDichVu = "HD";
@@ -337,6 +332,11 @@ namespace Manager_Hotel
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
         {
 
         }

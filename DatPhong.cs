@@ -112,6 +112,12 @@ namespace Manager_Hotel
             string squery = "Select ct.MaChiTietDatPhong, kh.HoTen, kh.CMND, ct.TenLoai,ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct, KhachHang kh where ct.MaKH = kh.Makh ";
             DataTable dt = modify.GetDataTable(squery);
             dataGridViewDSDatPhong.DataSource = dt;
+            dataGridViewDSDatPhong.Columns[0].HeaderText = "Mã Phòng";
+            dataGridViewDSDatPhong.Columns[1].HeaderText = "Họ Tên";
+            dataGridViewDSDatPhong.Columns[2].HeaderText = "Số CMND";
+            dataGridViewDSDatPhong.Columns[3].HeaderText = "Loại Phòng";
+            dataGridViewDSDatPhong.Columns[4].HeaderText = "Ngày Nhận";
+            dataGridViewDSDatPhong.Columns[5].HeaderText = "Ngày Trả";
         }
 
         private void Load_cbLoaiPhong()

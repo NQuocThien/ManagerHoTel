@@ -98,25 +98,24 @@ namespace Manager_Hotel
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1924, 91);
+            this.panel1.Size = new System.Drawing.Size(1346, 59);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label1.Font = new System.Drawing.Font("Verdana", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.ImageIndex = 2;
             this.label1.ImageList = this.imageList_icon;
-            this.label1.Location = new System.Drawing.Point(28, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(19, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(328, 72);
+            this.label1.Size = new System.Drawing.Size(279, 47);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhận Phòng";
             // 
@@ -137,21 +136,19 @@ namespace Manager_Hotel
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Padding = new System.Windows.Forms.Padding(22, 15, 8, 8);
-            this.panel4.Size = new System.Drawing.Size(1030, 894);
+            this.panel4.Padding = new System.Windows.Forms.Padding(15, 10, 5, 5);
+            this.panel4.Size = new System.Drawing.Size(687, 581);
             this.panel4.TabIndex = 1;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.groupBox4);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(22, 683);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(15, 444);
             this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.panel6.Size = new System.Drawing.Size(1000, 228);
+            this.panel6.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel6.Size = new System.Drawing.Size(667, 148);
             this.panel6.TabIndex = 0;
             // 
             // groupBox4
@@ -162,11 +159,9 @@ namespace Manager_Hotel
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox4.Location = new System.Drawing.Point(8, 8);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox4.Location = new System.Drawing.Point(5, 5);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox4.Size = new System.Drawing.Size(984, 212);
+            this.groupBox4.Size = new System.Drawing.Size(657, 138);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chức năng";
@@ -177,10 +172,9 @@ namespace Manager_Hotel
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHuy.ImageIndex = 1;
             this.btnHuy.ImageList = this.imageList_icon;
-            this.btnHuy.Location = new System.Drawing.Point(345, 65);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHuy.Location = new System.Drawing.Point(230, 42);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(216, 128);
+            this.btnHuy.Size = new System.Drawing.Size(144, 83);
             this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
@@ -192,10 +186,9 @@ namespace Manager_Hotel
             this.btnDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDong.ImageIndex = 1;
             this.btnDong.ImageList = this.imageList_icon;
-            this.btnDong.Location = new System.Drawing.Point(48, 65);
-            this.btnDong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDong.Location = new System.Drawing.Point(32, 42);
             this.btnDong.Name = "btnDong";
-            this.btnDong.Size = new System.Drawing.Size(218, 128);
+            this.btnDong.Size = new System.Drawing.Size(145, 83);
             this.btnDong.TabIndex = 1;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
@@ -207,10 +200,9 @@ namespace Manager_Hotel
             this.btnNhanPhong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhanPhong.ImageIndex = 3;
             this.btnNhanPhong.ImageList = this.imageList_icon;
-            this.btnNhanPhong.Location = new System.Drawing.Point(650, 60);
-            this.btnNhanPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNhanPhong.Location = new System.Drawing.Point(433, 39);
             this.btnNhanPhong.Name = "btnNhanPhong";
-            this.btnNhanPhong.Size = new System.Drawing.Size(291, 128);
+            this.btnNhanPhong.Size = new System.Drawing.Size(194, 83);
             this.btnNhanPhong.TabIndex = 1;
             this.btnNhanPhong.Text = "Nhận Phòng";
             this.btnNhanPhong.UseVisualStyleBackColor = true;
@@ -220,11 +212,10 @@ namespace Manager_Hotel
             // 
             this.panel5.Controls.Add(this.groupBox3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(22, 255);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(15, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.panel5.Size = new System.Drawing.Size(1000, 428);
+            this.panel5.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel5.Size = new System.Drawing.Size(667, 278);
             this.panel5.TabIndex = 0;
             // 
             // groupBox3
@@ -247,11 +238,9 @@ namespace Manager_Hotel
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox3.Location = new System.Drawing.Point(8, 8);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox3.Location = new System.Drawing.Point(5, 5);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(984, 412);
+            this.groupBox3.Size = new System.Drawing.Size(657, 268);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin nhận phòng";
@@ -261,20 +250,18 @@ namespace Manager_Hotel
             this.cbTenLoaiPhong.Enabled = false;
             this.cbTenLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenLoaiPhong.FormattingEnabled = true;
-            this.cbTenLoaiPhong.Location = new System.Drawing.Point(39, 252);
-            this.cbTenLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTenLoaiPhong.Location = new System.Drawing.Point(26, 164);
             this.cbTenLoaiPhong.Name = "cbTenLoaiPhong";
-            this.cbTenLoaiPhong.Size = new System.Drawing.Size(376, 37);
+            this.cbTenLoaiPhong.Size = new System.Drawing.Size(252, 28);
             this.cbTenLoaiPhong.TabIndex = 3;
             // 
             // udSL
             // 
             this.udSL.Enabled = false;
             this.udSL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.udSL.Location = new System.Drawing.Point(554, 252);
-            this.udSL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.udSL.Location = new System.Drawing.Point(369, 164);
             this.udSL.Name = "udSL";
-            this.udSL.Size = new System.Drawing.Size(388, 35);
+            this.udSL.Size = new System.Drawing.Size(259, 26);
             this.udSL.TabIndex = 2;
             // 
             // dateTra
@@ -284,10 +271,9 @@ namespace Manager_Hotel
             this.dateTra.Enabled = false;
             this.dateTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTra.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTra.Location = new System.Drawing.Point(554, 169);
-            this.dateTra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTra.Location = new System.Drawing.Point(369, 110);
             this.dateTra.Name = "dateTra";
-            this.dateTra.Size = new System.Drawing.Size(385, 35);
+            this.dateTra.Size = new System.Drawing.Size(258, 26);
             this.dateTra.TabIndex = 1;
             // 
             // dateNhan
@@ -297,20 +283,18 @@ namespace Manager_Hotel
             this.dateNhan.Enabled = false;
             this.dateNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateNhan.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNhan.Location = new System.Drawing.Point(555, 86);
-            this.dateNhan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateNhan.Location = new System.Drawing.Point(370, 56);
             this.dateNhan.Name = "dateNhan";
-            this.dateNhan.Size = new System.Drawing.Size(385, 35);
+            this.dateNhan.Size = new System.Drawing.Size(258, 26);
             this.dateNhan.TabIndex = 1;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(548, 302);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(365, 196);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(56, 29);
+            this.label12.Size = new System.Drawing.Size(38, 20);
             this.label12.TabIndex = 0;
             this.label12.Text = "Giá:";
             // 
@@ -318,10 +302,9 @@ namespace Manager_Hotel
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(549, 212);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(366, 138);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(246, 29);
+            this.label11.Size = new System.Drawing.Size(162, 20);
             this.label11.TabIndex = 0;
             this.label11.Text = "Số lượng người tối đa:";
             // 
@@ -329,10 +312,9 @@ namespace Manager_Hotel
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(549, 135);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(366, 88);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(108, 29);
+            this.label10.Size = new System.Drawing.Size(72, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Ngày trả:";
             // 
@@ -340,10 +322,9 @@ namespace Manager_Hotel
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 214);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(23, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 29);
+            this.label7.Size = new System.Drawing.Size(89, 20);
             this.label7.TabIndex = 0;
             this.label7.Text = "Tên phòng:";
             // 
@@ -351,10 +332,9 @@ namespace Manager_Hotel
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(549, 42);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(366, 27);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 29);
+            this.label9.Size = new System.Drawing.Size(89, 20);
             this.label9.TabIndex = 0;
             this.label9.Text = "Ngày nhận:";
             // 
@@ -362,10 +342,9 @@ namespace Manager_Hotel
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 128);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(23, 83);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(242, 29);
+            this.label6.Size = new System.Drawing.Size(159, 20);
             this.label6.TabIndex = 0;
             this.label6.Text = "Thẻ căn cước/CMND:";
             // 
@@ -373,10 +352,9 @@ namespace Manager_Hotel
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 42);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(23, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 29);
+            this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 0;
             this.label5.Text = "Họ và tên:";
             // 
@@ -384,39 +362,35 @@ namespace Manager_Hotel
             // 
             this.txtDonGia.Enabled = false;
             this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDonGia.Location = new System.Drawing.Point(554, 335);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtDonGia.Location = new System.Drawing.Point(369, 218);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(385, 35);
+            this.txtDonGia.Size = new System.Drawing.Size(258, 26);
             this.txtDonGia.TabIndex = 0;
             // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(555, 337);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBox6.Location = new System.Drawing.Point(370, 219);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(385, 35);
+            this.textBox6.Size = new System.Drawing.Size(258, 26);
             this.textBox6.TabIndex = 0;
             // 
             // txtCMND
             // 
             this.txtCMND.Enabled = false;
             this.txtCMND.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(39, 165);
-            this.txtCMND.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCMND.Location = new System.Drawing.Point(26, 107);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(385, 35);
+            this.txtCMND.Size = new System.Drawing.Size(258, 26);
             this.txtCMND.TabIndex = 0;
             // 
             // txtHoTen
             // 
             this.txtHoTen.Enabled = false;
             this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(39, 78);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtHoTen.Location = new System.Drawing.Point(26, 51);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(385, 35);
+            this.txtHoTen.Size = new System.Drawing.Size(258, 26);
             this.txtHoTen.TabIndex = 0;
             // 
             // panel3
@@ -424,11 +398,10 @@ namespace Manager_Hotel
             this.panel3.Controls.Add(this.groupBox5);
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(22, 15);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(15, 10);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
-            this.panel3.Size = new System.Drawing.Size(1000, 240);
+            this.panel3.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel3.Size = new System.Drawing.Size(667, 156);
             this.panel3.TabIndex = 0;
             // 
             // groupBox5
@@ -441,21 +414,19 @@ namespace Manager_Hotel
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Right;
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox5.Location = new System.Drawing.Point(506, 8);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.groupBox5.Location = new System.Drawing.Point(338, 5);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox5.Size = new System.Drawing.Size(486, 224);
+            this.groupBox5.Size = new System.Drawing.Size(324, 146);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách phòng trống";
             // 
             // btnLayPhong
             // 
-            this.btnLayPhong.Location = new System.Drawing.Point(368, 86);
-            this.btnLayPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLayPhong.Location = new System.Drawing.Point(245, 56);
             this.btnLayPhong.Name = "btnLayPhong";
-            this.btnLayPhong.Size = new System.Drawing.Size(112, 74);
+            this.btnLayPhong.Size = new System.Drawing.Size(75, 48);
             this.btnLayPhong.TabIndex = 2;
             this.btnLayPhong.Text = "Lấy Phòng";
             this.btnLayPhong.UseVisualStyleBackColor = true;
@@ -465,30 +436,27 @@ namespace Manager_Hotel
             // 
             this.cbPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPhong.FormattingEnabled = true;
-            this.cbPhong.Location = new System.Drawing.Point(45, 149);
-            this.cbPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbPhong.Location = new System.Drawing.Point(30, 97);
             this.cbPhong.Name = "cbPhong";
-            this.cbPhong.Size = new System.Drawing.Size(310, 37);
+            this.cbPhong.Size = new System.Drawing.Size(208, 28);
             this.cbPhong.TabIndex = 1;
             // 
             // cbLoaiPhong
             // 
             this.cbLoaiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiPhong.FormattingEnabled = true;
-            this.cbLoaiPhong.Location = new System.Drawing.Point(45, 68);
-            this.cbLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbLoaiPhong.Location = new System.Drawing.Point(30, 44);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(310, 37);
+            this.cbLoaiPhong.Size = new System.Drawing.Size(208, 28);
             this.cbLoaiPhong.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(40, 111);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(27, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 29);
+            this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Phòng:";
             // 
@@ -496,10 +464,9 @@ namespace Manager_Hotel
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 29);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(27, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 29);
+            this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Loại phòng:";
             // 
@@ -512,11 +479,9 @@ namespace Manager_Hotel
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.groupBox2.Location = new System.Drawing.Point(8, 8);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox2.Location = new System.Drawing.Point(5, 5);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(496, 224);
+            this.groupBox2.Size = new System.Drawing.Size(331, 146);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm Kiếm";
@@ -525,11 +490,9 @@ namespace Manager_Hotel
             // 
             this.groupBox8.Controls.Add(this.rdDanhSachNP);
             this.groupBox8.Controls.Add(this.rdDanhSachDp);
-            this.groupBox8.Location = new System.Drawing.Point(28, 111);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox8.Location = new System.Drawing.Point(19, 69);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox8.Size = new System.Drawing.Size(272, 109);
+            this.groupBox8.Size = new System.Drawing.Size(181, 71);
             this.groupBox8.TabIndex = 2;
             this.groupBox8.TabStop = false;
             // 
@@ -538,10 +501,9 @@ namespace Manager_Hotel
             this.rdDanhSachNP.AutoSize = true;
             this.rdDanhSachNP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdDanhSachNP.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rdDanhSachNP.Location = new System.Drawing.Point(20, 74);
-            this.rdDanhSachNP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdDanhSachNP.Location = new System.Drawing.Point(13, 46);
             this.rdDanhSachNP.Name = "rdDanhSachNP";
-            this.rdDanhSachNP.Size = new System.Drawing.Size(240, 29);
+            this.rdDanhSachNP.Size = new System.Drawing.Size(163, 20);
             this.rdDanhSachNP.TabIndex = 0;
             this.rdDanhSachNP.TabStop = true;
             this.rdDanhSachNP.Text = "Danh sách nhận phòng";
@@ -552,10 +514,9 @@ namespace Manager_Hotel
             this.rdDanhSachDp.AutoSize = true;
             this.rdDanhSachDp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdDanhSachDp.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rdDanhSachDp.Location = new System.Drawing.Point(20, 32);
-            this.rdDanhSachDp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rdDanhSachDp.Location = new System.Drawing.Point(13, 21);
             this.rdDanhSachDp.Name = "rdDanhSachDp";
-            this.rdDanhSachDp.Size = new System.Drawing.Size(223, 29);
+            this.rdDanhSachDp.Size = new System.Drawing.Size(153, 20);
             this.rdDanhSachDp.TabIndex = 0;
             this.rdDanhSachDp.TabStop = true;
             this.rdDanhSachDp.Text = "Danh sách đặt phòng";
@@ -565,19 +526,17 @@ namespace Manager_Hotel
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 31);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(23, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 29);
+            this.label4.Size = new System.Drawing.Size(107, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Mã đặt phòng";
             // 
             // btnSreach
             // 
-            this.btnSreach.Location = new System.Drawing.Point(309, 143);
-            this.btnSreach.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSreach.Location = new System.Drawing.Point(206, 93);
             this.btnSreach.Name = "btnSreach";
-            this.btnSreach.Size = new System.Drawing.Size(144, 68);
+            this.btnSreach.Size = new System.Drawing.Size(96, 44);
             this.btnSreach.TabIndex = 1;
             this.btnSreach.Text = "Tìm Kiếm";
             this.btnSreach.UseVisualStyleBackColor = true;
@@ -586,10 +545,9 @@ namespace Manager_Hotel
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(48, 68);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Location = new System.Drawing.Point(32, 44);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(384, 35);
+            this.txtSearch.Size = new System.Drawing.Size(257, 26);
             this.txtSearch.TabIndex = 0;
             // 
             // panel2
@@ -597,10 +555,9 @@ namespace Manager_Hotel
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 91);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(0, 59);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1924, 894);
+            this.panel2.Size = new System.Drawing.Size(1346, 581);
             this.panel2.TabIndex = 1;
             // 
             // groupBox1
@@ -610,11 +567,10 @@ namespace Manager_Hotel
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(4)))));
-            this.groupBox1.Location = new System.Drawing.Point(1030, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox1.Location = new System.Drawing.Point(687, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.groupBox1.Size = new System.Drawing.Size(894, 882);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.groupBox1.Size = new System.Drawing.Size(659, 573);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách nhận phòng";
@@ -623,11 +579,9 @@ namespace Manager_Hotel
             // 
             this.groupBox7.Controls.Add(this.gvNhanPhong);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox7.Location = new System.Drawing.Point(15, 446);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox7.Location = new System.Drawing.Point(10, 290);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox7.Size = new System.Drawing.Size(864, 415);
+            this.groupBox7.Size = new System.Drawing.Size(639, 270);
             this.groupBox7.TabIndex = 0;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Danh Sách Nhận Phòng";
@@ -637,22 +591,19 @@ namespace Manager_Hotel
             this.gvNhanPhong.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.gvNhanPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvNhanPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvNhanPhong.Location = new System.Drawing.Point(4, 28);
-            this.gvNhanPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gvNhanPhong.Location = new System.Drawing.Point(3, 18);
             this.gvNhanPhong.Name = "gvNhanPhong";
             this.gvNhanPhong.RowHeadersWidth = 62;
-            this.gvNhanPhong.Size = new System.Drawing.Size(856, 382);
+            this.gvNhanPhong.Size = new System.Drawing.Size(633, 249);
             this.gvNhanPhong.TabIndex = 0;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.gvDatPhong);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox6.Location = new System.Drawing.Point(15, 38);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.groupBox6.Location = new System.Drawing.Point(10, 25);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox6.Size = new System.Drawing.Size(864, 408);
+            this.groupBox6.Size = new System.Drawing.Size(639, 265);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Danh Sách Đặt Phòng";
@@ -662,22 +613,20 @@ namespace Manager_Hotel
             this.gvDatPhong.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.gvDatPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvDatPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gvDatPhong.Location = new System.Drawing.Point(4, 28);
-            this.gvDatPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.gvDatPhong.Location = new System.Drawing.Point(3, 18);
             this.gvDatPhong.Name = "gvDatPhong";
             this.gvDatPhong.RowHeadersWidth = 62;
-            this.gvDatPhong.Size = new System.Drawing.Size(856, 375);
+            this.gvDatPhong.Size = new System.Drawing.Size(633, 244);
             this.gvDatPhong.TabIndex = 0;
             this.gvDatPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDatPhong_CellClick);
             // 
             // NhanPhong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 969);
+            this.ClientSize = new System.Drawing.Size(1346, 630);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "NhanPhong";
             this.Text = "NhanPhong";
             this.TopMost = true;

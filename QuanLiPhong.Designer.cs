@@ -347,6 +347,7 @@ namespace Manager_Hotel
             // 
             // dataGridViewPhong
             // 
+            this.dataGridViewPhong.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridViewPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewPhong.Location = new System.Drawing.Point(3, 16);

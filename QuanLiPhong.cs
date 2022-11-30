@@ -33,10 +33,15 @@ namespace Manager_Hotel
             dataGridViewPhong.DataSource = modify.GetDataTable(querytableDV);
 
             int n = dataGridViewPhong.Width / 5;
+            dataGridViewPhong.Columns[0].HeaderText = "Mã Phòng";
             dataGridViewPhong.Columns[0].Width = n;
+            dataGridViewPhong.Columns[1].HeaderText = "Trạng Thái";
             dataGridViewPhong.Columns[1].Width = n;
+            dataGridViewPhong.Columns[2].HeaderText = "Loại Phòng";
             dataGridViewPhong.Columns[2].Width = n;
+            dataGridViewPhong.Columns[3].HeaderText = "Số Người";
             dataGridViewPhong.Columns[3].Width = n;
+            dataGridViewPhong.Columns[4].HeaderText = "Đơn Giá";
             dataGridViewPhong.Columns[4].Width = n;
         }
 

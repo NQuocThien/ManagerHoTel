@@ -36,9 +36,24 @@ namespace Manager_Hotel
 
             string squery = "Select ct.MaChiTietDatPhong, kh.HoTen, kh.CMND, ct.TenLoai, ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct , KhachHang kh where ct.MaKH  =kh.MaKH and ct.MaChiTietDatPhong not in (Select pdp.MaChiTietDP from PhieuDatPhong pdp )";
             gvDatPhong.DataSource = modify.GetDataTable(squery);
+            gvDatPhong.Columns[0].HeaderText = "Mã Đặt Phòng";
+            gvDatPhong.Columns[1].HeaderText = "Họ Tên";
+            gvDatPhong.Columns[2].HeaderText = "Số CMND";
+            gvDatPhong.Columns[3].HeaderText = "Loại Phòng";
+            gvDatPhong.Columns[4].HeaderText = "Ngày Nhận";
+            gvDatPhong.Columns[5].HeaderText = "Ngày Trả";
 
             string squery_Nhan = "Select p.MaPhong, kh.HoTen, kh.CMND, ct.TenLoai, ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct , KhachHang kh, PhieuDatPhong pdp, Phong p  where ct.MaKH  =kh.MaKH and p.MaPhong = pdp.MaPhong and ct.MaChiTietDatPhong = pdp.MaChiTietDP  and ct.MaChiTietDatPhong  in (Select pdp.MaChiTietDP from PhieuDatPhong pdp )";
             gvNhanPhong.DataSource = modify.GetDataTable(squery_Nhan);
+            gvNhanPhong.Columns[0].HeaderText = "Mã Phòng";
+            gvNhanPhong.Columns[1].HeaderText = "Họ Tên";
+            gvNhanPhong.Columns[2].HeaderText = "Số CMND";
+            gvNhanPhong.Columns[3].HeaderText = "Loại Phòng";
+            gvNhanPhong.Columns[4].HeaderText = "Ngày Nhận";
+            gvNhanPhong.Columns[5].HeaderText = "Ngày Trả";
+
+
+
 
             cbPhong.Enabled = false;
         }

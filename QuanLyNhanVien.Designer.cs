@@ -124,7 +124,7 @@ namespace Manager_Hotel
             // radioBtAddNV
             // 
             this.radioBtAddNV.AutoSize = true;
-            this.radioBtAddNV.Location = new System.Drawing.Point(363, 22);
+            this.radioBtAddNV.Location = new System.Drawing.Point(26, 62);
             this.radioBtAddNV.Margin = new System.Windows.Forms.Padding(2);
             this.radioBtAddNV.Name = "radioBtAddNV";
             this.radioBtAddNV.Size = new System.Drawing.Size(139, 24);
@@ -157,7 +157,7 @@ namespace Manager_Hotel
             this.btnThucHien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThucHien.ImageIndex = 0;
             this.btnThucHien.ImageList = this.imageList_iCon;
-            this.btnThucHien.Location = new System.Drawing.Point(132, 51);
+            this.btnThucHien.Location = new System.Drawing.Point(253, 40);
             this.btnThucHien.Name = "btnThucHien";
             this.btnThucHien.Size = new System.Drawing.Size(228, 35);
             this.btnThucHien.TabIndex = 4;
@@ -212,26 +212,26 @@ namespace Manager_Hotel
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1346, 41);
+            this.panel1.Size = new System.Drawing.Size(1346, 54);
             this.panel1.TabIndex = 6;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label2.ImageIndex = 4;
             this.label2.ImageList = this.imageList_iCon;
             this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 29);
+            this.label2.Size = new System.Drawing.Size(237, 42);
             this.label2.TabIndex = 5;
             this.label2.Text = "Quản Lý Nhân Viên";
             // 
@@ -240,16 +240,16 @@ namespace Manager_Hotel
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 41);
+            this.panel2.Location = new System.Drawing.Point(0, 54);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(590, 589);
+            this.panel2.Size = new System.Drawing.Size(590, 576);
             this.panel2.TabIndex = 7;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 411);
+            this.panel5.Location = new System.Drawing.Point(0, 398);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(590, 178);
             this.panel5.TabIndex = 8;
@@ -355,7 +355,7 @@ namespace Manager_Hotel
             this.dateTimePickerNgayVaoLam.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNgayVaoLam.Location = new System.Drawing.Point(20, 363);
             this.dateTimePickerNgayVaoLam.Name = "dateTimePickerNgayVaoLam";
-            this.dateTimePickerNgayVaoLam.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePickerNgayVaoLam.Size = new System.Drawing.Size(225, 26);
             this.dateTimePickerNgayVaoLam.TabIndex = 16;
             // 
             // txtCMND
@@ -601,9 +601,9 @@ namespace Manager_Hotel
             // 
             this.panel3.Controls.Add(this.groupBox5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(590, 41);
+            this.panel3.Location = new System.Drawing.Point(590, 54);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(753, 589);
+            this.panel3.Size = new System.Drawing.Size(753, 576);
             this.panel3.TabIndex = 8;
             // 
             // groupBox5
@@ -613,7 +613,7 @@ namespace Manager_Hotel
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(0, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(753, 589);
+            this.groupBox5.Size = new System.Drawing.Size(753, 576);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh Sách Nhân Viên";
@@ -628,7 +628,7 @@ namespace Manager_Hotel
             this.dataGirdViewDSNhanVien.Name = "dataGirdViewDSNhanVien";
             this.dataGirdViewDSNhanVien.RowHeadersWidth = 62;
             this.dataGirdViewDSNhanVien.RowTemplate.Height = 28;
-            this.dataGirdViewDSNhanVien.Size = new System.Drawing.Size(747, 568);
+            this.dataGirdViewDSNhanVien.Size = new System.Drawing.Size(747, 555);
             this.dataGirdViewDSNhanVien.TabIndex = 0;
             this.dataGirdViewDSNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGirdViewDSNhanVien_CellContentClick);
             // 

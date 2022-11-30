@@ -122,11 +122,11 @@ namespace Manager_Hotel
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(88, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 31);
+            this.label1.Size = new System.Drawing.Size(289, 35);
             this.label1.TabIndex = 3;
             this.label1.Tag = "";
             this.label1.Text = "Quản Lí Khách Sạn";
@@ -324,6 +324,7 @@ namespace Manager_Hotel
             // 
             this.btnQuanLiNV.BackColor = System.Drawing.Color.SteelBlue;
             this.btnQuanLiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLiNV.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnQuanLiNV.ImageIndex = 9;
             this.btnQuanLiNV.ImageList = this.imageListIMG;
             this.btnQuanLiNV.Location = new System.Drawing.Point(802, 276);
@@ -339,6 +340,7 @@ namespace Manager_Hotel
             // 
             this.btnQuanLiPhong.BackColor = System.Drawing.Color.SteelBlue;
             this.btnQuanLiPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLiPhong.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnQuanLiPhong.ImageIndex = 7;
             this.btnQuanLiPhong.ImageList = this.imageListIMG;
             this.btnQuanLiPhong.Location = new System.Drawing.Point(627, 276);
@@ -354,6 +356,7 @@ namespace Manager_Hotel
             // 
             this.btnThongKe.BackColor = System.Drawing.Color.SteelBlue;
             this.btnThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnThongKe.ImageIndex = 3;
             this.btnThongKe.ImageList = this.imageListIMG;
             this.btnThongKe.Location = new System.Drawing.Point(627, 93);
@@ -369,6 +372,7 @@ namespace Manager_Hotel
             // 
             this.btnQuyDinh.BackColor = System.Drawing.Color.SteelBlue;
             this.btnQuyDinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuyDinh.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnQuyDinh.ImageIndex = 8;
             this.btnQuyDinh.ImageList = this.imageListIMG;
             this.btnQuyDinh.Location = new System.Drawing.Point(984, 456);
@@ -384,6 +388,7 @@ namespace Manager_Hotel
             // 
             this.btnSDDVTT.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSDDVTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSDDVTT.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnSDDVTT.ImageIndex = 4;
             this.btnSDDVTT.ImageList = this.imageListIMG;
             this.btnSDDVTT.Location = new System.Drawing.Point(257, 456);
@@ -399,6 +404,7 @@ namespace Manager_Hotel
             // 
             this.btnQLDichVu.BackColor = System.Drawing.Color.SteelBlue;
             this.btnQLDichVu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLDichVu.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnQLDichVu.ImageKey = "QLDV.png";
             this.btnQLDichVu.ImageList = this.imageListIMG;
             this.btnQLDichVu.Location = new System.Drawing.Point(1163, 93);
@@ -414,6 +420,7 @@ namespace Manager_Hotel
             // 
             this.btnQLHoaDon.BackColor = System.Drawing.Color.SteelBlue;
             this.btnQLHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQLHoaDon.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnQLHoaDon.ImageIndex = 2;
             this.btnQLHoaDon.ImageList = this.imageListIMG;
             this.btnQLHoaDon.Location = new System.Drawing.Point(987, 93);
@@ -429,6 +436,7 @@ namespace Manager_Hotel
             // 
             this.btnDatPhong.BackColor = System.Drawing.Color.SteelBlue;
             this.btnDatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatPhong.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnDatPhong.ImageIndex = 0;
             this.btnDatPhong.ImageList = this.imageListIMG;
             this.btnDatPhong.Location = new System.Drawing.Point(260, 93);
@@ -444,6 +452,7 @@ namespace Manager_Hotel
             // 
             this.btnNhanPhong.BackColor = System.Drawing.Color.SteelBlue;
             this.btnNhanPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanPhong.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnNhanPhong.ImageIndex = 1;
             this.btnNhanPhong.ImageList = this.imageListIMG;
             this.btnNhanPhong.Location = new System.Drawing.Point(440, 93);
@@ -459,6 +468,7 @@ namespace Manager_Hotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1346, 630);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnQuanLiNV);

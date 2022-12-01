@@ -180,7 +180,7 @@ namespace Manager_Hotel
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(135, 38);
-            this.btnThoat.TabIndex = 13;
+            this.btnThoat.TabIndex = 17;
             this.btnThoat.Text = "Đóng";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -195,7 +195,7 @@ namespace Manager_Hotel
             this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(135, 41);
-            this.btnHuy.TabIndex = 12;
+            this.btnHuy.TabIndex = 16;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -211,7 +211,7 @@ namespace Manager_Hotel
             this.btnDatPhong.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatPhong.Name = "btnDatPhong";
             this.btnDatPhong.Size = new System.Drawing.Size(135, 42);
-            this.btnDatPhong.TabIndex = 11;
+            this.btnDatPhong.TabIndex = 15;
             this.btnDatPhong.Text = "Đặt phòng ";
             this.btnDatPhong.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDatPhong.UseVisualStyleBackColor = true;
@@ -357,7 +357,7 @@ namespace Manager_Hotel
             this.udSoDem.Location = new System.Drawing.Point(15, 117);
             this.udSoDem.Name = "udSoDem";
             this.udSoDem.Size = new System.Drawing.Size(214, 26);
-            this.udSoDem.TabIndex = 8;
+            this.udSoDem.TabIndex = 1;
             // 
             // label4
             // 
@@ -379,7 +379,7 @@ namespace Manager_Hotel
             this.dateTra.Margin = new System.Windows.Forms.Padding(2);
             this.dateTra.Name = "dateTra";
             this.dateTra.Size = new System.Drawing.Size(183, 26);
-            this.dateTra.TabIndex = 6;
+            this.dateTra.TabIndex = 3;
             // 
             // label3
             // 
@@ -406,7 +406,7 @@ namespace Manager_Hotel
             this.cbLoaiPhong.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiPhong.Name = "cbLoaiPhong";
             this.cbLoaiPhong.Size = new System.Drawing.Size(218, 28);
-            this.cbLoaiPhong.TabIndex = 3;
+            this.cbLoaiPhong.TabIndex = 0;
             // 
             // label2
             // 
@@ -439,7 +439,7 @@ namespace Manager_Hotel
             this.dateNhan.Margin = new System.Windows.Forms.Padding(2);
             this.dateNhan.Name = "dateNhan";
             this.dateNhan.Size = new System.Drawing.Size(183, 26);
-            this.dateNhan.TabIndex = 0;
+            this.dateNhan.TabIndex = 2;
             // 
             // groupBox2
             // 
@@ -464,7 +464,7 @@ namespace Manager_Hotel
             this.btnHuyTK.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuyTK.Name = "btnHuyTK";
             this.btnHuyTK.Size = new System.Drawing.Size(97, 26);
-            this.btnHuyTK.TabIndex = 10;
+            this.btnHuyTK.TabIndex = 6;
             this.btnHuyTK.Text = "Hủy";
             this.btnHuyTK.UseVisualStyleBackColor = true;
             this.btnHuyTK.Click += new System.EventHandler(this.btnHuyTK_Click);
@@ -476,7 +476,7 @@ namespace Manager_Hotel
             this.btnTimKiemKH.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiemKH.Name = "btnTimKiemKH";
             this.btnTimKiemKH.Size = new System.Drawing.Size(97, 26);
-            this.btnTimKiemKH.TabIndex = 10;
+            this.btnTimKiemKH.TabIndex = 5;
             this.btnTimKiemKH.Text = "Tìm kiếm";
             this.btnTimKiemKH.UseVisualStyleBackColor = true;
             this.btnTimKiemKH.Click += new System.EventHandler(this.btnTimKiemKH_Click);
@@ -499,7 +499,7 @@ namespace Manager_Hotel
             this.txtTimKiemCMND_KH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiemCMND_KH.Name = "txtTimKiemCMND_KH";
             this.txtTimKiemCMND_KH.Size = new System.Drawing.Size(243, 26);
-            this.txtTimKiemCMND_KH.TabIndex = 8;
+            this.txtTimKiemCMND_KH.TabIndex = 4;
             // 
             // groupBox4
             // 
@@ -547,7 +547,7 @@ namespace Manager_Hotel
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(205, 26);
-            this.txtDiaChi.TabIndex = 18;
+            this.txtDiaChi.TabIndex = 12;
             // 
             // label12
             // 
@@ -574,7 +574,7 @@ namespace Manager_Hotel
             this.dateSinh.Margin = new System.Windows.Forms.Padding(2);
             this.dateSinh.Name = "dateSinh";
             this.dateSinh.Size = new System.Drawing.Size(205, 26);
-            this.dateSinh.TabIndex = 8;
+            this.dateSinh.TabIndex = 11;
             // 
             // cbBoxQuocTich
             // 
@@ -593,7 +593,7 @@ namespace Manager_Hotel
             this.cbBoxQuocTich.Margin = new System.Windows.Forms.Padding(2);
             this.cbBoxQuocTich.Name = "cbBoxQuocTich";
             this.cbBoxQuocTich.Size = new System.Drawing.Size(205, 28);
-            this.cbBoxQuocTich.TabIndex = 17;
+            this.cbBoxQuocTich.TabIndex = 14;
             // 
             // label11
             // 
@@ -618,7 +618,7 @@ namespace Manager_Hotel
             this.cbBoxGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.cbBoxGioiTinh.Name = "cbBoxGioiTinh";
             this.cbBoxGioiTinh.Size = new System.Drawing.Size(205, 28);
-            this.cbBoxGioiTinh.TabIndex = 15;
+            this.cbBoxGioiTinh.TabIndex = 13;
             // 
             // label10
             // 
@@ -675,7 +675,7 @@ namespace Manager_Hotel
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(204, 26);
-            this.txtSoDienThoai.TabIndex = 12;
+            this.txtSoDienThoai.TabIndex = 10;
             // 
             // label7
             // 
@@ -695,7 +695,7 @@ namespace Manager_Hotel
             this.txtCMND.Margin = new System.Windows.Forms.Padding(2);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(204, 26);
-            this.txtCMND.TabIndex = 10;
+            this.txtCMND.TabIndex = 8;
             // 
             // label6
             // 
@@ -715,7 +715,7 @@ namespace Manager_Hotel
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(204, 26);
-            this.txtHoTen.TabIndex = 8;
+            this.txtHoTen.TabIndex = 7;
             // 
             // panel4
             // 

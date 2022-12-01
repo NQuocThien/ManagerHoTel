@@ -106,7 +106,24 @@ namespace Manager_Hotel
 
         private void Main_Load(object sender, EventArgs e)
         {
-            
+            this.btnQuanLiNV.Enabled = false;
+            this.btnQuanLiPhong.Enabled = false;
+            this.btnQLDichVu.Enabled = false;
+            this.btnQuanLiNV.Enabled = false;
+            string chucVu ="";
+            DataTableReader reader = modify.GetDataTable("Select ChucVu From NhanVien Where TenDangNhap = '" + tenDangNhap + "' ").CreateDataReader();
+            while(reader.Read())
+            {
+                chucVu = reader.GetString(0);
+            }
+            if (chucVu == "Admin")
+            {
+                this.btnQuanLiNV.Enabled = true;
+                this.btnQuanLiPhong.Enabled = true;
+                this.btnQLDichVu.Enabled = true;
+                this.btnQuanLiNV.Enabled = true;
+            }
+            lblChuVu.Text = chucVu;
         }
 
         private void btnQLHoaDon_Click(object sender, EventArgs e)

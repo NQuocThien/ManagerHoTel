@@ -73,7 +73,7 @@ namespace Manager_Hotel
             this.btnDangNhap.Location = new System.Drawing.Point(109, 252);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(199, 38);
-            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng Nhập ";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.UseWaitCursor = true;
@@ -104,7 +104,7 @@ namespace Manager_Hotel
             this.lblDangKy.Location = new System.Drawing.Point(284, 389);
             this.lblDangKy.Name = "lblDangKy";
             this.lblDangKy.Size = new System.Drawing.Size(69, 20);
-            this.lblDangKy.TabIndex = 6;
+            this.lblDangKy.TabIndex = 5;
             this.lblDangKy.TabStop = true;
             this.lblDangKy.Text = "Đăng Ký";
             this.lblDangKy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblDangKy_LinkClicked);
@@ -129,7 +129,7 @@ namespace Manager_Hotel
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(289, 29);
-            this.txtPass.TabIndex = 5;
+            this.txtPass.TabIndex = 1;
             // 
             // txtUserName
             // 
@@ -138,7 +138,7 @@ namespace Manager_Hotel
             this.txtUserName.Location = new System.Drawing.Point(64, 121);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(289, 29);
-            this.txtUserName.TabIndex = 5;
+            this.txtUserName.TabIndex = 0;
             // 
             // label3
             // 

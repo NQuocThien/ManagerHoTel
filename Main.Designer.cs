@@ -59,6 +59,7 @@ namespace Manager_Hotel
             this.btnQLHoaDon = new System.Windows.Forms.Button();
             this.btnDatPhong = new System.Windows.Forms.Button();
             this.btnNhanPhong = new System.Windows.Forms.Button();
+            this.lblChuVu = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panelSlider.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -464,12 +465,22 @@ namespace Manager_Hotel
             this.btnNhanPhong.UseVisualStyleBackColor = false;
             this.btnNhanPhong.Click += new System.EventHandler(this.btnNhanPhong_Click);
             // 
+            // lblChuVu
+            // 
+            this.lblChuVu.AutoSize = true;
+            this.lblChuVu.Location = new System.Drawing.Point(252, 55);
+            this.lblChuVu.Name = "lblChuVu";
+            this.lblChuVu.Size = new System.Drawing.Size(35, 13);
+            this.lblChuVu.TabIndex = 19;
+            this.lblChuVu.Text = "label3";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1346, 630);
+            this.Controls.Add(this.lblChuVu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnQuanLiNV);
             this.Controls.Add(this.btnQuanLiPhong);
@@ -491,6 +502,7 @@ namespace Manager_Hotel
             this.panelSlider.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -524,6 +536,7 @@ namespace Manager_Hotel
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnNhanPhong;
+        private System.Windows.Forms.Label lblChuVu;
     }
 }
 

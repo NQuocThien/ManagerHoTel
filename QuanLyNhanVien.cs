@@ -112,46 +112,51 @@ namespace Manager_Hotel
 
         private void btnbtnThucHien_Click(object sender, EventArgs e)
         {
-            if (radioBtcapnhatNV.Checked == true)
+            try
             {
-                int i;
-                i = dataGirdViewDSNhanVien.CurrentRow.Index;
+                if (radioBtcapnhatNV.Checked == true)
+                {
+                    int i;
+                    i = dataGirdViewDSNhanVien.CurrentRow.Index;
 
-                String query1 = "update NhanVien Set ChucVu=N'" + comboBoxChucVu.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='" + dateTimePickerNgayVaoLam.Text + "' where TenDangNhap='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
-                String query2 = "update TaiKhoan set MatKhau='" + txtPass.Text + "',Email='" + txtEmail.Text + "'where TenDangNhap='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
-                modi.Command(query2);
-                modi.Command(query1);
-                loadGirdView();
-            }
-            else if(radioBtAddNV.Checked == true)
-            {
-                String queryThemNV;
-                try
-                {
-                    string query_tk = "insert into TaiKhoan values ('" + txtTenTK.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "')";
-                    modi.Command(query_tk);
+                    String query1 = "update NhanVien Set ChucVu= N'" + comboBoxChucVu.Text + "',HoTen=N'" + txtHoTen.Text + "',CMNDNhanVien='" + txtCMND.Text + "',GioiTinh=N'" + comboBoxGioiTinh.Text + "',NgaySinhNV='" + dateNgaySinh.Text + "',SDT='" + txtSDT.Text + "',DiaChi=N'" + txtDiaChi.Text + "',NgayVaoLam='" + dateTimePickerNgayVaoLam.Text + "' where TenDangNhap='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
+                    String query2 = "update TaiKhoan set MatKhau='" + txtPass.Text + "',Email='" + txtEmail.Text + "'where TenDangNhap='" + dataGirdViewDSNhanVien.Rows[i].Cells[0].Value.ToString() + "'";
+                    modi.Command(query2);
+                    modi.Command(query1);
+                    loadGirdView();
                 }
-                catch (Exception ex)
+                else if (radioBtAddNV.Checked == true)
                 {
-
-                }
-                while (true)
-                {
+                    String queryThemNV;
                     try
                     {
-                        int ID = rd.Next(100, 1000);
-                        idNhanVien += ID;
-                        queryThemNV = "insert into NhanVien values ('" + idNhanVien + "','" + txtTenTK.Text + "','" + comboBoxChucVu.Text + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
-                        modi.Command(queryThemNV);
-                        break;
+                        string query_tk = "insert into TaiKhoan values ('" + txtTenTK.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "')";
+                        modi.Command(query_tk);
                     }
                     catch (Exception ex)
                     {
-                        idNhanVien = "E";
+                        MessageBox.Show("Thêm tài khoản thất bại ");
                     }
+                    while (true)
+                    {
+                        try
+                        {
+                            Random r = new Random();
+                            int ID = r.Next(100, 1000);
+                            idNhanVien += ID;
+                            queryThemNV = "insert into NhanVien values ('" + idNhanVien + "','" + txtTenTK.Text + "','" + comboBoxChucVu.Text + "',N'" + txtHoTen.Text + "','" + txtCMND.Text + "',N'" + comboBoxGioiTinh.Text + "','" + dateNgaySinh.Text + "','" + txtSDT.Text + "',N'" + txtDiaChi.Text + "','" + dateTimePickerNgayVaoLam.Text + "')";
+                            modi.Command(queryThemNV);
+                            break;
+                        }
+                        catch (Exception ex)
+                        {
+                            idNhanVien = "E";
+                        }
+                    }
+                    loadGirdView();
                 }
-                loadGirdView();
             }
+            catch { MessageBox.Show("Có Lỗi!!!!"); }
         }
 
         private void radioBtcapnhatNV_CheckedChanged(object sender, EventArgs e)

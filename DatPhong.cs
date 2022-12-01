@@ -52,11 +52,6 @@ namespace Manager_Hotel
             // các khóa chính 
             string id_kh = "C"; // Khóa chính bảng khách hàng
             string id_ctdp = "A"; // chi tiết đặt phòng
-            string maLoai = modify.GetID("select * from LoaiPhong lp where lp.TenLoai = '" + LoaiPhong + "'");
-
-            string id_Phong = "R"; // Phong
-            string id_pdp = "N"; // Phiếu
-
             while (true) // insert table KhachHang
             {
                 try
@@ -96,6 +91,12 @@ namespace Manager_Hotel
                     }
                     id_ctdp = "A";
                 }
+            }
+            if(cboxChuyenPhong.Checked = true)
+            {
+                this.Close();
+                NhanPhong np = new NhanPhong();
+                np.ShowDialog();
             }
             Load_gvDSDatPhong();
         }

@@ -92,7 +92,7 @@ namespace Manager_Hotel
                     id_ctdp = "A";
                 }
             }
-            if(cboxChuyenPhong.Checked = true)
+            if(cboxChuyenPhong.Checked == true)
             {
                 this.Close();
                 NhanPhong np = new NhanPhong();

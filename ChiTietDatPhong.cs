@@ -49,7 +49,7 @@ namespace Manager_Hotel
 
            string squery_kh = "Select * From KhachHang where MaKH = '"+maKH+"'";
             DataTableReader reader = modify.GetDataTable(squery_kh).CreateDataReader();
-            MessageBox.Show(squery_kh);
+           // MessageBox.Show(squery_kh);
             while (reader.Read())
             {
                 

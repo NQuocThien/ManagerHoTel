@@ -25,8 +25,6 @@ namespace Manager_Hotel
             this.tenDangNhap = Login.tenTK;
         }
 
-       
-
         private void btnSlider_Click_1(object sender, EventArgs e)
         {
             timer1.Start();
@@ -43,7 +41,6 @@ namespace Manager_Hotel
                     hiden = false;
                     this.Refresh();
                 }
-
             }
             else
             {
@@ -78,7 +75,6 @@ namespace Manager_Hotel
             NhanPhong np = new NhanPhong();
             np.ShowDialog();
         }
-
         private void btnSDDVTT_Click(object sender, EventArgs e)
         {
             string squery = "Select HoTen from NhanVien where TenDangNhap = '" + tenDangNhap + "'";
@@ -91,10 +87,6 @@ namespace Manager_Hotel
         {
             QuanLiPhong qlp = new QuanLiPhong();
             qlp.ShowDialog();
-        }
-
-        private void btnQuanLiDatPhong_Click(object sender, EventArgs e)
-        {
         }
 
         private void btnQuanLiNV_Click(object sender, EventArgs e)
@@ -129,20 +121,12 @@ namespace Manager_Hotel
         {
             QuanLyHoaDon QLHD = new QuanLyHoaDon();
             QLHD.ShowDialog();
-
-
-        }
-
-        private void btnSubLogOut_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnQLDichVu_Click(object sender, EventArgs e)
         {
             QuanLiDichVu s = new QuanLiDichVu();
             s.ShowDialog();
-
         }
 
         private void btnUser_Click(object sender, EventArgs e)
@@ -156,7 +140,6 @@ namespace Manager_Hotel
             QuyDinh qd = new QuyDinh();
             qd.ShowDialog();
         }
-
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             ThongKe tk = new ThongKe();

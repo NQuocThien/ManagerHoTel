@@ -489,7 +489,7 @@ namespace Manager_Hotel
             this.dataGridViewPhong.Location = new System.Drawing.Point(0, 16);
             this.dataGridViewPhong.Name = "dataGridViewPhong";
             this.dataGridViewPhong.RowHeadersWidth = 62;
-            this.dataGridViewPhong.Size = new System.Drawing.Size(425, 556);
+            this.dataGridViewPhong.Size = new System.Drawing.Size(434, 556);
             this.dataGridViewPhong.TabIndex = 11;
             this.dataGridViewPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatagirdviewPhong_CellClick);
             // 

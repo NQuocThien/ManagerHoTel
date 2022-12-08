@@ -135,7 +135,7 @@ namespace Manager_Hotel
         private void comboBoxLoaiDV_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            String queryLoaiDV = "select TenDV from DichVu where LoaiDichVu like '%" + comboBoxLoaiDV.Text + "%'";
+            String queryLoaiDV = "select TenDV from DichVu where LoaiDichVu like N'%" + comboBoxLoaiDV.Text + "%'";
             comboBoxDV.DisplayMember = "TenDV";
             comboBoxDV.ValueMember = "MaDV";
             comboBoxDV.DataSource = modify.GetDataTable(queryLoaiDV);

@@ -27,6 +27,18 @@ namespace Manager_Hotel
         {
             load_Data();
             load_MaNV();
+            txtEmail.Enabled = false;
+            txtTenDangNhap.Enabled =false;
+            cbChucVu.Enabled = false;
+            lblChucVu.Enabled = false;
+            txtTenNhanVien.Enabled = false;
+            lblHoTen.Enabled = false;
+            txtSoCMND.Enabled = false;
+            cbGioiTinh.Enabled = false;
+            dateNgaySinh.Enabled = false;
+            txtSDT.Enabled = false;
+            txtDiaChi.Enabled = false;
+            dateNgayVaoLam.Enabled = false;
         }
 
         private void load_MaNV()
@@ -88,6 +100,11 @@ namespace Manager_Hotel
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

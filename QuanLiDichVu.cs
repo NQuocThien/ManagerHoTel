@@ -25,11 +25,14 @@ namespace Manager_Hotel
             dataGridViewDV.DataSource = modify.GetDataTable(querytableDV);
 
             int n = dataGridViewDV.Width / 4;
+            dataGridViewDV.Columns[0].HeaderText = "Mã Dịch Vụ";
             dataGridViewDV.Columns[0].Width = n;
+            dataGridViewDV.Columns[1].HeaderText = "Loại Dịch Vụ";
             dataGridViewDV.Columns[1].Width = n;
+            dataGridViewDV.Columns[2].HeaderText = "Tên Dịch Vụ";
             dataGridViewDV.Columns[2].Width = n;
+            dataGridViewDV.Columns[3].HeaderText = "Đơn Giá";
             dataGridViewDV.Columns[3].Width = n;
-
         }
         private void btnCapNhatDichVu_Click(object sender, EventArgs e)
         {

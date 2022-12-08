@@ -163,6 +163,7 @@ namespace Manager_Hotel
             this.btnSubAccount.Text = "Acount";
             this.btnSubAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubAccount.UseVisualStyleBackColor = false;
+            this.btnSubAccount.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnSubLogOut
             // 
@@ -180,7 +181,7 @@ namespace Manager_Hotel
             this.btnSubLogOut.Text = "Đăng Xuất";
             this.btnSubLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubLogOut.UseVisualStyleBackColor = false;
-            this.btnSubLogOut.Click += new System.EventHandler(this.btnSubLogOut_Click);
+            this.btnSubLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnSubHelp
             // 
@@ -470,9 +471,8 @@ namespace Manager_Hotel
             this.lblChuVu.AutoSize = true;
             this.lblChuVu.Location = new System.Drawing.Point(252, 55);
             this.lblChuVu.Name = "lblChuVu";
-            this.lblChuVu.Size = new System.Drawing.Size(35, 13);
+            this.lblChuVu.Size = new System.Drawing.Size(0, 13);
             this.lblChuVu.TabIndex = 19;
-            this.lblChuVu.Text = "label3";
             // 
             // Main
             // 

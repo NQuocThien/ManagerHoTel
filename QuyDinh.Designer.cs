@@ -90,7 +90,7 @@
             this.panel3.Location = new System.Drawing.Point(0, 599);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(809, 43);
+            this.panel3.Size = new System.Drawing.Size(814, 43);
             this.panel3.TabIndex = 6;
             // 
             // panel2
@@ -101,14 +101,14 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(809, 599);
+            this.panel2.Size = new System.Drawing.Size(814, 599);
             this.panel2.TabIndex = 7;
             // 
             // QuyDinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 487);
+            this.ClientSize = new System.Drawing.Size(814, 653);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);

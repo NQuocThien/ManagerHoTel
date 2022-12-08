@@ -1,12 +1,6 @@
 ﻿using Manager_Hotel.ClassLoin;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Manager_Hotel
@@ -18,13 +12,11 @@ namespace Manager_Hotel
             InitializeComponent();
         }
 
-
         Modify modify = new Modify();
         private void NhanPhong_Load(object sender, EventArgs e)
         {
             Load_comboPhong();
             Load_GV();
-
         }
 
         private void Load_GV()
@@ -52,12 +44,8 @@ namespace Manager_Hotel
             gvNhanPhong.Columns[4].HeaderText = "Ngày Nhận";
             gvNhanPhong.Columns[5].HeaderText = "Ngày Trả";
 
-
-
-
             cbPhong.Enabled = false;
         }
-
         private void Load_comboPhong()
         {
             cbLoaiPhong.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -79,7 +67,7 @@ namespace Manager_Hotel
                 // lấy mã 
                 maChiTietDP = gvDatPhong.CurrentRow.Cells[0].Value.ToString();
                 maPhong = cbPhong.Text;
-                while(true )
+                while (true)
                 {
                     try
                     {
@@ -89,37 +77,32 @@ namespace Manager_Hotel
                         string squery = "Insert Into PhieuDatPhong values( '" + maPhieuDP + "', '" + maChiTietDP + "', '" + maPhong + "' )";
                         modify.Command(squery);
 
-
                         string squery_update = "Update Phong Set TrangThai = N'Đã Đặt' Where MaPhong = '" + maPhong + "'";
                         modify.Command(squery_update);
 
-                        MessageBox.Show("Đã Nhận Phòng " , "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-
+                        MessageBox.Show("Đã Nhận Phòng ", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
                         break;
                     }
-                    catch(Exception ex)
-                    {  
-                        
+                    catch (Exception ex)
+                    {
                         maPhong = "";
                         if (MessageBox.Show("Thử Lại", "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
                             break;
                     }
-
                 }
                 Load_GV();
             }
-
         }
 
         private void gvDatPhong_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(gvDatPhong.Rows.Count > 0)
+            if (gvDatPhong.Rows.Count > 0)
             {
                 DataGridViewRow row = gvDatPhong.SelectedRows[0];
                 string maChiTietDP = row.Cells[0].Value.ToString();
                 string squery = "Select kh.HoTen, kh.CMND,  ct.TenLoai, ct.NgayNhan, ct.NgayTra, lp.SoNguoi, lp.DonGia From KhachHang kh, ChiTietDatPhong ct , LoaiPhong lp Where kh.MaKH = ct.MaKH and lp.TenLoai = ct.TenLoai and  ct.MaChiTietDatPhong = '" + maChiTietDP + "'";
                 DataTableReader reader = modify.GetDataTable(squery).CreateDataReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     txtHoTen.Text = reader.GetString(0);
                     txtCMND.Text = reader.GetString(1);
@@ -131,9 +114,6 @@ namespace Manager_Hotel
                     txtDonGia.Text = reader.GetInt32(6).ToString();
                 }
                 cbPhong.Enabled = false;
-
-
-
             }
         }
 
@@ -141,7 +121,7 @@ namespace Manager_Hotel
         {
             if (cbLoaiPhong.Text != "")
             {
-                string squery = "Select p.MaPhong From Phong p, LoaiPhong lp where p.MaLoai = lp.MaLoai and p.TrangThai = N'Trống' and lp.TenLoai = '"+cbLoaiPhong.Text+"' ";
+                string squery = "Select p.MaPhong From Phong p, LoaiPhong lp where p.MaLoai = lp.MaLoai and p.TrangThai = N'Trống' and lp.TenLoai = '" + cbLoaiPhong.Text + "' ";
                 cbPhong.DataSource = modify.GetDataTable(squery);
                 cbPhong.DisplayMember = "MaPhong";
                 cbPhong.Enabled = true;
@@ -153,7 +133,7 @@ namespace Manager_Hotel
             string maPhong;
             string maPhieuDP;
             string maChiTietDP;
-            if(gvNhanPhong.Rows.Count >1 && gvNhanPhong.SelectedRows.Count >0)
+            if (gvNhanPhong.Rows.Count > 1 && gvNhanPhong.SelectedRows.Count > 0)
             {
                 // lấy mã phòng 
                 maPhong = gvNhanPhong.CurrentRow.Cells[0].Value.ToString();
@@ -163,7 +143,6 @@ namespace Manager_Hotel
                 // xóa phiếu đặt phòng 
                 string squery_del = "DELETE FROM PhieuDatPhong WHERE MaPhieuDP = '" + maPhieuDP + "'";
                 modify.Command(squery_del);
-
                 //
                 string squery_update = "Update Phong Set TrangThai = N'Trống' Where MaPhong = '" + maPhong + "'";
                 modify.Command(squery_update);
@@ -173,11 +152,12 @@ namespace Manager_Hotel
 
         private void btnSreach_Click(object sender, EventArgs e)
         {
-           if(rdDanhSachDp.Checked == true)
+            if (rdDanhSachDp.Checked == true)
             {
-                string squery = "Select ct.MaChiTietDatPhong, kh.HoTen, kh.CMND, ct.TenLoai, ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct , KhachHang kh where ct.MaKH  =kh.MaKH and ct.MaChiTietDatPhong not in (Select pdp.MaChiTietDP from PhieuDatPhong pdp ) and (kh.HoTen like '%"+txtSearch.Text+"%' or kh.CMND like '%"+txtSearch.Text+"%')";
+                string squery = "Select ct.MaChiTietDatPhong, kh.HoTen, kh.CMND, ct.TenLoai, ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct , KhachHang kh where ct.MaKH  =kh.MaKH and ct.MaChiTietDatPhong not in (Select pdp.MaChiTietDP from PhieuDatPhong pdp ) and (kh.HoTen like '%" + txtSearch.Text + "%' or kh.CMND like '%" + txtSearch.Text + "%')";
                 gvDatPhong.DataSource = modify.GetDataTable(squery);
-            }else if(rdDanhSachNP.Checked==true)
+            }
+            else if (rdDanhSachNP.Checked == true)
             {
                 string squery_Nhan = "Select p.MaPhong, kh.HoTen, kh.CMND, ct.TenLoai, ct.NgayNhan, ct.NgayTra from ChiTietDatPhong ct , KhachHang kh, PhieuDatPhong pdp, Phong p  where ct.MaKH  =kh.MaKH and p.MaPhong = pdp.MaPhong and ct.MaChiTietDatPhong = pdp.MaChiTietDP  and ct.MaChiTietDatPhong  in (Select pdp.MaChiTietDP from PhieuDatPhong pdp ) and (kh.HoTen like '%" + txtSearch.Text + "%' or kh.CMND like '%" + txtSearch.Text + "%')";
                 gvNhanPhong.DataSource = modify.GetDataTable(squery_Nhan);

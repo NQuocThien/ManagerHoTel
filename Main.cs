@@ -71,7 +71,6 @@ namespace Manager_Hotel
             DatPhong dp = new DatPhong();
             dp.ShowDialog();
             this.Hide();
-
         }
 
         private void btnNhanPhong_Click(object sender, EventArgs e)

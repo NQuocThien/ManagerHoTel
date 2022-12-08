@@ -125,11 +125,13 @@ namespace Manager_Hotel
             // 
             this.txtPass.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.txtPass.Location = new System.Drawing.Point(64, 199);
+            this.txtPass.Location = new System.Drawing.Point(64, 202);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(289, 29);
             this.txtPass.TabIndex = 1;
+            this.txtPass.DragEnter += new System.Windows.Forms.DragEventHandler(this.btnDangNhap_Click);
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
             // txtUserName
             // 

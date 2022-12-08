@@ -18,8 +18,6 @@ namespace Manager_Hotel
             InitializeComponent();
         }
         Modify modify = new Modify();
-        DataSet ds;
-       
 
         private void btnChiTietDatPhong_Click(object sender, EventArgs e)
         {
@@ -64,11 +62,9 @@ namespace Manager_Hotel
                 }
                 catch (Exception ex)
                 {
-                    if (MessageBox.Show(" Loi KH Thử lại " + ex, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
-                    {
-                        this.Close();
-                    }
+                    MessageBox.Show(" Loi KH Thử lại " + ex, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                     id_kh = "C";
+                    return;
                 }
             }
 
@@ -85,11 +81,9 @@ namespace Manager_Hotel
                 catch (Exception ex)
                 {
 
-                    if (MessageBox.Show(" Loi Đat Phong Thử lại " + ex, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
-                    {
-                        this.Close();
-                    }
+                    MessageBox.Show(" Loi Đat Phong Thử lại " + ex, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                     id_ctdp = "A";
+                    return;
                 }
             }
             if(cboxChuyenPhong.Checked == true)
@@ -98,6 +92,7 @@ namespace Manager_Hotel
                 NhanPhong np = new NhanPhong();
                 np.ShowDialog();
             }
+            xoatrang();
             Load_gvDSDatPhong();
         }
 

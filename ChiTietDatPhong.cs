@@ -25,14 +25,7 @@ namespace Manager_Hotel
             
         }
 
-        private void load_id()
-        {
-
-            // lấy mã KH
-
-           
-            
-        }
+        private void load_id() { }
 
         private void ChiTietDatPhong_Load(object sender, EventArgs e)
         {
@@ -44,9 +37,7 @@ namespace Manager_Hotel
 
         private void Load_KhachHang()
         {
-
-            maKH = modify.GetID("Select kh.MaKH From KhachHang kh, ChiTietDatPhong ct where kh.MaKH= ct.MaKH and ct.MaChiTietDatPhong = '" + maChiTietDP + "' ");
-
+           maKH = modify.GetID("Select kh.MaKH From KhachHang kh, ChiTietDatPhong ct where kh.MaKH= ct.MaKH and ct.MaChiTietDatPhong = '" + maChiTietDP + "' ");
            string squery_kh = "Select * From KhachHang where MaKH = '"+maKH+"'";
             DataTableReader reader = modify.GetDataTable(squery_kh).CreateDataReader();
            // MessageBox.Show(squery_kh);
@@ -63,7 +54,6 @@ namespace Manager_Hotel
                 cbBoxQuocTich.Text = reader.GetString(8);
             }
         }
-
         private void Load_Data()
         {
             string squery_loadDataThongTinPhong = "Select ct.MaChiTietDatPhong, ct.TenLoai,ct.NgayNhan, ct.NgayTra , ct.SoDem from ChiTietDatPhong ct where ct.MaChiTietDatPhong ='"+maChiTietDP+"'";
@@ -79,7 +69,6 @@ namespace Manager_Hotel
                 udSoDem.Value =  reader.GetInt32(4);
             }
         }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             modify.Command("UPDATE ChiTietDatPhong Set NgayNhan ='" + dateNhan.Value.ToString("yyyy-MM-dd") + "' , NgayTra='" + dateTra.Value.ToString("yyyy-MM-dd") + "' , SoDem = '" + udSoDem.Value + "' , TenLoai ='"+cbBoxLoaiPhong.Text+"' Where MaChiTietDatPhong = '" + maChiTietDP + "'");
@@ -100,15 +89,38 @@ namespace Manager_Hotel
 
         private void btnXoaKH_Click(object sender, EventArgs e)
         {
-           
-            // xóa phiếu chi tiết đặt phòng
+            // KT KH có hóa đơn chưa
+            int ktHD = modify.GetInt32("select Count(MaHD) from HoaDon where MaKH = '" + maKH + "'");
+            if(ktHD  > 0)
+            {
+                string maHD = modify.GetID("select MaHD from HoaDon where MaKH = '" + maKH + "'");
+                // xóa các hóa đơn dịch vụ
+                modify.Command("Delete HoaDonDV where MaHD = '" + maHD + "' ");
+                // xóa Phiếu đặt phòng 
+                modify.Command("Delete PhieuDatPhong Where MaChiTietDP = '" + maChiTietDP + "'");
+        
+                // xóa Hóa Đơn phòng
+                modify.Command("Delete HoaDonPhong Where MaHD = '" + maHD + "'");
+                // xóa Chi Tiết Đặt Phòng 
+                modify.Command("Delete ChiTietDatPhong Where MaChiTietDatPhong = '" + maChiTietDP + "'");
+                // xóa hóa đơn
+                modify.Command("Delete HoaDon Where MaHD = '" + maHD + "' ");
+                
+                // xáo khách hàng
+                string squery_delKH = " Delete From Khachhang  Where MaKH = '" + maKH + "' ";
+                modify.Command(squery_delKH);
+                
+            }else
+            {
+                // xóa bản chi tiet dat phong
+                modify.Command("Delete ChiTietDatPhong Where MaChiTietDatPhong = '" + maChiTietDP + "'");
+                // xóa bản khách hàng 
+                string squery_delKH = " Delete From Khachhang  Where MaKH = '" + maKH + "' ";
+                modify.Command(squery_delKH);
+            }
 
-            string squery_delCTDP = " Delete From ChiTietDatPhong  Where MaChiTietDatPhong = '" + maChiTietDP + "' ";
-            modify.Command(squery_delCTDP);
-            // xóa Khách hàng
-            string squery_delKH = " Delete From Khachhang  Where MaKH = '" + maKH + "' ";
-            modify.Command(squery_delKH);
             MessageBox.Show("Đã xóa khách hàng: " + txtHoTen.Text, "Delete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
